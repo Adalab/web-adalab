@@ -1,19 +1,19 @@
 {
 	"scss": {
 		"src": "src/scss/**/*.scss",
-		"dest": "dist/assets/css/"
+		"dest": "docs/assets/css/"
 	},
 	"js": {
 		"src": [
 			"src/js/main.js"
 		],
-		"dest": "dist/assets/js/"
+		"dest": "docs/assets/js/"
 	},
-  "images": "dist/assets/images/**/*.{gif,jpg,png,svg}",
+  "images": "docs/assets/images/**/*.{gif,jpg,png,svg}",
   "html_partials": {
     "src": "src/html/*.html",
     "base": "src/html/partials/",
-		"dest": "dist/"
+		"dest": "docs/"
   },
 	"html": [
     "src/**/*.html",

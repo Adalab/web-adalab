@@ -105,7 +105,7 @@ gulp.task('html', function (done) {
 gulp.task('default', gulp.series(['html','styles','scripts'], function(done) {
   browserSync.init({
     server : {
-      baseDir: './dist/'
+      baseDir: './docs/'
     },
     ghostMode: false,
     online: true
