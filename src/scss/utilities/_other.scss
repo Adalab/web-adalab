@@ -1,0 +1,19 @@
+//// SELECTION STYLES
+
+::selection {background: #FFFF66;color:grey;}
+::selection { background: #FFFF66;color:grey;}
+::-moz-selection {background: #FFFF66;color:grey;}
+::-webkit-selection {background: #FFFF66;color:grey;}
+
+//// PLACEHOLDER STYLES
+
+::-webkit-input-placeholder {color: #FFFF66;}
+:-moz-placeholder {color: #FFFF66;}
+::-moz-placeholder {color: #FFFF66;}
+:-ms-input-placeholder {color: #FFFF66;}
+
+//// MEDIA QUERIES
+
+@media (max-width:1200px) {
+
+}

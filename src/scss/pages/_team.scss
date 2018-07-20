@@ -1,0 +1,85 @@
+//// EQUIPO
+
+.equipo {
+  background-color:$grey1;
+}
+
+.equipo-main {
+  max-width: 693px;
+  margin: 0 auto;
+  min-height: 200px;
+  text-align: center;
+  padding:45px 0;
+  .equipo-miembros {
+      .miembro {
+          position: relative;
+          flex-basis: calc(100% / 3 - 32px);
+          margin:20px 16px;
+          &:hover {
+              figure {
+                  .linkedin {
+                      opacity: .8;
+                  }
+              }
+          }
+          &.unete {
+              &:hover {
+                  .linkedin {
+                      opacity: 0;
+                  }
+              }
+              .btn {
+                  margin-top:20px;
+                  box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.25);
+              }
+          }
+          figure {
+              position: relative;
+              border-radius: 3px;
+              overflow: hidden;
+              .linkedin {
+                  content: '';
+                  position: absolute;
+                  top:0;
+                  left: 0;
+                  width:100%;
+                  height:100%;
+                  display: -webkit-box;
+                  display: -ms-flexbox;
+                  display: flex;
+                  -ms-flex-align: center;
+                  -webkit-align-items: center;
+                  -webkit-box-align: center;
+                  align-items: center;
+                  text-align: center;
+                  color:#FFF;
+                  background-color: $aqua;
+                  opacity: 0;
+                  pointer-events: none;
+                  transition: opacity cubic-bezier(0.51, 0.07, 0.47, 0.91) 0.3s;
+              }
+              a {
+                  display: inline-block;
+                  vertical-align: middle;
+                  margin: auto;
+                  color: #FFF;
+              }
+          }
+          img {
+              display: block;
+              width:100%;
+          }
+          h4 {
+              margin-top:12px;
+              font-size: 18px;
+              font-weight: 500;
+              line-height: 160%;
+          }
+          span {
+              display: block;
+              font-size: 16px;
+              line-height: 160%;
+          }
+      }
+  }
+}
