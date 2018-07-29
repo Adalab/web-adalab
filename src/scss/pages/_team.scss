@@ -5,11 +5,8 @@
 }
 
 .equipo-main {
-  max-width: 693px;
-  margin: 0 auto;
-  min-height: 200px;
   text-align: center;
-  padding:45px 0;
+  padding:45px 20px;
   .equipo-miembros {
       .miembro {
           position: relative;
@@ -55,7 +52,6 @@
                   color:#FFF;
                   background-color: $aqua;
                   opacity: 0;
-                  pointer-events: none;
                   transition: opacity cubic-bezier(0.51, 0.07, 0.47, 0.91) 0.3s;
               }
               a {
@@ -82,4 +78,27 @@
           }
       }
   }
+}
+
+
+//// MEDIA QUERIES
+
+@media (max-width:680px) {
+    .equipo-main {
+        .equipo-miembros {
+            .miembro {
+                flex-basis: calc(100% / 2 - 32px);
+            }
+        }
+    }
+}
+
+@media (max-width:420px) {
+    .equipo-main {
+        .equipo-miembros {
+            .miembro {
+                flex-basis: 100%;
+            }
+        }
+    }
 }

@@ -1,7 +1,17 @@
-//// LAYOUT
+//// GRID
 
 .content {
     max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.content-sm {
+    max-width: 693px;
     margin: 0 auto;
     width: 100%;
     padding-right: 15px;
@@ -18,4 +28,11 @@
     flex-wrap: wrap;
     margin-right: -15px;
     margin-left: -15px;
+}
+
+//// HEROS
+
+.hero {
+    width:100%;
+    padding:60px 0;
 }

@@ -5,6 +5,18 @@ body {
   font-family: $Rubik;
 }
 
+.container {
+    padding-top:100px;
+}
+
 a {
   text-decoration: none;
+}
+
+// MEDIA QUERIES
+
+@media (max-width:680px) {
+    .container {
+        padding-top:75px;
+    }
 }
