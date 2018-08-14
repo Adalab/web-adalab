@@ -38,7 +38,7 @@ $Rubik: 'Rubik', sans-serif;
         background-color: transparent;
         color:$grey3;
     }
-    &.btn-big {
+    &.btn-lg {
         padding:16px 45px;
     }
 }
@@ -54,6 +54,14 @@ $Rubik: 'Rubik', sans-serif;
 
 
 /// TITLES 
+
+h2 {
+    font-size: 18px;
+    font-weight: normal;
+    color: $grey3;
+    line-height: 160%;
+    margin-bottom:40px;
+}
 
 h3 {
     position: relative;
@@ -75,12 +83,16 @@ h3 {
         opacity: 0.5;
         background-color:$aqua;
     }
+    span {
+        display: block;
+        margin-top: -10px;
+        font-size: 24px;
+        font-weight: 300;
+    }
 }
 
-h2 {
-    font-size: 18px;
-    font-weight: normal;
-    color: $grey3;
-    line-height: 160%;
-    margin-bottom:40px;
+h4 {
+    font-size: 22px;
+    font-weight: 500;
+    color:$aqua;
 }

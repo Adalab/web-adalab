@@ -2,6 +2,10 @@
 
 .equipo {
   background-color:$grey1;
+    .footer {
+        border-top:1px solid #dbdbdc;
+        margin-top:60px;
+    }
 }
 
 .equipo-main {
@@ -55,10 +59,12 @@
                   transition: opacity cubic-bezier(0.51, 0.07, 0.47, 0.91) 0.3s;
               }
               a {
+                  padding:15px;
                   display: inline-block;
                   vertical-align: middle;
                   margin: auto;
                   color: #FFF;
+                  font-size: 30px;
               }
           }
           img {
@@ -70,6 +76,7 @@
               font-size: 18px;
               font-weight: 500;
               line-height: 160%;
+              color:$grey3;
           }
           span {
               display: block;

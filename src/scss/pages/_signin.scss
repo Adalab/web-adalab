@@ -1,0 +1,142 @@
+//// INSCRIBETE
+
+    // HERO
+
+.inscribete-hero {
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    background: url(/assets/images/inscribete/inscribete_hero_main.jpg) no-repeat center center;
+    background-size: cover;
+    height: 70vh;
+    padding-bottom: 60px;
+    h2 {
+        font-size: calc(20px + .5vw);
+        font-weight: 700;
+        line-height: 120%;
+        text-shadow: 3px 3px 3px rgba(0,0,0,.3);
+        color: #FFF;
+        margin-bottom: 25px;
+    }
+}
+    
+    // HERO ANA
+
+.inscribete-ana {
+    background: url(/assets/images/inscribete/inscribete_hero_1.jpg) no-repeat center center;
+    background-size: cover;
+    color: #FFF;
+}
+
+    // HERO PROGRAMA
+
+.inscribete-programa {
+    .col {
+        position: relative;
+        align-self: center;
+        margin-top:10px;
+        &:first-child {
+            h4 {
+                border-bottom:3px solid $grey3;
+            }
+        }
+    }
+    h4 {
+        padding-bottom:10px;
+    }
+    ul {
+        position: relative;
+         &:before {
+            content: '+';
+            position: absolute;
+            top:calc(50% - 35px);
+            right:-22px;
+            font-family: $Rubik;
+            font-weight: 800;
+            font-size: 32px;
+            color:$aqua;
+        }
+        li {
+            position: relative;
+            padding:14px 0;
+            font-family: $OpenSans;
+            font-size: 20px;
+            font-weight: 700;
+            &:first-child {
+                border-bottom: 1px solid $grey2;
+            }
+            &:last-child {
+                background-color: #707070;
+                color:#FFF;
+                padding:4px 0;
+                font-size: 16px;
+                font-weight: 700;
+            }
+            > span {
+                display: block;
+                font-size: 18px;
+                font-weight: 600;
+                span {
+                    font-size: 14px;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+    .inscribete-programa-m {
+        margin-top:40px;
+    }
+}
+
+    // HERO SELECCIÓN
+
+.inscribete-seleccion {
+    .col {
+        align-self: center;
+    }
+    .col-25 {
+        text-align: right;
+        padding: 0 40px;
+    }
+    .inscribete-seleccion-list {
+        margin: 40px 0;
+        text-align: left;
+        .lista {
+            position: relative;
+            border-right:5px solid #D8D8D8;
+            &:before {
+                content: '';
+                position: absolute;
+                top:calc(50% - 12px);
+                right: -16px;
+                width: 0; 
+                height: 0; 
+                border-top: 12px solid transparent;
+                border-bottom: 12px solid transparent;
+
+                border-left: 12px solid #D8D8D8;
+            }
+        }
+        li {
+            margin-bottom:4px;
+            padding-right: 15%;
+        }
+    }
+    .row {
+        &:last-child {
+            text-align: left;
+            max-width: 800px;
+            padding-left: 42px;
+        }
+    }
+}
+
+//// MEDIA QUERIES
+
+@media (max-width:680px) {
+    
+}
+
+@media (max-width:420px) {
+    
+}
