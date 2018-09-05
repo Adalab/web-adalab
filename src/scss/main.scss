@@ -6,10 +6,18 @@
 @import 'utilities/helpers';
 @import 'utilities/commons';
 @import 'utilities/grid';
+@import 'utilities/swiper';
+@import 'utilities/modal';
+@import 'utilities/forms';
 
 @import 'pages/header';
 @import 'pages/footer';
 
 @import 'pages/team';
+@import 'pages/home';
+@import 'pages/companies';
+@import 'pages/signin';
+@import 'pages/volunteers';
+@import 'pages/contact';
 
 @import 'utilities/other';

@@ -2,28 +2,38 @@
 
 .equipo {
   background-color:$grey1;
+    .footer {
+        border-top:1px solid #dbdbdc;
+        margin-top:60px;
+    }
 }
 
 .equipo-main {
-  max-width: 693px;
-  margin: 0 auto;
-  min-height: 200px;
   text-align: center;
-  padding:45px 0;
+  padding:45px 20px;
   .equipo-miembros {
       .miembro {
-          position: relative;
-          flex-basis: calc(100% / 3 - 32px);
-          margin:20px 16px;
-          &:hover {
-              figure {
-                  .linkedin {
-                      opacity: .8;
-                  }
-              }
-          }
+        position: relative;
+        flex-basis: calc(100% / 3 - 33px);
+        margin:20px 16px;
+        
+        &:hover {
+            figure {
+                &:before {
+                    height:100%;
+                }
+                .linkedin {
+                    opacity: .8;
+                }
+            }
+        }
           &.unete {
               &:hover {
+                  figure {
+                      &:before {
+                          display: none;
+                      }
+                  }
                   .linkedin {
                       opacity: 0;
                   }
@@ -34,11 +44,24 @@
               }
           }
           figure {
+              z-index: 2;
               position: relative;
               border-radius: 3px;
               overflow: hidden;
+              &:before {
+                    content: '';
+                    z-index: 1;
+                    position: absolute;
+                    top:0;
+                    left:0;
+                    width:100%;
+                    height:0;
+                    background-color:$aqua;
+                    transition: height cubic-bezier(0.1, 0.79, 0.24, 0.93) .4s;
+                }
               .linkedin {
                   content: '';
+                  z-index: 2;
                   position: absolute;
                   top:0;
                   left: 0;
@@ -53,16 +76,16 @@
                   align-items: center;
                   text-align: center;
                   color:#FFF;
-                  background-color: $aqua;
                   opacity: 0;
-                  pointer-events: none;
                   transition: opacity cubic-bezier(0.51, 0.07, 0.47, 0.91) 0.3s;
               }
               a {
+                  padding:15px;
                   display: inline-block;
                   vertical-align: middle;
                   margin: auto;
                   color: #FFF;
+                  font-size: 30px;
               }
           }
           img {
@@ -74,6 +97,7 @@
               font-size: 18px;
               font-weight: 500;
               line-height: 160%;
+              color:$grey3;
           }
           span {
               display: block;
@@ -82,4 +106,27 @@
           }
       }
   }
+}
+
+
+//// MEDIA QUERIES
+
+@media (max-width:680px) {
+    .equipo-main {
+        .equipo-miembros {
+            .miembro {
+                flex-basis: calc(100% / 2 - 32px);
+            }
+        }
+    }
+}
+
+@media (max-width:420px) {
+    .equipo-main {
+        .equipo-miembros {
+            .miembro {
+                flex-basis: 100%;
+            }
+        }
+    }
 }

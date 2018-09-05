@@ -1,0 +1,124 @@
+//// VOLUNTARIOS
+
+    // HERO
+
+.voluntarios-hero {
+    position: relative;
+    background: url(../images/voluntarios/voluntarios_hero_main.jpg) no-repeat center center;
+    background-size: cover;
+    height: 70vh;
+    padding-top: 60px;
+    h2 {
+        max-width: 450px;
+        font-size: calc(20px + 1.5vw);
+        font-weight: 700;
+        line-height: 120%;
+        color: #FFF;
+    }
+}
+
+    // CÓMO SER VOLUNTARIO
+
+.voluntarios-comunidad {
+    .col {
+        /*&.col-33 {
+            &:last-child {
+                pointer-events: none;
+                .voluntario-comunidad-b {
+                    background-color:$grey1;
+                    border:2px solid $aqua;
+                    &:before {
+                        content: '';
+                        background: url(../images/logo-adalab.svg) no-repeat center center;
+                        background-size: 50% 50%;
+                        width:100%;
+                        height: 100%;
+                        top:0;
+                        left:0;
+                        right:auto;
+                        bottom: auto;
+                        opacity: .6;
+                    }
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+        }*/
+    }
+    .voluntario-comunidad-b {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        padding:20px;
+        align-items: center;
+        text-align: center;
+        min-height: 160px;
+        margin:15px;
+        font-size: 20px;
+        &:hover {
+            &:before {
+                transform:rotate(180deg);
+            }
+            &:after {
+                transform:scale3d(.95,.95,1);
+            }
+        }
+        &:before {
+            content: '+';
+            position: absolute;
+            bottom:8px;
+            right:18px;
+            font-family: $OpenSans;
+            font-weight: 300;
+            font-size: 36px;
+            color:#FFF;
+            transition: transform cubic-bezier(0.1, 0.79, 0.24, 0.93) .3s;
+        }
+        &:after {
+            content: '';
+            z-index: -1;
+            position: absolute;
+            top:0;
+            left: 0;
+            width:100%;
+            height:100%;
+            background-color:$aqua;
+            transition: transform cubic-bezier(0.1, 0.79, 0.24, 0.93) .3s;
+        }
+        span {
+            font-family: $OpenSans;
+            font-weight: 800;
+            letter-spacing: .5px;
+            color:#FFF;
+            flex: 1;
+        }
+    }
+}
+
+    // ESTILOS MODAL VOLUNTARIOS
+
+.modal {
+    &.voluntarios {
+        p > span {
+            display: block;
+            margin: 20px 0 0;
+            color:$grey2;
+            span {
+                border-bottom:1px solid $aqua;
+                color: $grey3;
+            }
+        }
+    }
+}
+
+
+//// MEDIA QUERIES
+
+@media (max-width:680px) {
+
+}
+
+@media (max-width:420px) {
+
+}
