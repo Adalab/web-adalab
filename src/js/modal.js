@@ -3,10 +3,8 @@
 console.log('>> Ready :)');
 
 $(document).ready(function() {
-    
-    ///////////////////////////////////
-    // MODALS
-    ///////////////////////////////////
+
+    //// MODALS
     
     ! function (o) {
         "object" == typeof module && "object" == typeof module.exports ? o(require("jquery"), window, document) : o(jQuery, window, document)

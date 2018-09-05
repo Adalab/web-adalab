@@ -3,16 +3,19 @@
     // HERO
 
 .home-hero {
-    background:url(/assets/images/home/home_hero_main.jpg) no-repeat center center;
+    position: relative;
+    background:url(../images/home/home_hero_main.jpg) no-repeat center bottom;
     background-size: cover;
-    height: 70vh;
-    margin: 0 0 60px;
+    height: 80vh;
     padding-top:60px;
     h2 {
         max-width: 300px;
         font-size: calc(20px + 1.5vw);
         font-weight: 700;
         line-height: 120%;
+    }
+    .pie {
+        background:none;
     }
 }
 
@@ -41,7 +44,7 @@
     margin-top:60px;
     padding:60px 0;
     background-color:$grey1;
-    &:before {
+/*    &:before {
         content: '';
         position: absolute;
         top:0;
@@ -50,8 +53,10 @@
         height: 100%;
         background-color:$grey2;
         opacity: .3;
-    }
+    }*/
     img {
+        display: inline-block;
+        vertical-align: middle;
         max-width: 130px;
         margin: 30px;
     }
@@ -93,6 +98,12 @@
 .home-medios {
     padding: 60px 0 80px;
     background-color:$grey1;
+    a {
+        transition: opacity cubic-bezier(0.1, 0.79, 0.24, 0.93) .3s;
+        &:hover {
+            opacity: .5; 
+        }
+    }
     img {
         max-width: 130px;
         margin-bottom:20px,
@@ -115,28 +126,28 @@
 //// BACKGROUNDS HEROS
 
 .home-inscribete {
-    background:url(/assets/images/home/home_hero_1.jpg) no-repeat center center;
+    background:url(../images/home/home_hero_1.jpg) no-repeat center center;
     background-size: cover;
     .hero-img {
-        background:url(/assets/images/home/home_hero_1.jpg) no-repeat center center;
+        background:url(../images/home/home_hero_1.jpg) no-repeat center center;
         background-size: cover;
     }
 }
 
 .home-contrata {
-    background:url(/assets/images/home/home_hero_2.jpg) no-repeat center center;
+    background:url(../images/home/home_hero_2.jpg) no-repeat center center;
     background-size: cover;
     .hero-img {
-        background:url(/assets/images/home/home_hero_2.jpg) no-repeat center center;
+        background:url(../images/home/home_hero_2.jpg) no-repeat center center;
         background-size: cover;
     }
 }
 
 .home-colabora {
-    background:url(/assets/images/home/home_hero_3.jpg) no-repeat center center;
+    background:url(../images/home/home_hero_3.jpg) no-repeat center center;
     background-size: cover;
     .hero-img {
-        background:url(/assets/images/home/home_hero_3.jpg) no-repeat center center;
+        background:url(../images/home/home_hero_3.jpg) no-repeat center center;
         background-size: cover;
     }
 }

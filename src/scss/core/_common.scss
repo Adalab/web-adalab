@@ -66,7 +66,7 @@ a {
 
 .hero-text {
     text-align: center;
-    padding:50px 0;
+    padding:80px 0;
     &.grey {
         background-color:$grey1;
     }
@@ -125,14 +125,20 @@ a {
 //// PIE DE FOTO
 
 .pie {
-    padding:20px;
+    padding: 6px 20px;
+    border-radius: 2px;
     position: absolute;
-    bottom:10px;
-    right:10px;
+    bottom: 16px;
+    right: 16px;
     font-size: 14px;
-    color:#FFF;
+    color: #FFF;
     font-style: italic;
-    opacity: .8;
+    background: rgba(0,0,0,.3);
+    opacity: 1;
+    &.pie-nobg {
+        background: transparent;
+        color:$grey3;
+    }
 }
 
 //// BLOCKQUOTES 
@@ -243,6 +249,11 @@ a {
                 opacity: .9;
                 border-bottom:1px solid #FFF;
             }
+            cite {
+                display: block;
+                margin-top:15px;
+                font-size: 13px;
+            }
         }
         ul {
             padding-left:40px;
@@ -251,7 +262,7 @@ a {
                 margin-bottom:10px;
                 font-family: $OpenSans;
                 padding-left:20px;
-                font-style: italic;
+                /*font-style: italic;*/
                 &:before {
                     content: '';
                     position: absolute;
@@ -260,7 +271,7 @@ a {
                     width:10px;
                     height:3px;
                     border-radius: 20px;
-                    background-color:#FFF;
+                    background-color:$grey3;
                 }
             }
         }

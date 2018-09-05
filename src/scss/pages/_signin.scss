@@ -6,12 +6,13 @@
     display: flex;
     align-items: flex-end;
     position: relative;
-    background: url(/assets/images/inscribete/inscribete_hero_main.jpg) no-repeat center center;
+    background: url(../images/inscribete/inscribete_hero_main.jpg) no-repeat center center;
     background-size: cover;
     height: 70vh;
     padding-bottom: 60px;
     h2 {
-        font-size: calc(20px + .5vw);
+        max-width: 470px;
+        font-size: calc(20px + 1.5vw);
         font-weight: 700;
         line-height: 120%;
         text-shadow: 3px 3px 3px rgba(0,0,0,.3);
@@ -23,9 +24,14 @@
     // HERO ANA
 
 .inscribete-ana {
-    background: url(/assets/images/inscribete/inscribete_hero_1.jpg) no-repeat center center;
+    margin: 0;
+    background: url(../images/inscribete/inscribete_hero_1.jpg) no-repeat center center;
     background-size: cover;
     color: #FFF;
+    .hero-img {
+        background: url(../images/inscribete/inscribete_hero_1.jpg) no-repeat center center;
+        background-size: cover;
+    }
 }
 
     // HERO PROGRAMA
@@ -33,28 +39,34 @@
 .inscribete-programa {
     .col {
         position: relative;
-        align-self: center;
-        margin-top:10px;
-        &:first-child {
-            h4 {
-                border-bottom:3px solid $grey3;
+        /*align-self: center;*/
+        margin-top:10px; 
+        &:not(:last-child) {
+            margin-right:60px;
+            li {
+                &:last-child {
+                    background-color: #707070;
+                }
             }
         }
     }
     h4 {
         padding-bottom:10px;
+        border-bottom:3px solid $grey3;
     }
     ul {
         position: relative;
-         &:before {
-            content: '+';
-            position: absolute;
-            top:calc(50% - 35px);
-            right:-22px;
-            font-family: $Rubik;
-            font-weight: 800;
-            font-size: 32px;
-            color:$aqua;
+        &.mas {
+            &:before {
+                content: '+';
+                position: absolute;
+                top:calc(50% - 47px);
+                right:-46px;
+                font-family: $Rubik;
+                font-weight: 800;
+                font-size: 52px;
+                color:$aqua;
+            }
         }
         li {
             position: relative;
@@ -66,7 +78,7 @@
                 border-bottom: 1px solid $grey2;
             }
             &:last-child {
-                background-color: #707070;
+                border-bottom:1px solid $grey2;
                 color:#FFF;
                 padding:4px 0;
                 font-size: 16px;
@@ -86,6 +98,7 @@
     .inscribete-programa-m {
         margin-top:40px;
     }
+
 }
 
     // HERO SELECCIÓN
@@ -131,12 +144,222 @@
     }
 }
 
+    // HERO Qué aprenderás
+
+.inscribete-aprenderas {
+    position: relative;
+    background: url(../images/inscribete/inscribete_hero_3.jpg) no-repeat center center;
+    background-size: cover;
+    h4 {
+        margin-bottom: 25px;
+    }
+    .row {
+        justify-content: space-between;
+    }
+}
+
+    // HERO CALENDARIO
+
+.inscribete-calendario {
+    background: url(../images/inscribete/inscribete_hero_2.jpg) no-repeat center center;
+    background-size: cover;
+    h4 {
+        color:$grey3;
+        span {
+            display:block;
+            font-size: 18px;
+        }
+    }
+    .slider {
+        position: relative;
+        padding: 0;
+        .swiper-container {
+            width: calc(100% - 140px);
+        }
+        .swiper-button-next, .swiper-button-prev {
+            margin-top:-40px;
+            outline:none;
+        }
+        .swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+            position: absolute;
+            bottom:89px;
+        }
+        .swiper-slide {
+            padding-top:50px;
+            &:before {
+                content: attr(data-date);
+                position: absolute;
+                top:0;;
+                left:0;
+                right:0;
+                margin: auto;
+                font-family: $OpenSans;
+                font-weight: 700;
+                color:$aqua;
+            } 
+        }
+    }
+    .row {
+        justify-content: space-evenly;
+        padding: 0 25px;
+    }
+    .col-50 {
+        .row {
+            position: relative;
+            &:after {
+                content: '';
+                position: absolute;
+                bottom:30px;
+                left:0;
+                right:0;
+                margin: auto;
+                width:calc(50% - 54px);
+                height:4px;
+                background-color:$grey2;
+            }
+            
+        }
+    }
+    .inscribete-calendario-fecha {
+        flex-wrap: wrap;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 80px;
+        margin:30px 0 60px;
+        padding:40px 10px;
+        width:44%;
+        background-color:$grey2;
+        border-radius: 3px;
+        font-size: 18px;
+        font-family: $Rubik;
+        font-weight: 500;
+        color: #FFF;
+        &.aqua {
+            background-color:$aqua;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            z-index: 1;
+            bottom:-44px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width:26px;
+            height:26px;
+            border:3px solid $grey2;
+            border-radius: 50%;
+        }
+        span {
+            padding: 0 20px;
+            display: block;
+            opacity: .8;
+            margin-bottom:6px;
+            font-size: 14px;
+        }
+    }
+    .btn {
+        margin:40px 0 0;
+    }
+}
+
 //// MEDIA QUERIES
 
-@media (max-width:680px) {
-    
+@media (max-width:880px) {
+    .inscribete-seleccion {
+        .inscribete-seleccion-list {
+            li {
+                padding-right:0;
+            }
+            .lista {
+                padding-bottom:30px;
+                border-right: 0;
+                border-bottom: 5px solid #D8D8D8;
+                &:before {
+                    top: auto;
+                    right: 0;
+                    left: 0;
+                    bottom:-28px;
+                    margin: auto;
+                    width: 0;
+                    height: 0;
+                    border-left: 12px solid transparent;
+                    border-right: 12px solid transparent;
+                    border-top: 12px solid #D8D8D8;
+                }
+            }
+        }
+        .col {
+            flex: 100%;
+            max-width: 100%;
+        }
+        .col-25 {
+            padding-top:40px;
+            text-align: center;
+        }
+    }
 }
 
-@media (max-width:420px) {
+@media (max-width:680px) {
+    .inscribete-ana {
+        color:$grey3;
+        padding:0;
+        margin: 0;
+    }
+    .inscribete-programa {
+        .col {
+            flex:100%;
+        }
+        h4 {
+            margin-top:30px;
+        }
+        ul {
+            &:before {
+                right:0;
+                left:0;
+                margin: auto;
+                top:auto;
+                bottom:-40px;
+            }
+        }
+    }
     
+    .inscribete-calendario {
+
+        .col-50 {
+            flex: 0 0 100%;
+            max-width: 100%;
+            .row {
+                padding:0 15px;
+                flex-wrap: nowrap;
+                &:after {
+                    width: calc(50% - 40px);
+                }
+            }
+        }
+        .inscribete-calendario-fecha {
+            &:not(:last-child) {
+                margin-right: 15px
+            }
+        
+        }
+    }
+    .swiper-wrapper {
+        flex-wrap: wrap;
+    }
+    .swiper-pagination, .swiper-button-next, .swiper-button-prev {
+        display: none;
+    }
 }
+
+@media (max-width: 480px) {
+    .inscribete-hero {
+        height: 320px;
+        padding-top: 20px;
+        margin: 0;
+    }
+}
+    
+

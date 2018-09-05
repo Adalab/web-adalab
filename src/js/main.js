@@ -4,9 +4,7 @@ console.log('>> Ready :)');
 
 $(document).ready(function() {
     
-    ///////////////////////////////////
-    // LISTA DESPLEGABLE
-    ///////////////////////////////////
+    //// LISTA DESPLEGABLE
     
     var lastitem='';
     (function($) {

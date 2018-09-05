@@ -4,7 +4,7 @@
 
 .empresas-hero {
     position: relative;
-    background:url(/assets/images/empresas/empresas_hero_main.jpg) no-repeat center center;
+    background:url(../images/empresas/empresas_hero_main.jpg) no-repeat center center;
     background-size: cover;
     height: 70vh;
     margin: 0 0 60px;
@@ -32,21 +32,26 @@
     // HERO PERFIL
 
 .empresas-perfil {
+    position: relative;
     padding:60px 0;
-    background:url(/assets/images/empresas/empresas_hero_1.jpg) no-repeat center center;
+    background:url(../images/empresas/empresas_hero_1.jpg) no-repeat center center;
     background-size: cover;
     h4 {
         margin-bottom:25px;
+    }
+    .row {
+        justify-content: space-between;
     }
 }
 
     // HERO VOLUNTARIADO
 
 .empresas-voluntariado {
-    background:url(/assets/images/empresas/empresas_hero_3.jpg) no-repeat center center;
-    background-size: cover;
+    /*background:url(../images/empresas/empresas_hero_3.jpg) no-repeat center center;
+    background-size: cover;*/
     margin-bottom:0;
     padding-bottom:80px;
+    margin-top:0;
     .row {
         margin:40px 0;
     }
@@ -55,10 +60,10 @@
     // HERO CONTRATA
 
 .empresas-contrata {
-    background:url(/assets/images/empresas/empresas_hero_2.jpg) no-repeat center center;
+    background:url(../images/empresas/empresas_hero_2.jpg) no-repeat center center;
     background-size: cover;
     .hero-img {
-        background:url(/assets/images/empresas/empresas_hero_2_mobile.jpg) no-repeat center center;
+        background:url(../images/empresas/empresas_hero_2_mobile.jpg) no-repeat center center;
         background-size: cover;
     }
 }
@@ -68,7 +73,8 @@
 .empresas-medios {
     padding: 60px 0 80px;
     img {
-        max-width: 130px;
+        
+        max-width: 160px;
         margin-bottom:20px,
     }
     .empresas-medios-logos {
@@ -81,7 +87,11 @@
         justify-content: space-between;
         -ms-flex-pack: justify;
         align-items: center;
+        flex-wrap: wrap;
         margin-top:80px;
+        > div {
+            flex: 1 0 25%;
+        }
     }
 }
 

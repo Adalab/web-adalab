@@ -16,7 +16,6 @@
             vertical-align: top;
             font-size: 20px;
             font-weight: 500;
-            margin-bottom:6px;
             i {
                 position: absolute;
                 top:3px;
@@ -26,6 +25,7 @@
         }
         .footer-info-address {
             font-style: normal;
+            margin: 22px 0 28px;
             li {
                 margin: 8px 0;
                 font-family: $OpenSans;
@@ -37,8 +37,10 @@
         }
         .footer-social {
             display: flex;
-            margin-top:20px;
+            margin-top: 15px;
             a {
+                position: relative;
+                z-index: 1;
                 width:30px;
                 height:30px;
                 display: flex;
@@ -50,6 +52,23 @@
                 i {
                     margin: auto;
                 }
+                &:before {
+                    content: '';
+                    z-index: -1;
+                    position: absolute;
+                    top:0;
+                    left:0;
+                    width:100%;
+                    height:0;
+                    background-color:$aqua;
+                    transition: all cubic-bezier(0.1, 0.79, 0.24, 0.93) .3s;
+                }
+                &:hover {
+                    color:#FFF;
+                    &:before {
+                        height:100%;
+                    }
+                }
             }
         }
     }
@@ -57,6 +76,7 @@
     .footer-menu {
         text-align: right;
         a {
+            position: relative;
             &:nth-child(-n+2) {
                 color:$aqua;
             }
@@ -66,6 +86,21 @@
             color:$grey3;
             font-size: 15px;
             font-weight: 500;
+            &:before {
+                content: '';
+                position: absolute;
+                bottom:0;
+                left: 0;
+                width:0;
+                height:2px;
+                background-color:$aqua;
+                transition: width cubic-bezier(0.1, 0.79, 0.24, 0.93) .3s;
+            }
+            &:hover {
+                &:before {
+                    width:100%;
+                }
+            }
         }
     }
     
