@@ -5,6 +5,328 @@ body {
   font-family: $Rubik;
 }
 
+.container {
+    
+}
+
 a {
-  text-decoration: none;
+    text-decoration: none;
+    color:$aqua;
+}
+
+//// HEROS
+
+.hero {
+    position: relative;
+    width:100%;
+    min-height: 70vh;
+    margin:60px 0;
+    padding:60px 0;
+    .hero-img {
+        display: none;
+        position: relative;
+        width:100%;
+        height:200px;
+        overflow: hidden;
+        img {
+            position: absolute;
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+            margin: auto;
+            height: 100%;
+            width:100%;
+            object-fit: cover;
+        }
+    }
+    p {
+        max-width: 400px;
+        font-size: calc(18px + .5vw);
+        font-weight: 500;
+        line-height: 160%;
+    }
+    blockquote {
+        cite {
+            display: block;
+            margin:40px 0 30px;
+            font-size: 18px;
+            line-height: 160%;
+            font-style: normal;
+            strong {
+                display: block;
+                font-size: 20px;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+    // HERO TEXT
+
+.hero-text {
+    text-align: center;
+    padding:80px 0;
+    &.grey {
+        background-color:$grey1;
+    }
+    p {
+        font-family: $OpenSans;
+        font-size: 18px;
+        line-height: 30px;
+        color:#000;
+        margin-bottom:30px;
+    }
+    em {
+        font-size: 14px;
+        font-weight: 300;
+    }
+    .medium {
+        display: block;
+        margin:25px 0 40px;
+    }
+}
+
+
+    // INFOGRAFÍA DATOS
+
+.hero-datos {
+    margin:30px auto 60px auto;
+    text-align: center;
+    .hero-dato {
+        padding:40px 10px;
+        flex-basis: calc(100% / 4 - 32px);
+        margin: 0 16px;
+        background-color:$aqua;
+        border-radius: 3px;
+        color: #FFF;
+        span {
+            display: block;
+            font-size: 60px;
+            font-weight: 500;
+            margin-bottom:10px;
+            > span {
+                display: inline-block;
+                font-size: 40px;
+            }
+        }
+        p {
+            text-transform: uppercase;
+            font-family: $Rubik;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 160%;
+            color:#FFF;
+            margin: 0;
+        }
+    }
+}
+
+//// PIE DE FOTO
+
+.pie {
+    padding: 6px 20px;
+    border-radius: 2px;
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    font-size: 14px;
+    color: #FFF;
+    font-style: italic;
+    background: rgba(0,0,0,.3);
+    opacity: 1;
+    &.pie-nobg {
+        background: transparent;
+        color:$grey3;
+    }
+}
+
+//// BLOCKQUOTES 
+
+.bq-lg {
+    max-width: 452px;
+}
+
+.bq-md {
+    max-width: 334px;
+}
+
+
+//// LISTAS
+
+.lista {
+    li {
+        position: relative;
+        padding-left:30px;
+        margin-bottom:15px;
+        font-family: $OpenSans;
+        font-size: 18px;
+        line-height: 180%;
+        &:before {
+            content: "\f00c";
+            position: absolute;
+            top:8px;
+            left:0;
+            font-family: "Font Awesome 5 Pro";
+            font-weight: 900;
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-font-smoothing: antialiased;
+            display: inline-block;
+            font-style: normal;
+            font-variant: normal;
+            text-rendering: auto;
+            line-height: 1;
+            color:$aqua;
+        }
+        &.cross {
+            &:before {
+                content: "\f00d";
+                color:#D91414;
+            }
+        }
+    }
+}
+
+
+//// LISTA DESPLEGABLE
+
+.desplegable {
+    margin: 80px 0 40px;
+    text-align: left;
+    border: 0;
+    dt,
+    dd {
+        border-bottom: 0;
+        > a {
+            padding-bottom:25px;
+            color:$grey3;
+            font-size: 22px;
+            display: block;
+            border-bottom: 1px solid $aqua;
+        }
+    }
+    dt, p, ul {
+        max-width: 693px;
+        margin: 0 auto;
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    dt {
+        padding-bottom:25px;
+    }
+    dd {
+        position: relative;
+        top:-26px;
+        background-color:$aqua;
+        padding: 25px;
+        border-top: 0;
+        font-family: $Rubik;
+        line-height: 180%;
+        font-size: 18px;
+        color:#000;
+        p {
+            position: relative;
+            margin-bottom: 15px;
+            &:first-child {
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: -40px;
+                    left: 40px;
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 0 15px 15px 15px;
+                    border-color: transparent transparent $aqua transparent;
+                }
+            }
+            a {
+                font-weight: 700;
+                color:#FFF;
+                opacity: .9;
+                border-bottom:1px solid #FFF;
+            }
+            cite {
+                display: block;
+                margin-top:15px;
+                font-size: 13px;
+            }
+        }
+        ul {
+            padding-left:40px;
+            li {
+                position: relative;
+                margin-bottom:10px;
+                font-family: $OpenSans;
+                padding-left:20px;
+                /*font-style: italic;*/
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top:15px;
+                    left:0;
+                    width:10px;
+                    height:3px;
+                    border-radius: 20px;
+                    background-color:$grey3;
+                }
+            }
+        }
+    }
+}
+
+//// ESTILOS PÁGINAS COOKIES, PRIVACIDAD
+
+.legal-main {
+    padding:45px 20px;
+    p {
+        margin-bottom:20px;
+    }
+}
+
+// MEDIA QUERIES
+
+@media (max-width:860px) {
+    .hero-datos {
+        .hero-dato {
+            flex-basis: calc(100% / 2 - 32px);
+            margin-bottom:30px;
+        }
+    }
+}
+
+@media (max-width:680px) {
+    .hero {
+        background: none;
+        .hero-img {
+            display: block;
+        }
+        .content {
+            position: static;
+            background-color:$grey1;
+            .right {
+                justify-content: center;
+                text-align: center;
+            }
+        }
+    }
+    .bq-md, .bq-lg {
+        padding:30px 15px 60px 15px;
+        p {
+            font-size:18px;
+            font-weight: 400;
+        }
+    }
+}
+
+@media (max-width:480px) {
+    .hero-datos {
+        .hero-dato {
+            flex-basis: 100%;
+            margin-bottom:30px;
+        }
+    }
 }

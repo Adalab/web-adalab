@@ -1,0 +1,116 @@
+//// EMPRESAS
+
+    // HERO
+
+.empresas-hero {
+    position: relative;
+    background:url(../images/empresas/empresas_hero_main.jpg) no-repeat center center;
+    background-size: cover;
+    height: 70vh;
+    margin: 0 0 60px;
+    padding-top:60px;
+    &:before {
+        content: '';
+        position: absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        background:rgba(0,0,0,.1);
+    }
+    .row {
+        position: relative;
+    }
+    h2 {
+        max-width: 450px;
+        font-size: calc(20px + 1.5vw);
+        font-weight: 700;
+        line-height: 120%;
+        color:#FFF;
+    }
+}
+    // HERO PERFIL
+
+.empresas-perfil {
+    position: relative;
+    padding:60px 0;
+    background:url(../images/empresas/empresas_hero_1.jpg) no-repeat center center;
+    background-size: cover;
+    h4 {
+        margin-bottom:25px;
+    }
+    .row {
+        justify-content: space-between;
+    }
+}
+
+    // HERO VOLUNTARIADO
+
+.empresas-voluntariado {
+    /*background:url(../images/empresas/empresas_hero_3.jpg) no-repeat center center;
+    background-size: cover;*/
+    margin-bottom:0;
+    padding-bottom:80px;
+    margin-top:0;
+    .row {
+        margin:40px 0;
+    }
+}
+
+    // HERO CONTRATA
+
+.empresas-contrata {
+    background:url(../images/empresas/empresas_hero_2.jpg) no-repeat center center;
+    background-size: cover;
+    .hero-img {
+        background:url(../images/empresas/empresas_hero_2_mobile.jpg) no-repeat center center;
+        background-size: cover;
+    }
+}
+
+    // HERO EMPRESAS
+
+.empresas-medios {
+    padding: 60px 0 80px;
+    img {
+        
+        max-width: 160px;
+        margin-bottom:20px,
+    }
+    .empresas-medios-logos {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+        -ms-flex-pack: justify;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top:80px;
+        > div {
+            flex: 1 0 25%;
+        }
+    }
+}
+
+
+//// MEDIA QUERIES
+
+@media (max-width:860px) {
+    .empresas-medios {
+        .empresas-medios-logos {
+            flex-direction: column;
+        }
+    }
+}
+
+@media (max-width:480px) {
+    .empresas-hero {
+        height:320px;
+        padding-top:20px;
+        background-position: 30% center;
+        margin: 0;
+    }
+}

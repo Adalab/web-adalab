@@ -5,7 +5,9 @@
 	},
 	"js": {
 		"src": [
-			"src/js/main.js"
+			"src/js/main.js",
+            "src/js/swiper.min.js",
+            "src/js/modal.js"
 		],
 		"dest": "docs/assets/js/"
 	},
