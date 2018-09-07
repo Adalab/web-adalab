@@ -29,6 +29,7 @@
         <partial src="_favicons.html" title="Favicons"></partial>
         <partial src="_fonts.html" title="Fuentes"></partial>
 
+        <partial src="_analytics.html" title="Favicons"></partial>
     </head>
     <body>
 
@@ -43,7 +44,7 @@
                             <h2>Necesitamos personas comprometidas como tú</h2>
                         </div>
                         <div class="row">
-                            <a href="contacto-voluntarios.html" class="btn btn-lg">COLABORA</a>
+                            <a href="contacto-voluntarios.html" class="btn btn-lg">Únete</a>
                         </div>
                     </div>
                     <div class="pie">
@@ -52,10 +53,11 @@
                 </section>
                 
                 <section class="hero-text">
-                    <div class="content-sm">
+                    <div class="content-md">
                         <h3>¿Por qué sumarte a nuestro programa de voluntariado?</h3>
                         <p>En Adalab buscamos personas comprometidas con las diversidad, que quieran ayudar a nuestras alumnas en su proceso de reinvención como programadoras.
-                        Hay muchas formas de colaborar, seguro que encuentras la tuya. <br/>Conseguir que el sector de la programación sea más diverso es una tarea de todos/as, ¿nos ayudas?</p>
+                        Hay muchas formas de colaborar, seguro que encuentras la tuya.</p> 
+                        <p>Conseguir que el sector de la programación sea más diverso es una tarea de todos/as, ¿nos ayudas?</p>
                     </div>
                 </section>
                 
@@ -108,13 +110,13 @@
                         <div id="vc3" class="modal voluntarios">
                             <div class="modal-content">
                                 <h4>Siendo profesor@ asistente</h4>
-                                <p>Si eres programador/a y te gusta ayudar, puedes apoyar a nuestras alumnas en ciertas sesiones del programa formativo, mientras hacen ejercicios prácticos de front-end o trabajan en equipo en sus proyectos de desarrollo web. ¡Ellas tienen mil dudas por resolver y necesitan a profesionales como tú!. <br/>Apúntate como profesor/a asistente a través del <a href="contacto-voluntarios.html">formulario</a> de voluntariado. <span>Dedicación: <span>2 sesiones de 4 horas</span></span> </p>
+                                <p>Si eres programador/a y te gusta ayudar, puedes apoyar a nuestras alumnas en ciertas sesiones del programa formativo, mientras hacen ejercicios prácticos de front-end o trabajan en equipo en sus proyectos de desarrollo web. ¡Ellas tienen mil dudas por resolver y necesitan a profesionales como tú!. <br/>Apúntate como profesor/a asistente a través del <a href="contacto-voluntarios.html">formulario</a> de voluntariado. <span>Dedicación: <span>Compromiso mínimo de 1 sesión de 4 horas</span></span> </p>
                             </div>
                         </div>
                         <div id="vc4" class="modal voluntarios">
                             <div class="modal-content">
                                 <h4>Proponiendo un proyecto real</h4>
-                                <p>Si trabajas en una empresa que busca el mejor talento junior front-end, tienes la oportunidad de proponer un proyecto real como parte de la formación de las alumnas, para que sea desarrollado por ellas durante las últimas 3 semanas del curso. De esta forma, tu empresa podrá conocer cómo trabajan nuestras alumnas y seleccionar los mejores perfiles. <a href="https://drive.google.com/open?id=1mZjIb45yutuQK58ouPvvKzbQnK76FYg1" target="_blank">Aquí</a> puedes consultar toda la información sobre las características del proyecto.</p>
+                                <p>Si trabajas en una empresa que busca el mejor talento junior front-end, tienes la oportunidad de proponer un proyecto real como parte de la formación de las alumnas, para que sea desarrollado por ellas durante las últimas 3 semanas del curso. De esta forma, tu empresa podrá conocer cómo trabajan nuestras alumnas y seleccionar los mejores perfiles. Consulta toda la información sobre las características del proyecto <a href="https://drive.google.com/open?id=1mZjIb45yutuQK58ouPvvKzbQnK76FYg1" target="_blank">aquí</a> y proponnos un proyecto en el formulario voluntariado.</p>
                             </div>
                         </div>
                         <div id="vc5" class="modal voluntarios">
@@ -126,7 +128,7 @@
                     </div>
                 </section>
                 
-                <section class="hero-text">
+                <section class="hero-text voluntarios-slider">
                     <div class="content-sm">
                         <h3>Momentos voluntari@s ¿te unes?</h3>
                     </div>
@@ -237,6 +239,12 @@
                         </dl>
                 </section>
                 
+                <section class="hero-text">
+                    <div class="content-sm" style="max-width:500px;">
+                        <p>¿Nos ayudas a crear diversidad?</p>
+                        <a href="contacto-voluntarios.html" class="btn btn-lg">Únete</a>
+                    </div>
+                </section>
             </main>
 
             <partial src="_footer.html" title="Some title"></partial>
@@ -255,7 +263,15 @@
                     , pagination: {
                         el: '.swiper-pagination'
                         , clickable: true
-                    , }
+                    , },
+                      breakpoints: {
+                        // when window width is <= 320px
+                        680: {
+                          slidesPerView: "auto",
+                          spaceBetween: 10,
+                            centeredSlides: true,
+                        },
+                      }
                 , });
             </script>
         </div>

@@ -7,7 +7,6 @@
     background:url(../images/empresas/empresas_hero_main.jpg) no-repeat center center;
     background-size: cover;
     height: 70vh;
-    margin: 0 0 60px;
     padding-top:60px;
     &:before {
         content: '';
@@ -36,11 +35,25 @@
     padding:60px 0;
     background:url(../images/empresas/empresas_hero_1.jpg) no-repeat center center;
     background-size: cover;
+    .hero-img {
+        background: url(../images/empresas/empresas_hero_1_mobile.jpg) no-repeat center center;
+        background-size: cover;
+        margin-bottom:30px;
+    }
     h4 {
         margin-bottom:25px;
     }
     .row {
         justify-content: space-between;
+    }
+}
+
+@media (max-width:680px) {
+    .empresas-perfil {
+        background:none;
+        background-color:$grey1;
+        padding-top:0;
+        margin: 0;
     }
 }
 
@@ -60,6 +73,7 @@
     // HERO CONTRATA
 
 .empresas-contrata {
+    margin: 0;
     background:url(../images/empresas/empresas_hero_2.jpg) no-repeat center center;
     background-size: cover;
     .hero-img {
@@ -68,10 +82,17 @@
     }
 }
 
+@media (max-width:680px) {
+    .empresas-contrata {
+        padding-top:0;
+    }
+}
+
     // HERO EMPRESAS
 
 .empresas-medios {
     padding: 60px 0 80px;
+    background-color:$grey1;
     img {
         
         max-width: 160px;
@@ -103,6 +124,12 @@
         .empresas-medios-logos {
             flex-direction: column;
         }
+    }
+}
+
+@media (max-width:680px) {
+    .empresas-adalaber {
+        padding-top:0;
     }
 }
 
