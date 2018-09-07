@@ -1600,7 +1600,7 @@ button.swiper-pagination-bullet {
   transition: opacity cubic-bezier(0.1, 0.79, 0.24, 0.93) 0.3s;
 }
 
-.cookie-message a:first-child {
+.cookie-message a.cookiebar-close {
   margin-left: 30px;
   background-color: #099d8d;
   padding: 10px 20px;
@@ -2702,6 +2702,15 @@ button.swiper-pagination-bullet {
     -ms-flex-preferred-size: calc(100% / 2 - 32px);
     flex-basis: calc(100% / 2 - 32px);
     margin-bottom: 30px;
+  }
+
+  .cookie-message span {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .cookie-message a {
+    margin: 0;
   }
 
   .home-cta {
