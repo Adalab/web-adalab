@@ -69,3 +69,13 @@
         background-color:$aqua;
     }
 }
+
+@media (max-width: 680px) {
+    .modal {
+        .modal-content {
+            p {
+                font-size: 16px;
+            }
+        }
+    }
+}

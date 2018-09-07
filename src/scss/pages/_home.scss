@@ -19,6 +19,14 @@
     }
 }
 
+@media (max-width:480px) {
+    .home-hero {
+        height:320px;
+        padding-top:20px;
+        background-position: 30% center;
+    }
+}
+
     // HOME INSCRÍBETE
 
 .home-cta {
@@ -37,14 +45,23 @@
     }
 }
 
+@media (max-width:860px) {
+    .home-cta {
+        padding: 0;
+        p {
+            font-size: 18px;
+            line-height: 160%;
+        }
+    }
+}
+
     // HOME PARTNERS - COLABORADORES
 
 .home-partners {
     position: relative;
-    margin-top:60px;
     padding:60px 0;
     background-color:$grey1;
-/*    &:before {
+    &:before {
         content: '';
         position: absolute;
         top:0;
@@ -53,12 +70,23 @@
         height: 100%;
         background-color:$grey2;
         opacity: .3;
-    }*/
+    }
     img {
         display: inline-block;
         vertical-align: middle;
         max-width: 130px;
         margin: 30px;
+    }
+}
+
+@media (max-width:680px) {
+    .home-partners {
+        &:before {
+            display: none;
+        }
+        .col {
+            flex-basis: auto;
+        }
     }
 }
 
@@ -122,10 +150,25 @@
     }
 }
 
+@media (max-width:860px) {
+    .home-medios {
+        .home-medios-logos {
+            flex-direction: column;
+        }
+    }
+}
+
+@media (max-width:860px) {
+    .home-voluntariado {
+        padding-top: 0;
+    }
+}
+
 
 //// BACKGROUNDS HEROS
 
 .home-inscribete {
+    margin: 80px 0 0;
     background:url(../images/home/home_hero_1.jpg) no-repeat center center;
     background-size: cover;
     .hero-img {
@@ -134,7 +177,15 @@
     }
 }
 
+@media (max-width:860px) {
+    .home-inscribete {
+        margin:0;
+        padding-bottom: 0;
+    }
+}
+
 .home-contrata {
+    margin: 0;
     background:url(../images/home/home_hero_2.jpg) no-repeat center center;
     background-size: cover;
     .hero-img {
@@ -144,6 +195,7 @@
 }
 
 .home-colabora {
+    margin: 0;
     background:url(../images/home/home_hero_3.jpg) no-repeat center center;
     background-size: cover;
     .hero-img {
@@ -152,40 +204,20 @@
     }
 }
 
-
-//// MEDIA QUERIES
-
 @media (max-width:860px) {
-    .home-cta {
-        padding: 0;
-        p {
-            font-size: 18px;
-            line-height: 160%;
-        }
-    }
-    .home-medios {
-        .home-medios-logos {
-            flex-direction: column;
-        }
+    .home-colabora {
+        padding:0;
     }
 }
 
 @media (max-width:680px) {
-    .home-partners {
-        &:before {
-            display: none;
-        }
-        .col {
-            flex-basis: auto;
-        }
+    .home-empresas {
+        padding-top: 0;
     }
 }
 
-@media (max-width:480px) {
-    .home-hero {
-        height:320px;
-        padding-top:20px;
-        background-position: 30% center;
-        margin: 0;
+@media (max-width:680px) {
+    .home-formacion {
+        padding: 20px 0;
     }
 }

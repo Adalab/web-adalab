@@ -3,17 +3,28 @@
     // HERO
 
 .voluntarios-hero {
+    display: flex;
+    align-items: flex-end;
     position: relative;
     background: url(../images/voluntarios/voluntarios_hero_main.jpg) no-repeat center center;
     background-size: cover;
     height: 70vh;
-    padding-top: 60px;
+    padding-bottom: 60px;
     h2 {
         max-width: 450px;
         font-size: calc(20px + 1.5vw);
         font-weight: 700;
         line-height: 120%;
         color: #FFF;
+        text-shadow: 3px 3px 3px rgba(0,0,0,.1);
+    }
+}
+
+@media (max-width: 480px) {
+    .voluntarios-hero {
+        height: 320px;
+        padding-top: 20px;
+        
     }
 }
 
@@ -113,12 +124,18 @@
 }
 
 
-//// MEDIA QUERIES
+    // ESTILOS SLIDER
+
+
 
 @media (max-width:680px) {
-
-}
-
-@media (max-width:420px) {
-
+    .voluntarios-slider {
+        .swiper-button-next, .swiper-button-prev {
+            display: none;
+        }
+        .swiper-pagination {
+            margin-top:0;
+        }
+    }
+      
 }

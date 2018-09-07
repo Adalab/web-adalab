@@ -47,8 +47,6 @@
     }
 }
 
-// MEDIA QUERIES
-
 @media (max-width:680px) {
     .btn {
         padding:10px 15px;
@@ -64,7 +62,13 @@ h2 {
     font-weight: normal;
     color: $grey3;
     line-height: 160%;
-    margin-bottom:40px;
+    margin-bottom:25px;
+}
+
+@media (max-width:680px) {
+    h2 {
+        font-size: 16px;
+    }
 }
 
 h3 {
@@ -92,6 +96,12 @@ h3 {
         margin-top: -10px;
         font-size: 24px;
         font-weight: 300;
+    }
+}
+
+@media (max-width:680px) {
+    h3 {
+        font-size: 24px;
     }
 }
 
