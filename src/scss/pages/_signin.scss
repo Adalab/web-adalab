@@ -216,7 +216,6 @@
             max-width: 100%;
         }
         .col-25 {
-            padding-top:40px;
             padding-left:0;
             text-align: center;
         }
@@ -285,30 +284,33 @@
         }
         .swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
             position: absolute;
-            bottom:89px;
+            bottom:0;
+        }
+        .swiper-slide {
+            .row {
+                position: relative;
+                &:after {
+                    content: '';
+                    position: absolute;
+                    bottom:30px;
+                    left:0;
+                    right:0;
+                    margin: auto;
+                    width:calc(50% - 54px);
+                    height:4px;
+                    background-color:$grey2;
+                }
+            }
         }
     }
     .row {
+        width: 100%;
         justify-content: space-evenly;
+        flex-wrap: nowrap;
         padding: 0 25px;
+        
     }
-    .col-50 {
-        .row {
-            position: relative;
-            &:after {
-                content: '';
-                position: absolute;
-                bottom:30px;
-                left:0;
-                right:0;
-                margin: auto;
-                width:calc(50% - 54px);
-                height:4px;
-                background-color:$grey2;
-            }
-            
-        }
-    }
+
     .inscribete-calendario-fecha {
         flex-wrap: wrap;
         position: relative;
@@ -316,7 +318,7 @@
         align-items: center;
         justify-content: center;
         min-height: 80px;
-        margin:30px 0 60px;
+        margin: 30px 4px 60px 4px;
         padding:40px 10px;
         width:44%;
         background-color:$grey2;
@@ -377,6 +379,15 @@
             .swiper-container {
                 width: 100%;
             }
+            .swiper-slide .row:after {
+                width: calc(50% - 24px);
+            }
+        }
+        .row {
+            padding:0;
+        }
+        .btn {
+            margin-top:15px;
         }
     }
     .swiper-pagination {
