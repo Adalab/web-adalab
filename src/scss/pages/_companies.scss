@@ -3,11 +3,13 @@
     // HERO
 
 .empresas-hero {
+    display: flex;
+    align-items: flex-end;
     position: relative;
     background:url(../images/empresas/empresas_hero_main.jpg) no-repeat center center;
     background-size: cover;
     height: 70vh;
-    padding-top:60px;
+    padding-bottom:60px;
     &:before {
         content: '';
         position: absolute;
@@ -26,8 +28,26 @@
         font-weight: 700;
         line-height: 120%;
         color:#FFF;
+        text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
     }
 }
+
+    // HERO CONTRATAR ADALABER
+
+.empresas-adalaber {
+    a {
+        &:last-child {
+            margin-top:40px;
+        }
+    }
+}
+
+@media (max-width:680px) {
+    .empresas-adalaber {
+        padding-top:0;
+    }
+}
+
     // HERO PERFIL
 
 .empresas-perfil {
@@ -124,12 +144,6 @@
         .empresas-medios-logos {
             flex-direction: column;
         }
-    }
-}
-
-@media (max-width:680px) {
-    .empresas-adalaber {
-        padding-top:0;
     }
 }
 

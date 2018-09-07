@@ -18,6 +18,9 @@
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
+    p:last-child {
+        margin-bottom: 0;
+    }
 }
 
 .content-sm {
