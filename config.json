@@ -7,7 +7,9 @@
 		"src": [
 			"src/js/main.js",
             "src/js/swiper.min.js",
-            "src/js/modal.js"
+            "src/js/modal.js",
+            "src/js/desplegable.js",
+            "src/js/cookies.js"
 		],
 		"dest": "docs/assets/js/"
 	},
