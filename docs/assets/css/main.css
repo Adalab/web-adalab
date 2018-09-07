@@ -2411,21 +2411,14 @@ button.swiper-pagination-bullet {
 
 .inscribete-calendario .slider .swiper-container-horizontal > .swiper-pagination-bullets,.inscribete-calendario .slider .swiper-pagination-custom,.inscribete-calendario .slider .swiper-pagination-fraction {
   position: absolute;
-  bottom: 89px;
+  bottom: 0;
 }
 
-.inscribete-calendario .row {
-  -webkit-box-pack: space-evenly;
-  -ms-flex-pack: space-evenly;
-  justify-content: space-evenly;
-  padding: 0 25px;
-}
-
-.inscribete-calendario .col-50 .row {
+.inscribete-calendario .slider .swiper-slide .row {
   position: relative;
 }
 
-.inscribete-calendario .col-50 .row:after {
+.inscribete-calendario .slider .swiper-slide .row:after {
   content: '';
   position: absolute;
   bottom: 30px;
@@ -2435,6 +2428,16 @@ button.swiper-pagination-bullet {
   width: calc(50% - 54px);
   height: 4px;
   background-color: #b8b8b9;
+}
+
+.inscribete-calendario .row {
+  width: 100%;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding: 0 25px;
 }
 
 .inscribete-calendario .inscribete-calendario-fecha {
@@ -2451,7 +2454,7 @@ button.swiper-pagination-bullet {
   -ms-flex-pack: center;
   justify-content: center;
   min-height: 80px;
-  margin: 30px 0 60px;
+  margin: 30px 4px 60px 4px;
   padding: 40px 10px;
   width: 44%;
   background-color: #b8b8b9;
@@ -2691,7 +2694,6 @@ button.swiper-pagination-bullet {
   }
 
   .inscribete-seleccion .col-25 {
-    padding-top: 40px;
     padding-left: 0;
     text-align: center;
   }
@@ -2971,6 +2973,18 @@ button.swiper-pagination-bullet {
 
   .inscribete-calendario .slider .swiper-container {
     width: 100%;
+  }
+
+  .inscribete-calendario .slider .swiper-slide .row:after {
+    width: calc(50% - 24px);
+  }
+
+  .inscribete-calendario .row {
+    padding: 0;
+  }
+
+  .inscribete-calendario .btn {
+    margin-top: 15px;
   }
 
   .swiper-pagination {

@@ -180,37 +180,33 @@
                                 <div class="swiper-wrapper">
                                     <!-- CALENDARIO 1 -->
                                     <div class="swiper-slide slide-1">
-                                        <div class="col col-50">
-                                             <h4>Proceso de selección <span>inicio/fin</span></h4>
-                                            <div class="row">
-                                                <div class="inscribete-calendario-fecha">10 de septiembre 2018</div>
-                                                <div class="inscribete-calendario-fecha">16 de octubre 2018</div>
-                                            </div>
+                                         <h4>Proceso de selección <span>inicio/fin</span></h4>
+                                        <div class="row">
+                                            <div class="inscribete-calendario-fecha">10 de septiembre 2018</div>
+                                            <div class="inscribete-calendario-fecha">16 de octubre 2018</div>
                                         </div>
-                                        <div class="col col-50">
-                                             <h4>Curso intensivo <span>inicio/fin</span></h4>
-                                            <div class="row">
-                                                <div class="inscribete-calendario-fecha aqua">23 de octubre 2018</div>
-                                                <div class="inscribete-calendario-fecha aqua">20 de febrero 2019</div>
-                                            </div>
-                                        </div> <a href="contacto-inscribete.html" class="btn btn-lg">INSCRÍBETE</a>
+                                    </div>
+                                    <div class="swiper-slide slide-1">
+                                         <h4>Curso intensivo <span>inicio/fin</span></h4>
+                                        <div class="row">
+                                            <div class="inscribete-calendario-fecha aqua">23 de octubre 2018</div>
+                                            <div class="inscribete-calendario-fecha aqua">20 de febrero 2019</div>
+                                        </div>
                                     </div>
                                     <!-- CALENDARIO 2 -->
                                     <div class="swiper-slide slide-2">
-                                        <div class="col col-50">
-                                             <h4>Proceso de selección <span>inicio/fin</span></h4>
-                                            <div class="row">
-                                                <div class="inscribete-calendario-fecha">3 de diciembre 2018</div>
-                                                <div class="inscribete-calendario-fecha">16 de enero 2019</div>
-                                            </div>
+                                         <h4>Proceso de selección <span>inicio/fin</span></h4>
+                                        <div class="row">
+                                            <div class="inscribete-calendario-fecha">3 de diciembre 2018</div>
+                                            <div class="inscribete-calendario-fecha">16 de enero 2019</div>
                                         </div>
-                                        <div class="col col-50">
-                                             <h4>Curso intensivo <span>inicio/fin</span></h4>
-                                            <div class="row">
-                                                <div class="inscribete-calendario-fecha aqua">23 de enero 2019</div>
-                                                <div class="inscribete-calendario-fecha aqua">20 de mayo 2019</div>
-                                            </div>
-                                        </div> <a href="contacto-inscribete.html" class="btn btn-lg">INSCRÍBETE</a>
+                                    </div>
+                                    <div class="swiper-slide slide-2">
+                                         <h4>Curso intensivo <span>inicio/fin</span></h4>
+                                        <div class="row">
+                                            <div class="inscribete-calendario-fecha aqua">23 de enero 2019</div>
+                                            <div class="inscribete-calendario-fecha aqua">20 de mayo 2019</div>
+                                        </div>
                                     </div>
                                 </div>
                                 <!-- Add Pagination -->
@@ -219,8 +215,7 @@
                             <!-- Add Arrows -->
                             <div class="swiper-arrow swiper-button-next"></div>
                             <div class="swiper-arrow swiper-button-prev"></div>
-                            <div class="content">
-                                <div class="row"></div>
+                            <div class="content"> <a href="contacto-inscribete.html" class="btn btn-lg">INSCRÍBETE</a>
                             </div>
                         </div>
                     </div>
@@ -435,8 +430,10 @@
             <!-- Initialize Swiper -->
             <script>
                 var swiper = new Swiper('.swiper-container', {
-                    slidesPerView: "auto"
+                    slidesPerView: 2
                     , spaceBetween: 0
+                    , slidesPerGroup: 2
+                    
                     /*, centeredSlides: true*/
                     , loop: true
                     , navigation: {
@@ -448,7 +445,11 @@
                         , clickable: true
                     , },
                     breakpoints: {  
-
+                            680: {
+                              slidesPerView: 1,
+                                slidesPerGroup: 1,
+                              spaceBetween: 0,
+                            },
 
                        }   
                 , });
