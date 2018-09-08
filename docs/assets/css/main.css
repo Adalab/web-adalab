@@ -2694,7 +2694,7 @@ button.swiper-pagination-bullet {
     margin-bottom: 20px;
   }
 
-  .cookie-message a {
+  .cookie-message a.cookiebar-close {
     margin: 0;
   }
 
