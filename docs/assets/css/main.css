@@ -13,7 +13,7 @@ a {
   width: 100%;
   min-height: 70vh;
   margin: 60px 0;
-  padding: 60px 0;
+  padding: 80px 0;
 }
 
 .hero p {
@@ -146,6 +146,10 @@ a {
 
 .bq-md {
   max-width: 334px;
+}
+
+.faq {
+  padding: 80px 0 65px;
 }
 
 .lista li {
@@ -503,7 +507,7 @@ h4 {
 }
 
 .content-md p:last-child {
-  margin-bottom: 0;
+  margin-bottom: 10px;
 }
 
 .content-sm {
@@ -1229,7 +1233,7 @@ button.swiper-pagination-bullet {
 
 .swiper-pagination {
   position: static;
-  margin: 20px auto;
+  margin: 20px auto 0 auto;
 }
 
 .swiper-pagination-bullet {
@@ -1511,8 +1515,6 @@ button.swiper-pagination-bullet {
 
 .desplegable dt {
   padding-bottom: 25px;
-  padding-top: 100px;
-  margin-top: -100px;
 }
 
 .desplegable dd {
@@ -1990,7 +1992,7 @@ button.swiper-pagination-bullet {
 }
 
 .home-reconocimientos {
-  padding: 60px 0 80px;
+  padding: 60px 0 65px;
 }
 
 .home-reconocimientos h6 {
@@ -2019,6 +2021,10 @@ button.swiper-pagination-bullet {
   padding: 20px;
   border: 1px solid #f1f1f1;
   max-width: 120px;
+}
+
+.home-reconocimientos h6 + img:last-child {
+  margin-bottom: 0;
 }
 
 .home-medios {
@@ -2174,7 +2180,7 @@ button.swiper-pagination-bullet {
 }
 
 .empresas-medios {
-  padding: 60px 0 80px;
+  padding: 80px 0 48px;
   background-color: #fafafa;
 }
 
@@ -2518,33 +2524,6 @@ button.swiper-pagination-bullet {
   text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
 }
 
-.voluntarios-comunidad .col {
- /*&.col-33 {
-            &:last-child {
-                pointer-events: none;
-                .voluntario-comunidad-b {
-                    background-color:$grey1;
-                    border:2px solid $aqua;
-                    &:before {
-                        content: '';
-                        background: url(../images/logo-adalab.svg) no-repeat center center;
-                        background-size: 50% 50%;
-                        width:100%;
-                        height: 100%;
-                        top:0;
-                        left:0;
-                        right:auto;
-                        bottom: auto;
-                        opacity: .6;
-                    }
-                    &:after {
-                        display: none;
-                    }
-                }
-            }
-        }*/;
-}
-
 .voluntarios-comunidad .voluntario-comunidad-b {
   position: relative;
   z-index: 1;
@@ -2662,6 +2641,10 @@ button.swiper-pagination-bullet {
 }
 
 @media (max-width: 880px) {
+  .inscribete-seleccion .inscribete-seleccion-list {
+    margin-bottom: 0;
+  }
+
   .inscribete-seleccion .inscribete-seleccion-list li {
     padding-right: 0;
     font-size: 16px;
@@ -2711,7 +2694,7 @@ button.swiper-pagination-bullet {
     margin-bottom: 20px;
   }
 
-  .cookie-message a {
+  .cookie-message a.cookiebar-close {
     margin: 0;
   }
 
@@ -2732,7 +2715,7 @@ button.swiper-pagination-bullet {
   }
 
   .home-voluntariado {
-    padding-top: 0;
+    padding-top: 60px;
   }
 
   .home-inscribete {
@@ -2891,7 +2874,7 @@ button.swiper-pagination-bullet {
   }
 
   .home-formacion {
-    padding: 20px 0;
+    padding: 60px 0 20px;
   }
 
   .empresas-adalaber {

@@ -32,7 +32,9 @@
             margin-bottom:20px;
         }
         a {
-            margin: 0;
+           &.cookiebar-close {
+                margin:0;
+            }
         }
     }
 }
