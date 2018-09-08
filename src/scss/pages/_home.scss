@@ -93,7 +93,7 @@
     // HOME RECONOMIENTOS
 
 .home-reconocimientos {
-    padding: 60px 0 80px;
+    padding: 60px 0 65px;
     h6 {
         position: relative;
         margin-top:40px;
@@ -118,6 +118,9 @@
         padding: 20px;
         border:1px solid #f1f1f1;
         max-width: 120px;
+    }
+    h6 + img:last-child {
+        margin-bottom: 0;
     }
 }
 
@@ -160,7 +163,7 @@
 
 @media (max-width:860px) {
     .home-voluntariado {
-        padding-top: 0;
+        padding-top: 60px;
     }
 }
 
@@ -218,6 +221,6 @@
 
 @media (max-width:680px) {
     .home-formacion {
-        padding: 20px 0;
+        padding: 60px 0 20px;
     }
 }

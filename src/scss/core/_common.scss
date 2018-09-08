@@ -21,7 +21,7 @@ a {
     width:100%;
     min-height: 70vh;
     margin:60px 0;
-    padding:60px 0;
+    padding:80px 0;
     p {
         max-width: 400px;
         font-size: calc(18px + .5vw);
@@ -213,6 +213,12 @@ a {
             font-weight: 400;
         }
     }
+}
+
+//// FAQ's
+
+.faq {
+    padding:80px 0 65px;
 }
 
 //// LISTAS
