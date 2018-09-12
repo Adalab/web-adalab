@@ -19,16 +19,16 @@
         <meta name="twitter:creator" content="@AdaLab_Digital">
         <meta name="twitter:title" content="AdaLab. Creando diversidad digital">
         <meta name="twitter:description" content="“Con el programa de Adalab y mi esfuerzo conseguí trabajo en una gran empresa, rodeándome además de personas dispuestas a ayudarme a crecer”.">
-        
+
 
         <link rel="canonical" href="http://www.adalab.es/">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
         <link href="assets/css/main.css" rel="stylesheet" type="text/css">
-        
+
         <partial src="_favicons.html" title="Favicons"></partial>
         <partial src="_fonts.html" title="Fuentes"></partial>
-        
+
         <partial src="_analytics.html" title="Favicons"></partial>
     </head>
     <body class="equipo">
@@ -81,8 +81,8 @@
                     <label for="mce-MMERGE3-month">Fecha de nacimiento  <span class="asterisk">*</span>
                 </label>
                     <div class="datefield">
-                        <span class="subfield dayfield"><input class="datepart required" type="text" pattern="[0-9]*" value="" placeholder="DD" size="2" maxlength="2" name="MMERGE3[day]" id="mce-MMERGE3-day"></span> / 
-                        <span class="subfield monthfield"><input class="datepart required" type="text" pattern="[0-9]*" value="" placeholder="MM" size="2" maxlength="2" name="MMERGE3[month]" id="mce-MMERGE3-month"></span> / 
+                        <span class="subfield dayfield"><input class="datepart required" type="text" pattern="[0-9]*" value="" placeholder="DD" size="2" maxlength="2" name="MMERGE3[day]" id="mce-MMERGE3-day"></span> /
+                        <span class="subfield monthfield"><input class="datepart required" type="text" pattern="[0-9]*" value="" placeholder="MM" size="2" maxlength="2" name="MMERGE3[month]" id="mce-MMERGE3-month"></span> /
                         <span class="subfield yearfield"><input class="datepart required" type="text" pattern="[0-9]*" value="" placeholder="YYYY" size="4" maxlength="4" name="MMERGE3[year]" id="mce-MMERGE3-year"></span>
                         <span class="small-meta nowrap">( dd / mm / yyyy )</span>
                     </div>
@@ -182,12 +182,14 @@
                 <div class="mc-field-group">
                     <label for="mce-MMERGE14">¿Lista para los siguientes pasos?  <span class="asterisk">*</span>
                 </label>
-                    <select name="MMERGE14" class="required" id="mce-MMERGE14">
-                    <option value=""></option>
-                    <option value="Sí, estoy lista">Sí, estoy lista</option>
-                <option value="No, aun no">No, aun no</option>
-
-                    </select>
+                <p class="help_text">
+                  Una vez inscrita en el programa nos comunicaremos contigo por mail. En ocasiones estos mails llegan a tu correo como Spam o Promociones. Para evitarlo agrega admisiones@adalab.es a tu libreta de direcciones o haz una búsqueda de los correos que te han llegado desde admisiones@adalab.es.
+                </p>
+                <select name="MMERGE14" class="required" id="mce-MMERGE14">
+                  <option value=""></option>
+                  <option value="Sí, estoy lista">Sí, estoy lista</option>
+                  <option value="No, aun no">No, aun no</option>
+                </select>
                 </div>
 
                         <div id="mergeRow-gdpr" class="mergeRow gdpr-mergeRow content__gdprBlock mc-field-group">
@@ -238,7 +240,7 @@
                                           min: $.validator.format("Por favor, escribe un valor mayor o igual a {0}.")
                                         });}(jQuery));var $mcj = jQuery.noConflict(true);</script>
                     <!--End mc_embed_signup-->
-                
+
             </main>
 
             <partial src="_footer.html" title="Some title"></partial>
