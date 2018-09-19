@@ -5,6 +5,13 @@
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
+    ],
+    "redirects": [
+      {
+        "source": "/curso-de-desarrollo-web/",
+        "destination": "/curso-desarrollo-web.html",
+        "type": 301
+      }
     ]
   }
 }
