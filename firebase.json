@@ -11,6 +11,21 @@
         "source": "/curso-de-desarrollo-web/",
         "destination": "/curso-desarrollo-web.html",
         "type": 301
+      },
+      {
+        "source": "/alumnas-en-practicas/",
+        "destination": "/desarrollador-front-end.html",
+        "type": 301
+      },
+      {
+        "source": "/contacto-alumnas/",
+        "destination": "/contacto-inscribete.html",
+        "type": 301
+      },
+      {
+        "source": "/hazte-voluntarioa/",
+        "destination": "/hazte-voluntario.html",
+        "type": 301
       }
     ]
   }
