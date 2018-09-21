@@ -13,6 +13,10 @@
         font-size: calc(20px + 1.5vw);
         font-weight: 700;
         line-height: 120%;
+        span {
+            display: block;
+            font-weight: 700;
+        }
     }
     .pie {
         background:none;
@@ -59,7 +63,7 @@
 
 .home-partners {
     position: relative;
-    padding:60px 0;
+    padding:80px 0 50px 0;
     background-color:$grey1;
     &:before {
         content: '';
@@ -81,11 +85,16 @@
 
 @media (max-width:680px) {
     .home-partners {
+        padding: 50px 0 30px;
         &:before {
             display: none;
         }
         .col {
             flex-basis: auto;
+        }
+        img {
+            max-width: 120px;
+            margin: 0 10px 30px 10px;
         }
     }
 }
@@ -93,7 +102,7 @@
     // HOME RECONOMIENTOS
 
 .home-reconocimientos {
-    padding: 60px 0 65px;
+    padding: 80px 0 60px;
     h6 {
         position: relative;
         margin-top:40px;
@@ -124,10 +133,19 @@
     }
 }
 
+@media (max-width:680px) {
+    .home-reconocimientos {
+        padding:50px 0;
+        h6 {
+            font-size: 12px;
+        }
+    }
+}
+
     // HOME MEDIOS
 
 .home-medios {
-    padding: 60px 0 80px;
+    padding: 80px 0 80px;
     background-color:$grey1;
     a {
         transition: opacity cubic-bezier(0.1, 0.79, 0.24, 0.93) .3s;
@@ -136,18 +154,13 @@
         }
     }
     img {
-        max-width: 130px;
-        margin-bottom:20px,
+        max-width: 120px;
+        max-height: 25px;
+        margin:0 10px 20px 10px;
     }
     .home-medios-logos {
-        display: -webkit-box;
-        display: -moz-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
         display: flex;
-        -webkit-justify-content: space-between;
         justify-content: space-between;
-        -ms-flex-pack: justify;
         align-items: center;
         margin-top:80px;
     }
@@ -156,8 +169,16 @@
 @media (max-width:860px) {
     .home-medios {
         .home-medios-logos {
-            flex-direction: column;
+            margin-top:60px;
+            flex-wrap: wrap;
+            justify-content: space-around;
         }
+    }
+}
+
+@media (max-width:680px) {
+    .home-medios {
+        padding: 50px 0;
     }
 }
 
@@ -183,7 +204,7 @@
 @media (max-width:860px) {
     .home-inscribete {
         margin:0;
-        padding-bottom: 0;
+        padding: 30px 0 0 !important;
     }
 }
 
@@ -207,7 +228,7 @@
     }
 }
 
-@media (max-width:860px) {
+@media (max-width:680px) {
     .home-colabora {
         padding:0;
     }

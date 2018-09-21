@@ -64,7 +64,7 @@ a {
 }
 
 .hero-text.grey {
-  background-color: #fafafa;
+  background-color: #f5f5f5;
 }
 
 .hero-text p {
@@ -573,6 +573,10 @@ h4 {
   -ms-flex-pack: end;
   justify-content: flex-end;
   text-align: right;
+}
+
+.show-mobile {
+  display: none;
 }/**
  * Swiper 4.3.5
  * Most modern mobile touch slider and framework with hardware accelerated transitions
@@ -1944,6 +1948,11 @@ button.swiper-pagination-bullet {
   line-height: 120%;
 }
 
+.home-hero h2 span {
+  display: block;
+  font-weight: 700;
+}
+
 .home-hero .pie {
   background: none;
 }
@@ -1969,7 +1978,7 @@ button.swiper-pagination-bullet {
 
 .home-partners {
   position: relative;
-  padding: 60px 0;
+  padding: 80px 0 50px 0;
   background-color: #fafafa;
 }
 
@@ -1992,7 +2001,7 @@ button.swiper-pagination-bullet {
 }
 
 .home-reconocimientos {
-  padding: 60px 0 65px;
+  padding: 80px 0 60px;
 }
 
 .home-reconocimientos h6 {
@@ -2028,7 +2037,7 @@ button.swiper-pagination-bullet {
 }
 
 .home-medios {
-  padding: 60px 0 80px;
+  padding: 80px 0 80px;
   background-color: #fafafa;
 }
 
@@ -2042,8 +2051,9 @@ button.swiper-pagination-bullet {
 }
 
 .home-medios img {
-  max-width: 130px;
-  margin-bottom: 20px;
+  max-width: 120px;
+  max-height: 25px;
+  margin: 0 10px 20px 10px;
 }
 
 .home-medios .home-medios-logos {
@@ -2051,8 +2061,8 @@ button.swiper-pagination-bullet {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  justify-content: space-between;
   -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -2135,7 +2145,7 @@ button.swiper-pagination-bullet {
 
 .empresas-perfil {
   position: relative;
-  padding: 60px 0;
+  padding: 80px 0;
   background: url(../images/empresas/empresas_hero_1.jpg) no-repeat center center;
   background-size: cover;
 }
@@ -2165,7 +2175,7 @@ button.swiper-pagination-bullet {
 }
 
 .empresas-voluntariado .row {
-  margin: 40px 0;
+  margin: 40px -15px;
 }
 
 .empresas-contrata {
@@ -2185,8 +2195,9 @@ button.swiper-pagination-bullet {
 }
 
 .empresas-medios img {
-  max-width: 160px;
-  margin-bottom: 20px;
+  max-height: 80px;
+  max-width: 120px;
+  margin: 0 10px 20px 10px;
 }
 
 .empresas-medios .empresas-medios-logos {
@@ -2194,8 +2205,8 @@ button.swiper-pagination-bullet {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  justify-content: space-between;
   -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -2327,7 +2338,7 @@ button.swiper-pagination-bullet {
 }
 
 .inscribete-seleccion .inscribete-seleccion-list {
-  margin: 40px 0;
+  margin: 40px 0 0;
   text-align: left;
 }
 
@@ -2461,7 +2472,7 @@ button.swiper-pagination-bullet {
   justify-content: center;
   min-height: 80px;
   margin: 30px 4px 60px 4px;
-  padding: 40px 10px;
+  padding: 40px 15px;
   width: 44%;
   background-color: #b8b8b9;
   border-radius: 3px;
@@ -2684,9 +2695,15 @@ button.swiper-pagination-bullet {
 
 @media (max-width: 860px) {
   .hero-datos .hero-dato {
-    -ms-flex-preferred-size: calc(100% / 2 - 32px);
-    flex-basis: calc(100% / 2 - 32px);
+    margin: 0 15px 30px 0;
+    -webkit-box-flex: calc(50% - 8px);
+    -ms-flex: calc(50% - 8px) 0 1;
+    flex: calc(50% - 8px) 0 1;
     margin-bottom: 30px;
+  }
+
+  .hero-datos .hero-dato:nth-child(2n+2) {
+    margin-right: 0;
   }
 
   .cookie-message span {
@@ -2708,10 +2725,11 @@ button.swiper-pagination-bullet {
   }
 
   .home-medios .home-medios-logos {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+    margin-top: 60px;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
   }
 
   .home-voluntariado {
@@ -2720,29 +2738,19 @@ button.swiper-pagination-bullet {
 
   .home-inscribete {
     margin: 0;
-    padding-bottom: 0;
-  }
-
-  .home-colabora {
-    padding: 0;
-  }
-
-  .empresas-medios .empresas-medios-logos {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+    padding: 30px 0 0 !important;
   }
 }
 
 @media (max-width: 680px) {
   .hero {
     background: none;
+    padding: 50px 0;
   }
 
   .hero .content {
     position: static;
-    background-color: #fafafa;
+    background-color: #f5f5f5;
   }
 
   .hero .content .right {
@@ -2752,8 +2760,20 @@ button.swiper-pagination-bullet {
     text-align: center;
   }
 
+  .hero blockquote cite {
+    font-size: 16px;
+  }
+
+  .hero blockquote cite strong {
+    font-size: 16px;
+  }
+
   .hero-img {
     display: block;
+  }
+
+  .hero-text {
+    padding: 50px 0;
   }
 
   .hero-text p {
@@ -2766,10 +2786,12 @@ button.swiper-pagination-bullet {
 
   .bq-md,.bq-lg {
     padding: 30px 15px 60px 15px;
+    margin: 0 auto;
+    text-align: center;
   }
 
   .bq-md p,.bq-lg p {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
   }
 
@@ -2793,6 +2815,22 @@ button.swiper-pagination-bullet {
 
   h3 {
     font-size: 24px;
+  }
+
+  .show-mobile {
+    display: block;
+  }
+
+  .hide-mobile {
+    display: none;
+  }
+
+  .blocker {
+    padding: 20px 0;
+  }
+
+  .modal .modal-content {
+    padding: 60px 40px;
   }
 
   .modal .modal-content p {
@@ -2860,6 +2898,10 @@ button.swiper-pagination-bullet {
     flex-basis: calc(100% / 2 - 32px);
   }
 
+  .home-partners {
+    padding: 50px 0 30px;
+  }
+
   .home-partners:before {
     display: none;
   }
@@ -2867,6 +2909,27 @@ button.swiper-pagination-bullet {
   .home-partners .col {
     -ms-flex-preferred-size: auto;
     flex-basis: auto;
+  }
+
+  .home-partners img {
+    max-width: 120px;
+    margin: 0 10px 30px 10px;
+  }
+
+  .home-reconocimientos {
+    padding: 50px 0;
+  }
+
+  .home-reconocimientos h6 {
+    font-size: 12px;
+  }
+
+  .home-medios {
+    padding: 50px 0;
+  }
+
+  .home-colabora {
+    padding: 0;
   }
 
   .home-empresas {
@@ -2877,6 +2940,13 @@ button.swiper-pagination-bullet {
     padding: 60px 0 20px;
   }
 
+  .empresas-hero {
+    height: 320px;
+    padding: 20px 0 0;
+    background-position: 30% center;
+    margin: 0 0 50px;
+  }
+
   .empresas-adalaber {
     padding-top: 0;
   }
@@ -2884,18 +2954,35 @@ button.swiper-pagination-bullet {
   .empresas-perfil {
     background: none;
     background-color: #fafafa;
-    padding-top: 0;
     margin: 0;
+    padding: 50px 0 30px;
+  }
+
+  .empresas-perfil .col-33 {
+    -webkit-box-flex: 100%;
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
   }
 
   .empresas-contrata {
     padding-top: 0;
   }
 
+  .empresas-medios {
+    padding: 50px 0 30px;
+  }
+
+  .inscribete-hero {
+    height: 320px;
+    padding: 20px 0 0;
+    margin-bottom: 50px;
+  }
+
   .inscribete-ana {
     color: #54585a;
     padding: 0;
-    margin: 0 0 60px;
+    margin: 0 0 50px;
   }
 
   .inscribete-programa {
@@ -2916,17 +3003,24 @@ button.swiper-pagination-bullet {
     margin-top: 30px;
   }
 
+  .inscribete-programa ul.mas {
+    margin-bottom: 30px;
+  }
+
   .inscribete-programa ul.mas:before {
-    display: none;
+    top: auto;
+    bottom: -65px;
+    right: 0;
+    left: 0;
   }
 
   .inscribete-aprenderas {
     background: none;
-    padding-top: 0;
+    padding: 0 0 30px;
     margin: 0;
   }
 
-  .col-33 {
+  .inscribete-aprenderas .col-33 {
     -webkit-box-flex: 100%;
     -ms-flex: 100%;
     flex: 100%;
@@ -2992,43 +3086,64 @@ button.swiper-pagination-bullet {
     transform: rotate(180deg) scale3d(0.6, 0.6, 1);
   }
 
+  .voluntarios-hero {
+    height: 320px;
+    margin-bottom: 50px;
+    padding: 20px 0 0;
+  }
+
+  .voluntarios-comunidad .col-33 {
+    -webkit-box-flex: 50%;
+    -ms-flex: 50% 0 1;
+    flex: 50% 0 1;
+    max-width: 50%;
+  }
+
+  .voluntarios-comunidad .col-33:nth-child(2n+2) .voluntario-comunidad-b {
+    margin: 0 0 20px 0;
+  }
+
+  .voluntarios-comunidad .voluntario-comunidad-b {
+    margin: 0 10px 20px 0;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .voluntarios-slider {
+    padding: 50px 0 20px;
+  }
+
   .voluntarios-slider .swiper-button-next,.voluntarios-slider .swiper-button-prev {
-    display: none;
+ /*display: none;*/
+    top: calc(50% - 42px);
   }
 
   .voluntarios-slider .swiper-pagination {
     margin-top: 0;
   }
+
+  .voluntarios-slider .slider {
+    padding: 0 20px;
+  }
 }
 
 @media (max-width: 480px) {
-  .hero-datos .hero-dato {
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
-    margin-bottom: 30px;
+  .hero-datos .hero-dato span {
+    font-size: 30px;
+  }
+
+  .hero-datos .hero-dato span > span {
+    font-size: 20px;
+  }
+
+  .hero-datos .hero-dato p {
+    font-size: 12px;
   }
 
   .home-hero {
     height: 320px;
     padding-top: 20px;
     background-position: 30% center;
-  }
-
-  .empresas-hero {
-    height: 320px;
-    padding-top: 20px;
-    background-position: 30% center;
-    margin: 0;
-  }
-
-  .inscribete-hero {
-    height: 320px;
-    padding-top: 20px;
-  }
-
-  .voluntarios-hero {
-    height: 320px;
-    padding-top: 20px;
   }
 }
 

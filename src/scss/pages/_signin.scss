@@ -21,11 +21,11 @@
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 680px) {
     .inscribete-hero {
         height: 320px;
-        padding-top: 20px;
-        
+        padding:20px 0 0;
+        margin-bottom: 50px;
     }
 }
     
@@ -46,7 +46,7 @@
     .inscribete-ana {
         color:$grey3;
         padding:0;
-        margin: 0 0 60px;
+        margin: 0 0 50px;
     }
 }
 
@@ -133,8 +133,12 @@
         }
         ul {
             &.mas {
+                margin-bottom:30px;
                 &:before {
-                   display: none;
+                    top: auto;
+                    bottom: -65px;
+                    right: 0;
+                    left: 0; 
                 }
             }
         }
@@ -152,7 +156,7 @@
         padding-left:40px;
     }
     .inscribete-seleccion-list {
-        margin: 40px 0;
+        margin: 40px 0 0;
         text-align: left;
         .lista {
             position: relative;
@@ -245,12 +249,12 @@
 @media (max-width:680px) {
     .inscribete-aprenderas {
         background:none;
-        padding-top:0;
+        padding:0 0 30px;
         margin: 0;
-    }
-    .col-33 {
-        flex: 100%;
-        max-width: 100%;
+        .col-33 {
+            flex: 100%;
+            max-width: 100%;
+        }
     }
 }
 
@@ -320,7 +324,7 @@
         justify-content: center;
         min-height: 80px;
         margin: 30px 4px 60px 4px;
-        padding:40px 10px;
+        padding:40px 15px;
         width:44%;
         background-color:$grey2;
         border-radius: 3px;
