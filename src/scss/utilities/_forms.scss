@@ -13,7 +13,7 @@
             background-color:#ece9e9;
             padding: 12px 0 !important;
             border-color:#ece9e9;
-            
+
             &:focus {
                 outline: 0;
                 border-color: $aqua;
@@ -46,7 +46,7 @@
               transition: all cubic-bezier(0.1, 0.79, 0.24, 0.93) .3s;
             }
             &:active:before {
-             
+
             }
           }
           display: none !important;
@@ -82,7 +82,7 @@
             }
         }
     }
-    
+
     .asterisk {
         color:$aqua !important;
     }
@@ -101,11 +101,17 @@
     background-color:transparent !important;
 }
 
+.help_text{
+  margin-bottom: 15px;
+  font-size: 12px;
+  color:$grey2;
+}
+
 #mergeRow-gdpr {
     text-align: center;
     .content__gdpr {
         > label {
-           
+
         }
     }
     p {

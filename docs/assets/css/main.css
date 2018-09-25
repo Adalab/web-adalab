@@ -1475,6 +1475,12 @@ button.swiper-pagination-bullet {
   background-color: transparent !important;
 }
 
+.help_text {
+  margin-bottom: 15px;
+  font-size: 12px;
+  color: #b8b8b9;
+}
+
 #mergeRow-gdpr {
   text-align: center;
 }
