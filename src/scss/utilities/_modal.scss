@@ -71,8 +71,12 @@
 }
 
 @media (max-width: 680px) {
+    .blocker {
+        padding:20px 0;
+    }
     .modal {
         .modal-content {
+            padding:60px 40px;
             p {
                 font-size: 16px;
             }
