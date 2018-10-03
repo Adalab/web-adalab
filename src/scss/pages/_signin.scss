@@ -300,9 +300,10 @@
     }
     .support {
         margin: -10px 0 20px;
+        font-size: 13px;
         img {
-            width:90px;
-            margin-left:10px;
+            width:70px;
+            margin-left:5px;
             display: inline-block;
             vertical-align: middle;
         }
@@ -314,7 +315,7 @@
             width: calc(100% - 140px);
         }
         .swiper-button-next, .swiper-button-prev {
-            margin-top:-102px;
+            margin-top:-91px;
             outline:none;
         }
         .swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
@@ -331,7 +332,7 @@
                     left:0;
                     right:0;
                     margin: auto;
-                    width:calc(50% - 54px);
+                    width:calc(50% - 56px);
                     height:4px;
                     background-color:$grey2;
                 }
