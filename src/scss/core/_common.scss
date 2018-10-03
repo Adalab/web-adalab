@@ -46,6 +46,7 @@ a {
 
 @media (max-width:680px) {
     .hero {
+        min-height: auto;
         background: none;
         padding: 50px 0;
         .content {
@@ -58,10 +59,14 @@ a {
         }
         blockquote {
             cite {
+                display: none;
                 font-size: 16px;
                 strong {
                     font-size: 16px;
                 }
+            }
+            .btn {
+                margin-top:30px;
             }
         }
     }
@@ -73,6 +78,9 @@ a {
     width:100%;
     height:200px;
     overflow: hidden;
+    &.top {
+        align-items: baseline;
+    }
     img {
         position: absolute;
         top:0;
@@ -84,11 +92,22 @@ a {
         width:100%;
         object-fit: cover;
     }
+    cite {
+        font-style: normal;
+        font-size: 14px;
+        line-height: 140%;
+        strong {
+            display: block;
+            font-weight: 500;
+        }
+    }
 }
 
 @media (max-width:680px) {
     .hero-img {
-        display: block;
+        display: flex;
+        align-items: flex-end;
+        padding:30px 20px;
     }
 }
 

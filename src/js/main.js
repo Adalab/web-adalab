@@ -8,9 +8,9 @@ $(document).ready(function() {
     
     $('.swiper-arrow').on('click', function(){
         if ($(".slide-1").hasClass("swiper-slide-active")) {
-          $('.inscribete-calendario h3').children('span').text('Octubre 2018');
+          $('.inscribete-calendario .date').children('span').text('Octubre 2018');
         } else {
-          $('.inscribete-calendario h3').children('span').text('Enero 2019');  
+          $('.inscribete-calendario .date').children('span').text('Enero 2019');  
         }
     });  
     
