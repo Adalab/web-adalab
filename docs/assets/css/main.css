@@ -2471,12 +2471,12 @@ button.swiper-pagination-bullet {
 
 .inscribete-calendario .support {
   margin: -10px 0 20px;
-  font-size: 13px;
+  font-size: 11px;
 }
 
 .inscribete-calendario .support img {
-  width: 70px;
-  margin-left: 5px;
+  width: 88px;
+  margin-left: 1px;
   display: inline-block;
   vertical-align: middle;
 }
