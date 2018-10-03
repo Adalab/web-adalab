@@ -138,6 +138,7 @@
         padding:50px 0;
         h6 {
             font-size: 12px;
+            margin-top:20px;
         }
     }
 }
@@ -145,7 +146,7 @@
     // HOME MEDIOS
 
 .home-medios {
-    padding: 80px 0 80px;
+    padding: 80px 0 60px;
     background-color:$grey1;
     a {
         transition: opacity cubic-bezier(0.1, 0.79, 0.24, 0.93) .3s;
@@ -162,7 +163,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-top:80px;
+        margin-top:60px;
     }
 }
 
@@ -178,7 +179,7 @@
 
 @media (max-width:680px) {
     .home-medios {
-        padding: 50px 0;
+        padding: 50px 0 30px;
     }
 }
 
