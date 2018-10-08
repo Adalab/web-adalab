@@ -159,62 +159,78 @@
                                     <option value="Otros">Otros</option>
                                 </select>
                             </div>
-                            <div class="mc-field-group input-group"> <strong>Indica qué tipos de voluntariado te interesan </strong>
-
-                                <ul>
-                                    <li>
-                                        <input type="checkbox" value="1" name="group[6503][1]" id="mce-group[6503]-6503-0">
-                                        <label for="mce-group[6503]-6503-0">Mentora (solo para mujeres programadoras)</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" value="2" name="group[6503][2]" id="mce-group[6503]-6503-1">
-                                        <label for="mce-group[6503]-6503-1">Masterclass/taller/charla técnico (1.45 h)</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" value="4" name="group[6503][4]" id="mce-group[6503]-6503-2">
-                                        <label for="mce-group[6503]-6503-2">Profesor/a asistente (compromiso mínimo sesión 4h)</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" value="8" name="group[6503][8]" id="mce-group[6503]-6503-3">
-                                        <label for="mce-group[6503]-6503-3">Prescriptor/a (difundir nuestro programa)</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" value="16" name="group[6503][16]" id="mce-group[6503]-6503-4">
-                                        <label for="mce-group[6503]-6503-4">Proyecto colaborativo empresa</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" value="32" name="group[6503][32]" id="mce-group[6503]-6503-5">
-                                        <label for="mce-group[6503]-6503-5">Otros</label>
-                                    </li>
-                                </ul>
+                            <div class="mc-field-group">
+                                <label for="mce-MENTOR">¿Quieres ser mentora?</label>
+                                <p class="help_text">Solo para mujeres que trabajen en la creación de productos digitales</p>
+                                <select
+                                name="MENTOR" class="" id="mce-MENTOR">
+                                    <option value=""></option>
+                                    <option value="Sí">Sí</option>
+                                    <option value="No">No</option>
+                                    </select>
+                            </div>
+                            <div class="mc-field-group">
+                                <label for="mce-MASTERCLAS">¿Quieres impartir una masterclass técnica?</label>
+                                <p class="help_text">Charla doble de 1:30h</p>
+                                <select name="MASTERCLAS" class="" id="mce-MASTERCLAS">
+                                    <option value=""></option>
+                                    <option value="Sí">Sí</option>
+                                    <option value="No">No</option>
+                                </select>
                             </div>
                             <div class="mc-field-group">
                                 <label for="mce-MMERGE4">Temática de masterclass</label>
-                                <input type="text" value="" name="MMERGE4"
-                                class="" id="mce-MMERGE4">
-                            </div>
-                            <div class="mc-field-group input-group"> <strong>Selecciona temática para ser profesor/a asistente </strong>
-
-                                <ul>
-                                    <li>
-                                        <input type="checkbox" value="64" name="group[6507][64]" id="mce-group[6507]-6507-0">
-                                        <label for="mce-group[6507]-6507-0">HTML/CSS</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" value="128" name="group[6507][128]" id="mce-group[6507]-6507-1">
-                                        <label for="mce-group[6507]-6507-1">JS</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" value="256" name="group[6507][256]" id="mce-group[6507]-6507-2">
-                                        <label for="mce-group[6507]-6507-2">React</label>
-                                    </li>
-                                </ul>
+                                <p class="help_text">Si has indicado que quieres dar una masterclass/charla/taller indica el
+                                    título</p>
+                                <input type="text" value="" name="MMERGE4" class="" id="mce-MMERGE4">
                             </div>
                             <div class="mc-field-group">
-                                <label for="mce-MMERGE7">Si has indicado otros, ¿en qué estás pensando?</label>
-                                <input type="text"
-                                value="" name="MMERGE7" class="" id="mce-MMERGE7">
+                                <label for="mce-TEACHING_A">¿Quieres ser profesor/a asistente?</label>
+                                <p class="help_text">Compromiso mínimo: sesión de 4h</p>
+                                <select name="TEACHING_A" class=""
+                                id="mce-TEACHING_A">
+                                    <option value=""></option>
+                                    <option value="Sí">Sí</option>
+                                    <option value="No">No</option>
+                                </select>
                             </div>
+                            <div class="mc-field-group">
+                                <label for="mce-MMERGE12">Selecciona la temática para profesor/a asistente</label>
+                                <select name="MMERGE12"
+                                class="" id="mce-MMERGE12">
+                                    <option value=""></option>
+                                    <option value="HTML/CSS">HTML/CSS</option>
+                                    <option value="JavaScript">JavaScript</option>
+                                </select>
+                            </div>
+                            <div class="mc-field-group">
+                                <label for="mce-PRESCRIPTO">¿Quieres ser prescriptor/a?</label>
+                                <p class="help_text">Ayúdanos a difundir nuestro proyecto en medios y redes</p>
+                                <select name="PRESCRIPTO"
+                                class="" id="mce-PRESCRIPTO">
+                                    <option value=""></option>
+                                    <option value="Sí">Sí</option>
+                                    <option value="No">No</option>
+                                </select>
+                            </div>
+                            <div class="mc-field-group">
+                                <label for="mce-PROJECT">¿Quiere tu empresa proponer un proyecto?</label>
+                                <p class="help_text">Proyecto de front-end a realizar por las alumnas como parte de su formación</p>
+                                <select
+                                name="PROJECT" class="" id="mce-PROJECT">
+                                    <option value=""></option>
+                                    <option value="Sí">Sí</option>
+                                    <option value="No">No</option>
+                                    </select>
+                            </div>
+                            <div class="mc-field-group">
+                                <label for="mce-OTHER_VOLU">¿Se te ocurre otro tipo de voluntariado? Cuéntanos</label>
+                                <input type="text"
+                                value="" name="OTHER_VOLU" class="" id="mce-OTHER_VOLU">
+                            </div>
+                            <p class="help_text">En ocasiones el email para confirmar tu particiapción llega al correo
+                                como Spam o Promociones. Para evitarlo agrega voluntariado@adalab.es a
+                                tu libreta de direcciones.</p>
                             <div id="mergeRow-gdpr" class="mergeRow gdpr-mergeRow content__gdprBlock mc-field-group">
                                 <div class="content__gdpr">
                                     <label>Cómo usaremos tus datos</label>
