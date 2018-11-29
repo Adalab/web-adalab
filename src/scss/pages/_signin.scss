@@ -28,7 +28,7 @@
         margin-bottom: 50px;
     }
 }
-    
+
     // HERO ANA
 
 .inscribete-ana {
@@ -62,7 +62,7 @@
     .col {
         position: relative;
         /*align-self: center;*/
-        margin-top:10px; 
+        margin-top:10px;
         &:not(:last-child) {
             margin-right:60px;
             li {
@@ -75,6 +75,9 @@
     h4 {
         padding-bottom:10px;
         border-bottom:3px solid $grey3;
+        &.hidden {
+          visibility: hidden;
+        }
     }
     ul {
         position: relative;
@@ -106,6 +109,9 @@
                 padding:4px 0;
                 font-size: 16px;
                 font-weight: 700;
+            }
+            &.first {
+              border-top: 1px solid $grey2;
             }
             > span {
                 display: block;
@@ -143,7 +149,7 @@
                     top: auto;
                     bottom: -65px;
                     right: 0;
-                    left: 0; 
+                    left: 0;
                 }
             }
         }
@@ -171,8 +177,8 @@
                 position: absolute;
                 top:calc(50% - 12px);
                 right: -16px;
-                width: 0; 
-                height: 0; 
+                width: 0;
+                height: 0;
                 border-top: 12px solid transparent;
                 border-bottom: 12px solid transparent;
 
@@ -344,7 +350,7 @@
         justify-content: space-evenly;
         flex-wrap: nowrap;
         padding: 0 25px;
-        
+
     }
 
     .inscribete-calendario-fecha {
@@ -380,6 +386,14 @@
             border:3px solid $grey2;
             border-radius: 50%;
         }
+        .footnote {
+          font-style: italic;
+          font-size: 9px;
+          padding: 0;
+          position: absolute;
+          bottom: 9px;
+        }
+
         span {
             padding: 0 20px;
             display: block;
@@ -412,7 +426,7 @@
             &:not(:last-child) {
                 margin-right: 15px
             }
-        
+
         }
         .slider {
             .swiper-container {
@@ -447,5 +461,5 @@
 }
 
 
-    
+
 

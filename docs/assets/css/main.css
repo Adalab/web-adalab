@@ -2319,6 +2319,10 @@ button.swiper-pagination-bullet {
   border-bottom: 3px solid #54585a;
 }
 
+.inscribete-programa h4.hidden {
+  visibility: hidden;
+}
+
 .inscribete-programa ul {
   position: relative;
 }
@@ -2353,6 +2357,10 @@ button.swiper-pagination-bullet {
   padding: 4px 0;
   font-size: 16px;
   font-weight: 700;
+}
+
+.inscribete-programa ul li.first {
+  border-top: 1px solid #b8b8b9;
 }
 
 .inscribete-programa ul li > span {
@@ -2570,6 +2578,14 @@ button.swiper-pagination-bullet {
   height: 26px;
   border: 3px solid #b8b8b9;
   border-radius: 50%;
+}
+
+.inscribete-calendario .inscribete-calendario-fecha .footnote {
+  font-style: italic;
+  font-size: 9px;
+  padding: 0;
+  position: absolute;
+  bottom: 9px;
 }
 
 .inscribete-calendario .inscribete-calendario-fecha span {
