@@ -1,23 +1,22 @@
-'use strict';
+"use strict";
 
-console.log('>> Ready :)');
+console.log(">> Ready :)");
 
 $(document).ready(function() {
+  //// INICIAMOS MENSAJE COOKIES
 
-    //// CALENDARIO CURSOS
-    swiper.on('slideChange', function () {
+  $(".cookie-message").cookieBar();
+
+  //// CALENDARIO CURSOS
+  if (typeof swiper !== "undefined") {
+    swiper.on("slideChange", function() {
       if (swiper.realIndex === 0) {
-        $('.inscribete-calendario .date1').show();
-        $('.inscribete-calendario .date2').hide();
+        $(".inscribete-calendario .date1").show();
+        $(".inscribete-calendario .date2").hide();
       } else {
-        $('.inscribete-calendario .date2').show();
-        $('.inscribete-calendario .date1').hide();
+        $(".inscribete-calendario .date2").show();
+        $(".inscribete-calendario .date1").hide();
       }
     });
-
-    //// INICIAMOS MENSAJE COOKIES
-
-    $('.cookie-message').cookieBar();
+  }
 });
-
-

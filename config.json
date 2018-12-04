@@ -1,26 +1,23 @@
 {
-	"scss": {
-		"src": "src/scss/**/*.scss",
-		"dest": "docs/assets/css/"
-	},
-	"js": {
-		"src": [
-			"src/js/main.js",
-            "src/js/swiper.min.js",
-            "src/js/modal.js",
-            "src/js/desplegable.js",
-            "src/js/cookies.js"
-		],
-		"dest": "docs/assets/js/"
-	},
+  "scss": {
+    "src": "src/scss/**/*.scss",
+    "dest": "docs/assets/css/"
+  },
+  "js": {
+    "src": [
+      "src/js/swiper.min.js",
+      "src/js/modal.js",
+      "src/js/desplegable.js",
+      "src/js/cookies.js",
+      "src/js/main.js"
+    ],
+    "dest": "docs/assets/js/"
+  },
   "images": "docs/assets/images/**/*.{gif,jpg,png,svg}",
   "html_partials": {
     "src": "src/html/*.html",
     "base": "src/html/partials/",
-		"dest": "docs/"
+    "dest": "docs/"
   },
-	"html": [
-    "src/**/*.html",
-    "!node_modules/**/*.*"
-  ]
+  "html": ["src/**/*.html", "!node_modules/**/*.*"]
 }
