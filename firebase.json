@@ -1,30 +1,66 @@
 {
   "hosting": {
     "public": "docs",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "redirects": [
       {
-        "source": "/curso-de-desarrollo-web/",
-        "destination": "/curso-desarrollo-web.html",
+        "source": "/curso-desarrollo-web.html",
+        "destination": "/curso-desarrollo-web/",
         "type": 301
       },
       {
         "source": "/alumnas-en-practicas/",
-        "destination": "/desarrollador-front-end.html",
+        "destination": "/desarrollador-front-end/",
+        "type": 301
+      },
+      {
+        "source": "/desarrollador-front-end.html",
+        "destination": "/desarrollador-front-end/",
         "type": 301
       },
       {
         "source": "/contacto-alumnas/",
-        "destination": "/contacto-inscribete.html",
+        "destination": "/contacto-inscribete/",
+        "type": 301
+      },
+      {
+        "source": "/contacto-inscribete.html",
+        "destination": "/contacto-inscribete/",
         "type": 301
       },
       {
         "source": "/hazte-voluntarioa/",
-        "destination": "/hazte-voluntario.html",
+        "destination": "/hazte-voluntario/",
+        "type": 301
+      },
+      {
+        "source": "/hazte-voluntario.html",
+        "destination": "/hazte-voluntario/",
+        "type": 301
+      },
+      {
+        "source": "/contacto-empresas.html",
+        "destination": "/contacto-empresas/",
+        "type": 301
+      },
+      {
+        "source": "/contacto.html",
+        "destination": "/contacto/",
+        "type": 301
+      },
+      {
+        "source": "/cookies.html",
+        "destination": "/cookies/",
+        "type": 301
+      },
+      {
+        "source": "/equipo.html",
+        "destination": "/equipo/",
+        "type": 301
+      },
+      {
+        "source": "/contacto-voluntarios.html",
+        "destination": "/contacto-voluntarios/",
         "type": 301
       }
     ]
