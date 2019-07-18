@@ -2278,7 +2278,7 @@ button.swiper-pagination-bullet {
   font-weight: 700;
   line-height: 120%;
   text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
-  color: #FFF;
+  color: #fff;
   margin-bottom: 25px;
 }
 
@@ -2286,18 +2286,18 @@ button.swiper-pagination-bullet {
   margin: 0;
   background: url(../images/inscribete/inscribete_hero_1.jpg) no-repeat center center;
   background-size: cover;
-  color: #FFF;
+  color: #fff;
 }
 
 .inscribete-ana .hero-img {
   background: url(../images/inscribete/inscribete_hero_1_mobile.jpg) no-repeat center right;
   background-size: cover;
-  color: #FFF;
+  color: #fff;
 }
 
 .inscribete-ana .hero-img cite {
   max-width: 60%;
-  opacity: .9;
+  opacity: 0.9;
 }
 
 .inscribete-programa .col {
@@ -2339,7 +2339,7 @@ button.swiper-pagination-bullet {
 }
 
 .inscribete-programa ul.mas li {
-  padding: 16px 0;
+  padding: 30px 0;
 }
 
 .inscribete-programa ul li {
@@ -2353,7 +2353,7 @@ button.swiper-pagination-bullet {
 
 .inscribete-programa ul li.duracion {
   border-bottom: 1px solid #b8b8b9;
-  color: #FFF;
+  color: #fff;
   padding: 4px 0;
   font-size: 16px;
   font-weight: 700;
@@ -2395,7 +2395,7 @@ button.swiper-pagination-bullet {
 
 .inscribete-seleccion .inscribete-seleccion-list .lista {
   position: relative;
-  border-right: 5px solid #D8D8D8;
+  border-right: 5px solid #d8d8d8;
 }
 
 .inscribete-seleccion .inscribete-seleccion-list .lista:before {
@@ -2407,7 +2407,7 @@ button.swiper-pagination-bullet {
   height: 0;
   border-top: 12px solid transparent;
   border-bottom: 12px solid transparent;
-  border-left: 12px solid #D8D8D8;
+  border-left: 12px solid #d8d8d8;
 }
 
 .inscribete-seleccion .inscribete-seleccion-list li {
@@ -2559,7 +2559,7 @@ button.swiper-pagination-bullet {
   font-size: 14px;
   font-family: "Rubik", sans-serif;
   font-weight: 500;
-  color: #FFF;
+  color: #fff;
 }
 
 .inscribete-calendario .inscribete-calendario-fecha.aqua {
@@ -2591,7 +2591,7 @@ button.swiper-pagination-bullet {
 .inscribete-calendario .inscribete-calendario-fecha span {
   padding: 0 20px;
   display: block;
-  opacity: .8;
+  opacity: 0.8;
   margin-bottom: 6px;
   font-size: 14px;
 }
@@ -2752,7 +2752,7 @@ button.swiper-pagination-bullet {
   .inscribete-seleccion .inscribete-seleccion-list .lista {
     padding-bottom: 30px;
     border-right: 0;
-    border-bottom: 5px solid #D8D8D8;
+    border-bottom: 5px solid #d8d8d8;
   }
 
   .inscribete-seleccion .inscribete-seleccion-list .lista:before {
@@ -2765,7 +2765,7 @@ button.swiper-pagination-bullet {
     height: 0;
     border-left: 12px solid transparent;
     border-right: 12px solid transparent;
-    border-top: 12px solid #D8D8D8;
+    border-top: 12px solid #d8d8d8;
   }
 
   .inscribete-seleccion .row:last-child {

@@ -1,465 +1,467 @@
 //// INSCRIBETE
 
-    // HERO
+// HERO
 
 .inscribete-hero {
-    display: flex;
-    align-items: flex-end;
-    position: relative;
-    background: url(../images/inscribete/inscribete_hero_main.jpg) no-repeat center center;
-    background-size: cover;
-    height: 70vh;
-    padding-bottom: 60px;
-    h2 {
-        max-width: 470px;
-        font-size: calc(20px + 1.5vw);
-        font-weight: 700;
-        line-height: 120%;
-        text-shadow: 3px 3px 3px rgba(0,0,0,.3);
-        color: #FFF;
-        margin-bottom: 25px;
-    }
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  background: url(../images/inscribete/inscribete_hero_main.jpg) no-repeat
+    center center;
+  background-size: cover;
+  height: 70vh;
+  padding-bottom: 60px;
+  h2 {
+    max-width: 470px;
+    font-size: calc(20px + 1.5vw);
+    font-weight: 700;
+    line-height: 120%;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    margin-bottom: 25px;
+  }
 }
 
 @media (max-width: 680px) {
-    .inscribete-hero {
-        height: 320px;
-        padding:20px 0 0;
-        margin-bottom: 50px;
-    }
+  .inscribete-hero {
+    height: 320px;
+    padding: 20px 0 0;
+    margin-bottom: 50px;
+  }
 }
 
-    // HERO ANA
+// HERO ANA
 
 .inscribete-ana {
-    margin: 0;
-    background: url(../images/inscribete/inscribete_hero_1.jpg) no-repeat center center;
+  margin: 0;
+  background: url(../images/inscribete/inscribete_hero_1.jpg) no-repeat center
+    center;
+  background-size: cover;
+  color: #fff;
+  .hero-img {
+    background: url(../images/inscribete/inscribete_hero_1_mobile.jpg) no-repeat
+      center right;
     background-size: cover;
-    color: #FFF;
-    .hero-img {
-        background: url(../images/inscribete/inscribete_hero_1_mobile.jpg) no-repeat center right;
-        background-size: cover;
-        color: #FFF;
-        cite {
-            max-width: 60%;
-            opacity: .9;
-        }
+    color: #fff;
+    cite {
+      max-width: 60%;
+      opacity: 0.9;
     }
+  }
 }
 
-@media (max-width:680px) {
-    .inscribete-ana {
-        color:$grey3;
-        padding:0;
-        margin: 0 0 50px;
-    }
+@media (max-width: 680px) {
+  .inscribete-ana {
+    color: $grey3;
+    padding: 0;
+    margin: 0 0 50px;
+  }
 }
 
-
-    // HERO PROGRAMA
+// HERO PROGRAMA
 
 .inscribete-programa {
-    .col {
-        position: relative;
-        /*align-self: center;*/
-        margin-top:10px;
-        &:not(:last-child) {
-            margin-right:60px;
-            li {
-                &:last-child {
-                    background-color: #707070;
-                }
-            }
+  .col {
+    position: relative;
+    /*align-self: center;*/
+    margin-top: 10px;
+    &:not(:last-child) {
+      margin-right: 60px;
+      li {
+        &:last-child {
+          background-color: #707070;
         }
+      }
+    }
+  }
+  h4 {
+    padding-bottom: 10px;
+    border-bottom: 3px solid $grey3;
+    &.hidden {
+      visibility: hidden;
+    }
+  }
+  ul {
+    position: relative;
+    &.mas {
+      &:before {
+        content: '+';
+        position: absolute;
+        top: calc(50% - 47px);
+        right: -46px;
+        font-family: $Rubik;
+        font-weight: 800;
+        font-size: 52px;
+        color: $aqua;
+      }
+      li {
+        padding: 30px 0;
+      }
+    }
+    li {
+      position: relative;
+      padding: 14px 0;
+      font-family: $OpenSans;
+      font-size: 20px;
+      font-weight: 700;
+      border-bottom: 1px solid $grey2;
+      &.duracion {
+        border-bottom: 1px solid $grey2;
+        color: #fff;
+        padding: 4px 0;
+        font-size: 16px;
+        font-weight: 700;
+      }
+      &.first {
+        border-top: 1px solid $grey2;
+      }
+      > span {
+        display: block;
+        font-size: 18px;
+        font-weight: 600;
+        span {
+          font-size: 14px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+  .inscribete-programa-m {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 680px) {
+  .inscribete-programa {
+    padding-top: 0;
+    .col {
+      flex: 100%;
+      &:not(:last-child) {
+        margin: 0;
+      }
     }
     h4 {
-        padding-bottom:10px;
-        border-bottom:3px solid $grey3;
-        &.hidden {
-          visibility: hidden;
-        }
+      margin-top: 30px;
     }
     ul {
-        position: relative;
-        &.mas {
-            &:before {
-                content: '+';
-                position: absolute;
-                top:calc(50% - 47px);
-                right:-46px;
-                font-family: $Rubik;
-                font-weight: 800;
-                font-size: 52px;
-                color:$aqua;
-            }
-            li {
-                padding: 16px 0;
-            }
+      &.mas {
+        margin-bottom: 30px;
+        &:before {
+          top: auto;
+          bottom: -65px;
+          right: 0;
+          left: 0;
         }
-        li {
-            position: relative;
-            padding:14px 0;
-            font-family: $OpenSans;
-            font-size: 20px;
-            font-weight: 700;
-            border-bottom: 1px solid $grey2;
-            &.duracion {
-                border-bottom:1px solid $grey2;
-                color:#FFF;
-                padding:4px 0;
-                font-size: 16px;
-                font-weight: 700;
-            }
-            &.first {
-              border-top: 1px solid $grey2;
-            }
-            > span {
-                display: block;
-                font-size: 18px;
-                font-weight: 600;
-                span {
-                    font-size: 14px;
-                    font-weight: 400;
-                }
-            }
-        }
+      }
     }
-    .inscribete-programa-m {
-        margin-top:40px;
-    }
-
+  }
 }
 
-@media (max-width:680px) {
-    .inscribete-programa {
-        padding-top:0;
-        .col {
-            flex:100%;
-            &:not(:last-child) {
-                margin: 0;
-            }
-        }
-        h4 {
-            margin-top:30px;
-        }
-        ul {
-            &.mas {
-                margin-bottom:30px;
-                &:before {
-                    top: auto;
-                    bottom: -65px;
-                    right: 0;
-                    left: 0;
-                }
-            }
-        }
-    }
-}
-
-    // HERO SELECCIÓN
+// HERO SELECCIÓN
 
 .inscribete-seleccion {
+  .col {
+    align-self: center;
+  }
+  .col-25 {
+    text-align: right;
+    padding-left: 40px;
+  }
+  .inscribete-seleccion-list {
+    margin: 40px 0;
+    text-align: left;
+    .lista {
+      position: relative;
+      border-right: 5px solid #d8d8d8;
+      &:before {
+        content: '';
+        position: absolute;
+        top: calc(50% - 12px);
+        right: -16px;
+        width: 0;
+        height: 0;
+        border-top: 12px solid transparent;
+        border-bottom: 12px solid transparent;
+
+        border-left: 12px solid #d8d8d8;
+      }
+    }
+    li {
+      margin-bottom: 4px;
+      padding-right: 15%;
+    }
+  }
+  .row {
+    &:last-child {
+      text-align: left;
+      max-width: 800px;
+      padding-left: 42px;
+    }
+  }
+}
+
+@media (max-width: 880px) {
+  .inscribete-seleccion {
+    .inscribete-seleccion-list {
+      margin-bottom: 0;
+      li {
+        padding-right: 0;
+        font-size: 16px;
+      }
+      .lista {
+        padding-bottom: 30px;
+        border-right: 0;
+        border-bottom: 5px solid #d8d8d8;
+        &:before {
+          top: auto;
+          right: 0;
+          left: 0;
+          bottom: -28px;
+          margin: auto;
+          width: 0;
+          height: 0;
+          border-left: 12px solid transparent;
+          border-right: 12px solid transparent;
+          border-top: 12px solid #d8d8d8;
+        }
+      }
+    }
+    .row {
+      &:last-child {
+        text-align: center;
+        padding-left: 0;
+      }
+    }
     .col {
-        align-self: center;
+      flex: 100%;
+      max-width: 100%;
     }
     .col-25 {
-        text-align: right;
-        padding-left:40px;
+      margin: 15px 0 30px;
+      padding-left: 0;
+      text-align: center;
     }
-    .inscribete-seleccion-list {
-        margin: 40px 0;
-        text-align: left;
-        .lista {
-            position: relative;
-            border-right:5px solid #D8D8D8;
-            &:before {
-                content: '';
-                position: absolute;
-                top:calc(50% - 12px);
-                right: -16px;
-                width: 0;
-                height: 0;
-                border-top: 12px solid transparent;
-                border-bottom: 12px solid transparent;
-
-                border-left: 12px solid #D8D8D8;
-            }
-        }
-        li {
-            margin-bottom:4px;
-            padding-right: 15%;
-        }
-    }
-    .row {
-        &:last-child {
-            text-align: left;
-            max-width: 800px;
-            padding-left: 42px;
-        }
-    }
+  }
 }
 
-
-
-@media (max-width:880px) {
-    .inscribete-seleccion {
-        .inscribete-seleccion-list {
-            margin-bottom:0;
-            li {
-                padding-right:0;
-                font-size: 16px;
-            }
-            .lista {
-                padding-bottom:30px;
-                border-right: 0;
-                border-bottom: 5px solid #D8D8D8;
-                &:before {
-                    top: auto;
-                    right: 0;
-                    left: 0;
-                    bottom:-28px;
-                    margin: auto;
-                    width: 0;
-                    height: 0;
-                    border-left: 12px solid transparent;
-                    border-right: 12px solid transparent;
-                    border-top: 12px solid #D8D8D8;
-                }
-            }
-        }
-        .row {
-            &:last-child {
-                text-align: center;
-                padding-left:0;
-            }
-        }
-        .col {
-            flex: 100%;
-            max-width: 100%;
-        }
-        .col-25 {
-            margin:15px 0 30px;
-            padding-left:0;
-            text-align: center;
-        }
-    }
-}
-
-    // HERO Qué aprenderás
+// HERO Qué aprenderás
 
 .inscribete-aprenderas {
-    position: relative;
-    background: url(../images/inscribete/inscribete_hero_3.jpg) no-repeat center center;
+  position: relative;
+  background: url(../images/inscribete/inscribete_hero_3.jpg) no-repeat center
+    center;
+  background-size: cover;
+  .hero-img {
+    background: url(../images/inscribete/inscribete_hero_3_mobile.jpg) no-repeat
+      center center;
     background-size: cover;
-    .hero-img {
-        background: url(../images/inscribete/inscribete_hero_3_mobile.jpg) no-repeat center center;
-        background-size: cover;
-        margin-bottom:30px;
-    }
-    h4 {
-        margin-bottom: 25px;
-    }
-    .row {
-        justify-content: space-between;
-    }
+    margin-bottom: 30px;
+  }
+  h4 {
+    margin-bottom: 25px;
+  }
+  .row {
+    justify-content: space-between;
+  }
 }
 
-@media (max-width:680px) {
-    .inscribete-aprenderas {
-        background:none;
-        padding:0 0 30px;
-        margin: 0;
-        .col-33 {
-            flex: 100%;
-            max-width: 100%;
-        }
+@media (max-width: 680px) {
+  .inscribete-aprenderas {
+    background: none;
+    padding: 0 0 30px;
+    margin: 0;
+    .col-33 {
+      flex: 100%;
+      max-width: 100%;
     }
+  }
 }
 
-    // HERO CALENDARIO
+// HERO CALENDARIO
 
 .inscribete-calendario {
-    background: url(../images/inscribete/inscribete_hero_2.jpg) no-repeat center center;
-    background-size: cover;
-    h3 {
-        margin-bottom:35px;
-        span {
-            margin: 10px 0;
-            display: block;
-            font-weight: 500;
-        }
+  background: url(../images/inscribete/inscribete_hero_2.jpg) no-repeat center
+    center;
+  background-size: cover;
+  h3 {
+    margin-bottom: 35px;
+    span {
+      margin: 10px 0;
+      display: block;
+      font-weight: 500;
     }
-    .date {
-        display: block;
-        font-size: 24px;
-        margin-bottom:25px;
-        span {
-            font-weight: 500;
-        }
+  }
+  .date {
+    display: block;
+    font-size: 24px;
+    margin-bottom: 25px;
+    span {
+      font-weight: 500;
     }
-    h4 {
-        color:$grey3;
-        span {
-            display:block;
-            font-size: 18px;
-        }
+  }
+  h4 {
+    color: $grey3;
+    span {
+      display: block;
+      font-size: 18px;
     }
-    .support {
-        margin: -10px 0 20px;
-        font-size: 11px;
-        img {
-            width:88px;
-            margin-left:1px;
-            display: inline-block;
-            vertical-align: middle;
+  }
+  .support {
+    margin: -10px 0 20px;
+    font-size: 11px;
+    img {
+      width: 88px;
+      margin-left: 1px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+  .slider {
+    position: relative;
+    padding: 0;
+    .swiper-container {
+      width: calc(100% - 140px);
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+      margin-top: -91px;
+      outline: none;
+    }
+    .swiper-container-horizontal > .swiper-pagination-bullets,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction {
+      position: absolute;
+      bottom: 0;
+    }
+    .swiper-slide {
+      .row {
+        position: relative;
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: 30px;
+          left: 0;
+          right: 0;
+          margin: auto;
+          width: calc(50% - 56px);
+          height: 4px;
+          background-color: $grey2;
         }
+      }
+    }
+  }
+  .row {
+    width: 100%;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    padding: 0 25px;
+  }
+
+  .inscribete-calendario-fecha {
+    flex-wrap: wrap;
+    position: relative;
+    display: flex;
+    flex: 0 0 calc(40% - 15px);
+    align-items: center;
+    justify-content: center;
+    min-height: 80px;
+    margin: 30px 4px 60px 4px;
+    padding: 40px 15px;
+    width: 40%;
+    background-color: $grey2;
+    border-radius: 3px;
+    font-size: 14px;
+    font-family: $Rubik;
+    font-weight: 500;
+    color: #fff;
+    &.aqua {
+      background-color: $aqua;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      z-index: 1;
+      bottom: -44px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      width: 26px;
+      height: 26px;
+      border: 3px solid $grey2;
+      border-radius: 50%;
+    }
+    .footnote {
+      font-style: italic;
+      font-size: 9px;
+      padding: 0;
+      position: absolute;
+      bottom: 9px;
+    }
+
+    span {
+      padding: 0 20px;
+      display: block;
+      opacity: 0.8;
+      margin-bottom: 6px;
+      font-size: 14px;
+    }
+  }
+  .btn {
+    margin: 40px 0 0;
+  }
+}
+
+@media (max-width: 680px) {
+  .inscribete-calendario {
+    .col-50 {
+      flex: 0 0 100%;
+      max-width: 100%;
+      .row {
+        padding: 0 15px;
+        flex-wrap: nowrap;
+        &:after {
+          width: calc(50% - 40px);
+        }
+      }
+    }
+    .inscribete-calendario-fecha {
+      font-size: 12px;
+      min-height: 60px;
+      &:not(:last-child) {
+        margin-right: 15px;
+      }
     }
     .slider {
-        position: relative;
-        padding: 0;
-        .swiper-container {
-            width: calc(100% - 140px);
-        }
-        .swiper-button-next, .swiper-button-prev {
-            margin-top:-91px;
-            outline:none;
-        }
-        .swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
-            position: absolute;
-            bottom:0;
-        }
-        .swiper-slide {
-            .row {
-                position: relative;
-                &:after {
-                    content: '';
-                    position: absolute;
-                    bottom:30px;
-                    left:0;
-                    right:0;
-                    margin: auto;
-                    width:calc(50% - 56px);
-                    height:4px;
-                    background-color:$grey2;
-                }
-            }
-        }
+      .swiper-container {
+        width: 100%;
+      }
+      .swiper-slide .row:after {
+        width: calc(50% - 24px);
+      }
     }
     .row {
-        width: 100%;
-        justify-content: space-evenly;
-        flex-wrap: nowrap;
-        padding: 0 25px;
-
-    }
-
-    .inscribete-calendario-fecha {
-        flex-wrap: wrap;
-        position: relative;
-        display: flex;
-        flex:0 0 calc(40% - 15px);
-        align-items: center;
-        justify-content: center;
-        min-height: 80px;
-        margin: 30px 4px 60px 4px;
-        padding:40px 15px;
-        width:40%;
-        background-color:$grey2;
-        border-radius: 3px;
-        font-size: 14px;
-        font-family: $Rubik;
-        font-weight: 500;
-        color: #FFF;
-        &.aqua {
-            background-color:$aqua;
-        }
-        &:after {
-            content: '';
-            position: absolute;
-            z-index: 1;
-            bottom:-44px;
-            left: 0;
-            right: 0;
-            margin: auto;
-            width:26px;
-            height:26px;
-            border:3px solid $grey2;
-            border-radius: 50%;
-        }
-        .footnote {
-          font-style: italic;
-          font-size: 9px;
-          padding: 0;
-          position: absolute;
-          bottom: 9px;
-        }
-
-        span {
-            padding: 0 20px;
-            display: block;
-            opacity: .8;
-            margin-bottom:6px;
-            font-size: 14px;
-        }
+      padding: 0;
     }
     .btn {
-        margin:40px 0 0;
+      margin-top: 15px;
     }
+  }
+  .swiper-pagination {
+    display: none;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    top: -28px;
+    transform: scale3d(0.6, 0.6, 1);
+  }
+  .swiper-button-next,
+  .swiper-container-rtl .swiper-button-prev {
+    right: 0;
+    transform: scale3d(0.6, 0.6, 1);
+  }
+  .swiper-button-prev,
+  .swiper-container-rtl .swiper-button-next {
+    left: 0;
+    transform: rotate(180deg) scale3d(0.6, 0.6, 1);
+  }
 }
-
-@media (max-width:680px) {
-    .inscribete-calendario {
-        .col-50 {
-            flex: 0 0 100%;
-            max-width: 100%;
-            .row {
-                padding:0 15px;
-                flex-wrap: nowrap;
-                &:after {
-                    width: calc(50% - 40px);
-                }
-            }
-        }
-        .inscribete-calendario-fecha {
-            font-size: 12px;
-            min-height: 60px;
-            &:not(:last-child) {
-                margin-right: 15px
-            }
-
-        }
-        .slider {
-            .swiper-container {
-                width: 100%;
-            }
-            .swiper-slide .row:after {
-                width: calc(50% - 24px);
-            }
-        }
-        .row {
-            padding:0;
-        }
-        .btn {
-            margin-top:15px;
-        }
-    }
-    .swiper-pagination {
-        display: none;
-    }
-    .swiper-button-next, .swiper-button-prev {
-        top: -28px;
-        transform: scale3d(.6,.6,1);
-    }
-    .swiper-button-next, .swiper-container-rtl .swiper-button-prev {
-        right:0;
-        transform: scale3d(.6,.6,1);
-    }
-    .swiper-button-prev, .swiper-container-rtl .swiper-button-next {
-        left:0;
-        transform: rotate(180deg) scale3d(.6,.6,1);
-    }
-}
-
-
-
-
