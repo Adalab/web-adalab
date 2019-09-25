@@ -11,7 +11,8 @@
   background-size: cover;
   height: 70vh;
   padding-bottom: 60px;
-  h2 {
+  h2,
+  h3 {
     max-width: 470px;
     font-size: calc(20px + 1.5vw);
     font-weight: 700;
@@ -74,7 +75,7 @@
       }
     }
   }
-  h4 {
+  .course-module-title {
     padding-bottom: 10px;
     border-bottom: 3px solid $grey3;
     &.hidden {
@@ -257,7 +258,7 @@
     background-size: cover;
     margin-bottom: 30px;
   }
-  h4 {
+  .course-module-title {
     margin-bottom: 25px;
   }
   .row {
