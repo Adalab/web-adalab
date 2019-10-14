@@ -35,7 +35,7 @@ gulp.task('styles', function(done) {
     )
     .pipe(
       autoprefixer({
-        browsers: ['last 2 versions', 'ie >= 10'],
+        overrideBrowserslist: ['last 2 versions', 'ie >= 10'],
         cascade: false,
       })
     )
