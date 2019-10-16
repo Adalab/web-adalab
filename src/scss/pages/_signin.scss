@@ -378,6 +378,7 @@
     font-family: $Rubik;
     font-weight: 500;
     color: #fff;
+    user-select: none;
     &.aqua {
       background-color: $aqua;
     }
