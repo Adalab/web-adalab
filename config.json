@@ -9,6 +9,7 @@
       "src/js/modal.js",
       "src/js/desplegable.js",
       "src/js/cookies.js",
+      "src/js/jquery-modal-video.js",
       "src/js/main.js"
     ],
     "dest": "docs/assets/js/"

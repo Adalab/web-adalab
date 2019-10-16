@@ -150,20 +150,24 @@
     background-color:$grey1;
     a {
         transition: opacity cubic-bezier(0.1, 0.79, 0.24, 0.93) .3s;
-        &:hover {
-            opacity: .5; 
-        }
+        &:hover { opacity: .5; }
     }
-    img {
-        max-width: 120px;
-        max-height: 25px;
-        margin:0 10px 20px 10px;
+
+    #video {
+      max-width: 480px;
+      margin: 0 auto;
     }
+
     .home-medios-logos {
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        justify-content: center;
         align-items: center;
-        margin-top:60px;
+        grid-template-columns: 200px 200px 200px;
+        grid-template-columns: repeat(3, 200px);
+        grid-auto-rows: 100px;
+        margin-top: 30px;
+
+        img { max-height: 25px; }
     }
 }
 

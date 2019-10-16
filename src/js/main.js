@@ -4,7 +4,6 @@ console.log('>> Ready :)');
 
 $(document).ready(function() {
   //// INICIAMOS MENSAJE COOKIES
-
   $('.cookie-message').cookieBar();
 
   //// CALENDARIO CURSOS
@@ -19,4 +18,8 @@ $(document).ready(function() {
       }
     });
   }
+
+  // Iniciamos vídeos!
+  // $("#video").fitVids();
+  $("#video a").modalVideo();
 });
