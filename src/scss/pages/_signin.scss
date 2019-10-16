@@ -21,15 +21,18 @@
     color: #fff;
     margin-bottom: 25px;
   }
-}
 
-@media (max-width: 680px) {
-  .inscribete-hero {
+  &.inscribete-madrid { background-image: url(../images/inscribete/inscribete_grace_desktop.jpg) }
+
+
+  @media (max-width: 680px) {
     height: 320px;
     padding: 20px 0 0;
     margin-bottom: 50px;
+    &.inscribete-madrid { background-image: url(../images/inscribete/inscribete_grace_mobile.jpg) }
   }
 }
+
 
 // HERO ANA
 
