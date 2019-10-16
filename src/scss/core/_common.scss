@@ -6,7 +6,7 @@ body {
 }
 
 .container {
-    
+
 }
 
 a {
@@ -246,7 +246,7 @@ a {
     }
 }
 
-//// BLOCKQUOTES 
+//// BLOCKQUOTES
 
 .bq-lg {
     max-width: 452px;
@@ -283,7 +283,7 @@ a {
         margin-bottom:15px;
         font-family: $OpenSans;
         font-size: 18px;
-        line-height: 180%;
+        line-height: 150%;
         &:before {
             content: "\f00c";
             position: absolute;
@@ -326,4 +326,17 @@ a {
     p {
         margin-bottom:20px;
     }
+}
+
+.readmore {
+  i { margin-right: .5em; }
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.text-center {
+
 }
