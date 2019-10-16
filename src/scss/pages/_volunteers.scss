@@ -91,7 +91,7 @@
             &:nth-child(2n+2) {
                .voluntario-comunidad-b {
                     margin: 0 0 20px 5px;
-                } 
+                }
             }
         }
         .voluntario-comunidad-b {
@@ -102,9 +102,12 @@
     }
 }
 
-    // ESTILOS MODAL VOLUNTARIOS
+// ESTILOS MODAL VOLUNTARIOS
 
 .modal {
+    p + p {
+      margin-top: 1em;
+    }
     &.voluntarios {
         p > span {
             display: block;
@@ -137,5 +140,5 @@
             padding: 0 20px;
         }
     }
-      
+
 }
