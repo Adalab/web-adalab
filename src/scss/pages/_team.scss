@@ -12,99 +12,99 @@
   text-align: center;
   padding:45px 20px;
   .equipo-miembros {
-      .miembro {
-        position: relative;
-        flex-basis: calc(100% / 3 - 33px);
-        margin:20px 16px;
-        
-        &:hover {
-            figure {
-                &:before {
-                    height:100%;
-                }
-                .linkedin {
-                    opacity: .8;
-                }
-            }
-        }
-          &.unete {
-              &:hover {
-                  figure {
-                      &:before {
-                          display: none;
-                      }
-                  }
-                  .linkedin {
-                      opacity: 0;
-                  }
-              }
-              .btn {
-                  margin-top:20px;
-                  box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.25);
-              }
-          }
+    .miembro {
+      position: relative;
+      flex-basis: calc(100% / 3 - 33px);
+      margin:20px 16px;
+
+      &:hover {
           figure {
-              z-index: 2;
-              position: relative;
-              border-radius: 3px;
-              overflow: hidden;
               &:before {
-                    content: '';
-                    z-index: 1;
-                    position: absolute;
-                    top:0;
-                    left:0;
-                    width:100%;
-                    height:0;
-                    background-color:$aqua;
-                    transition: height cubic-bezier(0.1, 0.79, 0.24, 0.93) .4s;
-                }
-              .linkedin {
-                  content: '';
-                  z-index: 2;
-                  position: absolute;
-                  top:0;
-                  left: 0;
-                  width:100%;
                   height:100%;
-                  display: -webkit-box;
-                  display: -ms-flexbox;
-                  display: flex;
-                  -ms-flex-align: center;
-                  -webkit-align-items: center;
-                  -webkit-box-align: center;
-                  align-items: center;
-                  text-align: center;
-                  color:#FFF;
-                  opacity: 0;
-                  transition: opacity cubic-bezier(0.51, 0.07, 0.47, 0.91) 0.3s;
               }
-              a {
-                  padding:15px;
-                  display: inline-block;
-                  vertical-align: middle;
-                  margin: auto;
-                  color: #FFF;
-                  font-size: 30px;
+              .linkedin {
+                  opacity: .8;
               }
-          }
-          img {
-              display: block;
-              width:100%;
-          }
-          h4 {
-              margin-top:12px;
-              font-size: 18px;
-              font-weight: 500;
-              line-height: 160%;
-              color:$grey3;
-          }
-          span {
-              display: block;
-              font-size: 16px;
-              line-height: 160%;
           }
       }
+      &.unete {
+        &:hover {
+          figure {
+            &:before {
+                display: none;
+            }
+          }
+          .linkedin {
+            opacity: 0;
+          }
+        }
+        .btn {
+            margin-top:20px;
+            box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.25);
+        }
+      }
+      figure {
+          z-index: 2;
+          position: relative;
+          border-radius: 3px;
+          overflow: hidden;
+          height: 0;
+          padding-bottom: 100%;
+          &:before {
+            content: '';
+            z-index: 1;
+            position: absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:0;
+            background-color:$aqua;
+            transition: height cubic-bezier(0.1, 0.79, 0.24, 0.93) .4s;
+          }
+          .linkedin {
+            content: '';
+            z-index: 2;
+            position: absolute;
+            top:0;
+            left: 0;
+            width:100%;
+            height:100%;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color:#FFF;
+            opacity: 0;
+            transition: opacity cubic-bezier(0.51, 0.07, 0.47, 0.91) 0.3s;
+          }
+          a {
+            padding:15px;
+            display: inline-block;
+            vertical-align: middle;
+            margin: auto;
+            color: #FFF;
+            font-size: 30px;
+          }
+      }
+      img {
+        position: absolute;
+        display: block;
+        width:100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      h4 {
+          margin-top:12px;
+          font-size: 18px;
+          font-weight: 500;
+          line-height: 160%;
+          color:$grey3;
+      }
+      span {
+          display: block;
+          font-size: 16px;
+          line-height: 160%;
+      }
+    }
   }
 }
 
