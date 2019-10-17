@@ -150,21 +150,22 @@ a {
     // INFOGRAFÍA DATOS
 
 .hero-datos {
-    margin:30px auto 60px auto;
+    margin: 30px auto 60px;
     text-align: center;
+
     .hero-dato {
         min-height: 147px;
         display: flex;
         align-items: center;
         text-align: center;
         padding:40px 10px;
-        flex-basis: calc(100% / 4 - 32px);
+        flex: 1;
         margin: 0 16px;
-        background-color:$aqua;
+        border: 1px solid $aqua;
         border-radius: 3px;
-        color: #FFF;
+
         .hero-dato-content {
-            width:100%;
+            width: 100%;
             > span {
                 width:100%;
                 display: block;
@@ -184,7 +185,7 @@ a {
             font-size: 14px;
             font-weight: 500;
             line-height: 160%;
-            color:#FFF;
+            color: $aqua;
             margin: 0;
         }
     }
