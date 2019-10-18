@@ -161,8 +161,11 @@ a {
         padding:40px 10px;
         flex: 1;
         margin: 0 16px;
-        border: 1px solid $aqua;
+        // border: 1px solid $aqua;
         border-radius: 3px;
+        background: $aqua;
+        color: white;
+        p { color: white; }
 
         .hero-dato-content {
             width: 100%;
@@ -185,7 +188,7 @@ a {
             font-size: 14px;
             font-weight: 500;
             line-height: 160%;
-            color: $aqua;
+            color: white;
             margin: 0;
         }
     }

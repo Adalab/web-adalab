@@ -46,7 +46,7 @@
 .empresas-adalaber {
     a {
         &:last-child {
-            margin-top:40px;
+            margin-top:20px;
         }
     }
 }
@@ -133,13 +133,23 @@
     }
     .empresas-medios-logos {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
         align-items: center;
         flex-wrap: wrap;
         margin-top:80px;
         > div {
             flex: 1 0 25%;
+            flex-grow: 0;
         }
+    }
+
+    img {
+      &[alt="SanzClima"],
+      &[alt="xprt"],
+      &[alt="Track & Chain"],
+      &[alt="Kubide"] { transform: scale(0.8); }
+      &[alt="Endado"],
+      &[alt="Bq"] { transform: scale(.7); }
     }
 }
 
@@ -154,7 +164,7 @@
 @media (max-width:860px) {
     .empresas-medios {
         .empresas-medios-logos {
-           
+
         }
     }
 }
