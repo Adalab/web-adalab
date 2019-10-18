@@ -121,8 +121,13 @@ a {
   -ms-flex: 1;
   flex: 1;
   margin: 0 16px;
-  border: 1px solid #14d9c4;
   border-radius: 3px;
+  background: #14d9c4;
+  color: white;
+}
+
+.hero-datos .hero-dato p {
+  color: white;
 }
 
 .hero-datos .hero-dato .hero-dato-content {
@@ -149,7 +154,7 @@ a {
   font-size: 14px;
   font-weight: 500;
   line-height: 160%;
-  color: #14d9c4;
+  color: white;
   margin: 0;
 }
 
@@ -2312,7 +2317,7 @@ button.swiper-pagination-bullet {
 }
 
 .empresas-adalaber a:last-child {
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .empresas-perfil {
@@ -2376,9 +2381,9 @@ button.swiper-pagination-bullet {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -2391,6 +2396,19 @@ button.swiper-pagination-bullet {
   -webkit-box-flex: 1;
   -ms-flex: 1 0 25%;
   flex: 1 0 25%;
+  -webkit-box-flex: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+}
+
+.empresas-medios img[alt="SanzClima"],.empresas-medios img[alt="xprt"],.empresas-medios img[alt="Track & Chain"],.empresas-medios img[alt="Kubide"] {
+  -webkit-transform: scale(0.8);
+  transform: scale(0.8);
+}
+
+.empresas-medios img[alt="Endado"],.empresas-medios img[alt="Bq"] {
+  -webkit-transform: scale(0.7);
+  transform: scale(0.7);
 }
 
 .inscribete-hero {
