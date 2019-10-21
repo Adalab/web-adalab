@@ -22,14 +22,14 @@
     margin-bottom: 25px;
   }
 
-  &.inscribete-madrid { background-image: url(../images/inscribete/inscribete_grace_desktop.jpg) }
+  &.inscribete-madrid { background-image: url(../images/inscribete/inscribete_madrid.jpg) }
 
 
   @media (max-width: 680px) {
     height: 320px;
     padding: 20px 0 0;
     margin-bottom: 50px;
-    &.inscribete-madrid { background-image: url(../images/inscribete/inscribete_grace_mobile.jpg) }
+    &.inscribete-madrid { background-image: url(../images/inscribete/inscribete_madrid_mobile.jpg) }
   }
 }
 
