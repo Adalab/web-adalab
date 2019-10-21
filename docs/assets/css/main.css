@@ -2457,6 +2457,24 @@ button.swiper-pagination-bullet {
   opacity: 0.9;
 }
 
+.inscribete-lorena {
+  margin: 0;
+  background: url(../images/inscribete/inscribete_hero_4.jpg) no-repeat top left;
+  background-size: cover;
+  color: #fff;
+}
+
+.inscribete-lorena .hero-img {
+  background: url(../images/inscribete/inscribete_hero_4_mobile.jpg) no-repeat top left;
+  background-size: cover;
+  color: #fff;
+}
+
+.inscribete-lorena .hero-img cite {
+  max-width: 60%;
+  opacity: 0.9;
+}
+
 .inscribete-programa .col {
   position: relative;
  /*align-self: center;*/
@@ -3011,6 +3029,7 @@ button.swiper-pagination-bullet {
   .hero .content {
     position: static;
     background-color: #f5f5f5;
+    color: #54585a;
   }
 
   .hero .content .right {

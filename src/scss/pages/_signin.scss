@@ -39,12 +39,29 @@
 .inscribete-ana {
   margin: 0;
   background: url(../images/inscribete/inscribete_hero_1.jpg) no-repeat center
-    center;
+  center;
   background-size: cover;
   color: #fff;
   .hero-img {
     background: url(../images/inscribete/inscribete_hero_1_mobile.jpg) no-repeat
       center right;
+    background-size: cover;
+    color: #fff;
+    cite {
+      max-width: 60%;
+      opacity: 0.9;
+    }
+  }
+}
+
+.inscribete-lorena {
+  margin: 0;
+  background: url(../images/inscribete/inscribete_hero_4.jpg) no-repeat top left;
+  background-size: cover;
+  color: #fff;
+  .hero-img {
+    background: url(../images/inscribete/inscribete_hero_4_mobile.jpg) no-repeat
+    top left;
     background-size: cover;
     color: #fff;
     cite {
