@@ -93,7 +93,6 @@ a {
 }
 
 .hero-text em {
-  font-size: 14px;
   font-weight: 300;
 }
 
@@ -3364,7 +3363,6 @@ button.swiper-pagination-bullet {
 
   .inscribete-aprenderas {
     background: none;
-    padding: 0 0 30px;
     margin: 0;
   }
 
