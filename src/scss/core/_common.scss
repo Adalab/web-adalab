@@ -48,7 +48,7 @@ a {
     .hero {
         min-height: auto;
         background: none;
-        padding: 50px 0;
+        padding: 0;
         .content {
             position: static;
             background-color: $grey1;
@@ -74,7 +74,6 @@ a {
 
     .hero-video-player {
       height: 200px;
-      top: 50px;
 
       a {
         max-width: 50px;

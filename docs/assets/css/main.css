@@ -3064,7 +3064,7 @@ button.swiper-pagination-bullet {
   .hero {
     min-height: auto;
     background: none;
-    padding: 50px 0;
+    padding: 0;
   }
 
   .hero .content {
@@ -3095,7 +3095,6 @@ button.swiper-pagination-bullet {
 
   .hero-video-player {
     height: 200px;
-    top: 50px;
   }
 
   .hero-video-player a {
