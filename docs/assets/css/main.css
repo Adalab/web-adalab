@@ -3093,6 +3093,15 @@ button.swiper-pagination-bullet {
     margin-top: 30px;
   }
 
+  .hero-video-player {
+    height: 200px;
+    top: 50px;
+  }
+
+  .hero-video-player a {
+    max-width: 50px;
+  }
+
   .hero-img {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3344,7 +3353,7 @@ button.swiper-pagination-bullet {
   }
 
   .inscribete-programa ul.mas {
-    margin-bottom: 30px;
+    margin-bottom: 80px;
   }
 
   .inscribete-programa ul.mas:before {
