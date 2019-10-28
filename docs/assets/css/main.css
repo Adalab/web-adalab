@@ -88,7 +88,6 @@ a {
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
   line-height: 30px;
-  color: #000;
   margin-bottom: 30px;
 }
 
@@ -99,6 +98,10 @@ a {
 .hero-text .medium {
   display: block;
   margin: 25px 0 40px;
+}
+
+.hero-text.hero-grey {
+  background-color: #fafafa;
 }
 
 .hero-datos {
@@ -275,6 +278,14 @@ a {
 .invert {
   -webkit-filter: invert(1);
   filter: invert(1);
+}
+
+.sin-foto .hero-text {
+  background: none !important;
+}
+
+.cursos .inscribete-calendario {
+  background: transparent !important;
 }
 
 html,body,body div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,figure,footer,header,menu,nav,section,time,mark,audio,video,details,summary {
@@ -2511,8 +2522,22 @@ button.swiper-pagination-bullet {
 }
 
 .inscribete-lorena .hero-img cite {
-  max-width: 60%;
+  max-width: 50%;
   opacity: 0.9;
+}
+
+.inscribete-lorena .content:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.inscribete-lorena blockquote {
+  z-index: 9;
 }
 
 .inscribete-programa .col {
@@ -2656,6 +2681,10 @@ button.swiper-pagination-bullet {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+}
+
+.inscribete-aprenderas-2 {
+  background-image: url("../images/inscribete/inscribete_hero_3.1.jpg");
 }
 
 .inscribete-calendario {
@@ -2962,6 +2991,13 @@ button.swiper-pagination-bullet {
   font-family:'Bembo Std';src:url("../fonts/BemboStd-SemiboldItalic.eot");src:url("../fonts/BemboStd-SemiboldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/BemboStd-SemiboldItalic.woff") format("woff"), url("../fonts/BemboStd-SemiboldItalic.ttf") format("truetype");font-weight:600;font-style:italic;
 }
 
+@media (min-width: 680px) {
+  .hero-text .lista {
+    max-width: 60ch;
+    margin: 0 auto;
+  }
+}
+
 @media (max-width: 880px) {
   .inscribete-seleccion .inscribete-seleccion-list {
     margin-bottom: 0;
@@ -3098,6 +3134,8 @@ button.swiper-pagination-bullet {
 
   .hero-video-player a {
     max-width: 50px;
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
   }
 
   .hero-img {
@@ -3371,6 +3409,10 @@ button.swiper-pagination-bullet {
     -ms-flex: 100%;
     flex: 100%;
     max-width: 100%;
+  }
+
+  .inscribete-aprenderas-2 {
+    background-image: url("../images/inscribete/inscribete_hero_3.1_mobile.jpg");
   }
 
   .inscribete-calendario .col-50 {
