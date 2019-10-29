@@ -2526,16 +2526,6 @@ button.swiper-pagination-bullet {
   opacity: 0.9;
 }
 
-.inscribete-lorena .content:before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  background: rgba(0, 0, 0, 0.2);
-}
-
 .inscribete-lorena blockquote {
   z-index: 9;
 }
@@ -2996,6 +2986,16 @@ button.swiper-pagination-bullet {
     max-width: 60ch;
     margin: 0 auto;
   }
+
+  .inscribete-lorena .content:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.2);
+  }
 }
 
 @media (max-width: 880px) {
@@ -3370,10 +3370,6 @@ button.swiper-pagination-bullet {
     margin: 0 0 50px;
   }
 
-  .inscribete-programa {
-    padding-top: 0;
-  }
-
   .inscribete-programa .col {
     -webkit-box-flex: 100%;
     -ms-flex: 100%;
@@ -3413,6 +3409,7 @@ button.swiper-pagination-bullet {
 
   .inscribete-aprenderas-2 {
     background-image: url("../images/inscribete/inscribete_hero_3.1_mobile.jpg");
+    background: #fafafa;
   }
 
   .inscribete-calendario .col-50 {
