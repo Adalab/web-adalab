@@ -519,7 +519,7 @@ button,input[type=button] {
   padding: 16px 45px;
 }
 
-h2 {
+h2,.h2 {
   font-size: 18px;
   font-weight: normal;
   color: #54585a;
@@ -2170,16 +2170,12 @@ button.swiper-pagination-bullet {
   padding-top: 60px;
 }
 
-.home-hero h2 {
+.home-hero h2,.home-hero .h2 {
   max-width: 300px;
   font-size: calc(20px + 1.5vw);
   font-weight: 700;
   line-height: 120%;
-}
-
-.home-hero h2 span {
-  display: block;
-  font-weight: 700;
+  word-spacing: 100vw;
 }
 
 .home-hero .pie {
@@ -2363,7 +2359,7 @@ button.swiper-pagination-bullet {
   position: relative;
 }
 
-.empresas-hero h2 {
+.empresas-hero h2,.empresas-hero .h2 {
   max-width: 450px;
   font-size: calc(20px + 1.5vw);
   font-weight: 700;
@@ -2481,7 +2477,7 @@ button.swiper-pagination-bullet {
   padding-bottom: 60px;
 }
 
-.inscribete-hero h2,.inscribete-hero h3 {
+.inscribete-hero h2,.inscribete-hero .h2,.inscribete-hero h3,.inscribete-hero .h3 {
   max-width: 470px;
   font-size: calc(20px + 1.5vw);
   font-weight: 700;
@@ -2857,7 +2853,7 @@ button.swiper-pagination-bullet {
   padding-bottom: 60px;
 }
 
-.voluntarios-hero h2 {
+.voluntarios-hero h2,.voluntarios-hero .h2 {
   max-width: 450px;
   font-size: calc(20px + 1.5vw);
   font-weight: 700;
@@ -3190,7 +3186,7 @@ button.swiper-pagination-bullet {
     font-size: 12px;
   }
 
-  h2 {
+  h2,.h2 {
     font-size: 16px;
   }
 

@@ -8,15 +8,12 @@
     background-size: cover;
     height: 80vh;
     padding-top:60px;
-    h2 {
+    h2, .h2 {
         max-width: 300px;
         font-size: calc(20px + 1.5vw);
         font-weight: 700;
         line-height: 120%;
-        span {
-            display: block;
-            font-weight: 700;
-        }
+        word-spacing: 100vw;
     }
     .pie {
         background:none;

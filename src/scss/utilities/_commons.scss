@@ -55,7 +55,7 @@
 
 /// TITLES
 
-h2 {
+h2, .h2 {
   font-size: 18px;
   font-weight: normal;
   color: $grey3;
@@ -64,7 +64,7 @@ h2 {
 }
 
 @media (max-width: 680px) {
-  h2 {
+  h2, .h2 {
     font-size: 16px;
   }
 }
