@@ -64,25 +64,36 @@
                 font-size: 13px;
             }
         }
+        ul, ol {
+          padding-left:40px;
+          li {
+            position: relative;
+            margin-bottom:10px;
+            font-family: $OpenSans;
+          }
+            p:before { display: none; }
+        }
         ul {
-            padding-left:40px;
-            li {
-                position: relative;
-                margin-bottom:10px;
-                font-family: $OpenSans;
-                padding-left:20px;
-                /*font-style: italic;*/
-                &:before {
-                    content: '';
-                    position: absolute;
-                    top:15px;
-                    left:0;
-                    width:10px;
-                    height:3px;
-                    border-radius: 20px;
-                    background-color:$grey3;
-                }
+
+          li {
+              padding-left:20px;
+            /*font-style: italic;*/
+            &:before {
+                content: '';
+                position: absolute;
+                top:15px;
+                left:0;
+                width:10px;
+                height:3px;
+                border-radius: 20px;
+                background-color:$grey3;
             }
+          }
+        }
+        ol {
+          li {
+            padding-left: 0;
+          }
         }
     }
 }
