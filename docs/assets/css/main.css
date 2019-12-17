@@ -1676,14 +1676,21 @@ button.swiper-pagination-bullet {
   font-size: 13px;
 }
 
-.desplegable dd ul {
+.desplegable dd ul,.desplegable dd ol {
   padding-left: 40px;
 }
 
-.desplegable dd ul li {
+.desplegable dd ul li,.desplegable dd ol li {
   position: relative;
   margin-bottom: 10px;
   font-family: "Open Sans", sans-serif;
+}
+
+.desplegable dd ul p:before,.desplegable dd ol p:before {
+  display: none;
+}
+
+.desplegable dd ul li {
   padding-left: 20px;
  /*font-style: italic;*/;
 }
@@ -1697,6 +1704,10 @@ button.swiper-pagination-bullet {
   height: 3px;
   border-radius: 20px;
   background-color: #54585a;
+}
+
+.desplegable dd ol li {
+  padding-left: 0;
 }
 
 .cookie-message {
