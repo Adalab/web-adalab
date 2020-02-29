@@ -1477,6 +1477,16 @@ button.swiper-pagination-bullet {
   background-color: #14d9c4;
 }
 
+.af-form {
+  margin: 0 auto;
+}
+
+.content__gdprLegal {
+  font-size: 90%;
+  font-weight: lighter;
+  opacity: .8;
+}
+
 #mc_embed_signup {
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
@@ -2987,6 +2997,16 @@ button.swiper-pagination-bullet {
 ::-webkit-selection {
   background: #14d9c4;
   color: #FFF;
+}
+
+.af-form {
+  margin: 0 auto;
+}
+
+.content__gdprLegal {
+  font-size: 90%;
+  font-weight: lighter;
+  opacity: .8;
 }
 
 @font-face {
