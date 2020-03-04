@@ -2999,16 +2999,6 @@ button.swiper-pagination-bullet {
   color: #FFF;
 }
 
-.af-form {
-  margin: 0 auto;
-}
-
-.content__gdprLegal {
-  font-size: 90%;
-  font-weight: lighter;
-  opacity: .8;
-}
-
 @font-face {
   font-family:'Bembo Std';src:url("../fonts/BemboStd-SemiboldItalic.eot");src:url("../fonts/BemboStd-SemiboldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/BemboStd-SemiboldItalic.woff") format("woff"), url("../fonts/BemboStd-SemiboldItalic.ttf") format("truetype");font-weight:600;font-style:italic;
 }
