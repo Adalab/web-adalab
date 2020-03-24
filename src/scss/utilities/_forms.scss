@@ -9,6 +9,13 @@
   opacity: .8;
 }
 
+.af-field-label {
+    text-align: left;
+}
+.af-form {
+    --input-background: #fff;
+}
+
 #mc_embed_signup {
     font-family: $OpenSans;
     font-size: 14px;

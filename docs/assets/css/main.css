@@ -1487,6 +1487,14 @@ button.swiper-pagination-bullet {
   opacity: .8;
 }
 
+.af-field-label {
+  text-align: left;
+}
+
+.af-form {
+  --input-background: #fff;
+}
+
 #mc_embed_signup {
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
