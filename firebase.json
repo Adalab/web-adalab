@@ -62,6 +62,16 @@
         "source": "/contacto-voluntarios.html",
         "destination": "/contacto-voluntarios/",
         "type": 301
+      },
+      {
+        "source": "/equipo-y-colaboradores/",
+        "destination": "/equipo/",
+        "type": 301
+      },
+      {
+        "source": "/curso-de-desarrollo-web/",
+        "destination": "/curso-desarrollo-web/",
+        "type": 301
       }
     ]
   }
