@@ -99,6 +99,7 @@
     position: relative;
     /*align-self: center;*/
     margin-top: 10px;
+    max-width: 60ch;
     &:not(:last-child) {
       margin-right: 60px;
       li {
@@ -107,6 +108,9 @@
         }
       }
     }
+  }
+  .content {
+    max-width: 80ch;
   }
   .course-module-title {
     padding-bottom: 10px;
@@ -141,7 +145,7 @@
       border-bottom: 1px solid $grey2;
       &.duracion {
         border-bottom: 1px solid $grey2;
-        color: #fff;
+        // color: #fff;
         padding: 4px 0;
         font-size: 16px;
         font-weight: 700;
@@ -320,9 +324,8 @@
 // HERO CALENDARIO
 
 .inscribete-calendario {
-  background: url(../images/inscribete/inscribete_hero_2.jpg) no-repeat center
-    center;
-  background-size: cover;
+  // background: url(../images/inscribete/inscribete_hero_2.jpg) no-repeat center center;
+  // background-size: cover;
   h3 {
     margin-bottom: 35px;
     span {
@@ -504,5 +507,70 @@
   .swiper-container-rtl .swiper-button-next {
     left: 0;
     transform: rotate(180deg) scale3d(0.6, 0.6, 1);
+  }
+}
+
+
+// HERO AYUDA BÚSQUEDA DE EMPLEO
+
+.inscribete-ayuda {
+  margin: 0;
+  background: url(../images/cursos/Cursos.jpg) no-repeat 50% 60%;
+  background-size: cover;
+  color: #fff;
+  .content {     max-width: 1260px; }
+  .hero-img {
+    background: url(../images/cursos/Cursos.jpg) no-repeat 50% 60%;
+    background-size: cover;
+    color: #fff;
+    cite {
+      max-width: 50%;
+      opacity: 0.9;
+    }
+  }
+  @media (min-width: $movil) {
+    .content:before {
+      content: '';
+      position: absolute;
+      width: 100%; height: 100%;
+      left: 0; top: 0;
+      background: rgba(0, 0, 0, .2);
+    }
+  }
+  @media (max-width: $movil) {
+    .hero-img {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 240px;
+    }
+  }
+  &:before { display: none; }
+}
+
+.hero-only-text {
+  background: rgba(255, 255, 255, .9);
+  transition: background-color 250ms ease;
+  padding: 1em;
+  margin: 1em;
+  border-radius: 8px;
+  z-index: 1;
+  text-align: left;
+
+  &:hover { background: white; }
+
+  p {
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: 1.5;
+    margin: 0 0 1em;
+    position: relative;
+    z-index: 2;
+    color: $grey3;
+  }
+  .section__title {
+    position: relative;
+    z-index: 2;
+    &:before { display: none; }
   }
 }

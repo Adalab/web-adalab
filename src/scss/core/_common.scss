@@ -304,6 +304,12 @@ a {
     }
 }
 
+.hide_mobile {
+  @media (max-width: $movil) {
+    display: none;
+  }
+}
+
 //// FAQ's
 
 .faq {
@@ -388,3 +394,6 @@ a {
 }
 
 .cursos .inscribete-calendario { background: transparent !important; }
+
+.no-padding { padding: 0; }
+.no-padding-top { padding-top: 0; }

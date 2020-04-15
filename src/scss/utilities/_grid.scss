@@ -59,6 +59,11 @@
     max-width: 100%;
 }
 
+.margin-auto {
+  display: inline-block;
+  margin: 0 auto;
+}
+
 .col-75 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 75%;

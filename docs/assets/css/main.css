@@ -288,6 +288,14 @@ a {
   background: transparent !important;
 }
 
+.no-padding {
+  padding: 0;
+}
+
+.no-padding-top {
+  padding-top: 0;
+}
+
 html,body,body div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,figure,footer,header,menu,nav,section,time,mark,audio,video,details,summary {
   margin: 0;
   padding: 0;
@@ -646,6 +654,11 @@ h2,.h2 {
   -ms-flex-positive: 1;
   flex-grow: 1;
   max-width: 100%;
+}
+
+.margin-auto {
+  display: inline-block;
+  margin: 0 auto;
 }
 
 .col-75 {
@@ -1728,7 +1741,7 @@ button.swiper-pagination-bullet {
   padding-left: 0;
 }
 
-.cookie-message {
+.cookie-message,.covid-message {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -1740,7 +1753,7 @@ button.swiper-pagination-bullet {
   text-align: center;
 }
 
-.cookie-message a {
+.cookie-message a,.covid-message a {
   padding: 10px;
   cursor: pointer;
   color: #FFF;
@@ -1749,14 +1762,53 @@ button.swiper-pagination-bullet {
   transition: opacity cubic-bezier(0.1, 0.79, 0.24, 0.93) 0.3s;
 }
 
-.cookie-message a.cookiebar-close {
+.cookie-message a.cookiebar-close,.covid-message a.cookiebar-close {
   margin-left: 30px;
   background-color: #099d8d;
   padding: 10px 20px;
 }
 
-.cookie-message a:hover {
+.cookie-message a:hover,.covid-message a:hover {
   opacity: .7;
+}
+
+.covid-message {
+  padding: 10px;
+  position: static;
+  background-color: #feea22;
+  color: #003636;
+  -webkit-transition: -webkit-transform 250ms ease;
+  transition: -webkit-transform 250ms ease;
+  transition: transform 250ms ease;
+  transition: transform 250ms ease, -webkit-transform 250ms ease;
+}
+
+.covid-message:hover {
+  -webkit-transform: scale(1.01);
+  transform: scale(1.01);
+}
+
+.covid-message:hover svg {
+  -webkit-transform: scale(1.3) translateX(3px);
+  transform: scale(1.3) translateX(3px);
+}
+
+.covid-message span {
+  display: inline-block !important;
+  font-size: 120%;
+  margin: 0 !important;
+  margin-right: .25em;
+}
+
+.covid-message a {
+  color: inherit;
+}
+
+.covid-message svg {
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+  fill: #003636;
+  color: #003636;
 }
 
 .modal-video {
@@ -2564,6 +2616,7 @@ button.swiper-pagination-bullet {
   position: relative;
  /*align-self: center;*/
   margin-top: 10px;
+  max-width: 60ch;
 }
 
 .inscribete-programa .col:not(:last-child) {
@@ -2572,6 +2625,10 @@ button.swiper-pagination-bullet {
 
 .inscribete-programa .col:not(:last-child) li:last-child {
   background-color: #707070;
+}
+
+.inscribete-programa .content {
+  max-width: 80ch;
 }
 
 .inscribete-programa .course-module-title {
@@ -2613,7 +2670,6 @@ button.swiper-pagination-bullet {
 
 .inscribete-programa ul li.duracion {
   border-bottom: 1px solid #b8b8b9;
-  color: #fff;
   padding: 4px 0;
   font-size: 16px;
   font-weight: 700;
@@ -2705,11 +2761,6 @@ button.swiper-pagination-bullet {
 
 .inscribete-aprenderas-2 {
   background-image: url("../images/inscribete/inscribete_hero_3.1.jpg");
-}
-
-.inscribete-calendario {
-  background: url(../images/inscribete/inscribete_hero_2.jpg) no-repeat center center;
-  background-size: cover;
 }
 
 .inscribete-calendario h3 {
@@ -2868,6 +2919,66 @@ button.swiper-pagination-bullet {
   margin: 40px 0 0;
 }
 
+.inscribete-ayuda {
+  margin: 0;
+  background: url(../images/cursos/Cursos.jpg) no-repeat 50% 60%;
+  background-size: cover;
+  color: #fff;
+}
+
+.inscribete-ayuda .content {
+  max-width: 1260px;
+}
+
+.inscribete-ayuda .hero-img {
+  background: url(../images/cursos/Cursos.jpg) no-repeat 50% 60%;
+  background-size: cover;
+  color: #fff;
+}
+
+.inscribete-ayuda .hero-img cite {
+  max-width: 50%;
+  opacity: 0.9;
+}
+
+.inscribete-ayuda:before {
+  display: none;
+}
+
+.hero-only-text {
+  background: rgba(255, 255, 255, 0.9);
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  padding: 1em;
+  margin: 1em;
+  border-radius: 8px;
+  z-index: 1;
+  text-align: left;
+}
+
+.hero-only-text:hover {
+  background: white;
+}
+
+.hero-only-text p {
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: 1.5;
+  margin: 0 0 1em;
+  position: relative;
+  z-index: 2;
+  color: #54585a;
+}
+
+.hero-only-text .section__title {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-only-text .section__title:before {
+  display: none;
+}
+
 .voluntarios-hero {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3017,7 +3128,33 @@ button.swiper-pagination-bullet {
     margin: 0 auto;
   }
 
+  .covid-message {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .covid-message span {
+    font-size: 150%;
+  }
+
   .inscribete-lorena .content:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  .inscribete-ayuda .content:before {
     content: '';
     position: absolute;
     width: 100%;
@@ -3089,12 +3226,12 @@ button.swiper-pagination-bullet {
     margin-right: 0;
   }
 
-  .cookie-message span {
+  .cookie-message span,.covid-message span {
     display: block;
     margin-bottom: 20px;
   }
 
-  .cookie-message a.cookiebar-close {
+  .cookie-message a.cookiebar-close,.covid-message a.cookiebar-close {
     margin: 0;
   }
 
@@ -3199,6 +3336,10 @@ button.swiper-pagination-bullet {
   .bq-md p,.bq-lg p {
     font-size: 16px;
     font-weight: 400;
+  }
+
+  .hide_mobile {
+    display: none;
   }
 
   .lista {
@@ -3504,6 +3645,19 @@ button.swiper-pagination-bullet {
     left: 0;
     -webkit-transform: rotate(180deg) scale3d(0.6, 0.6, 1);
     transform: rotate(180deg) scale3d(0.6, 0.6, 1);
+  }
+
+  .inscribete-ayuda .hero-img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 240px;
   }
 
   .voluntarios-hero {

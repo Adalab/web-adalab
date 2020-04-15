@@ -1,4 +1,5 @@
-.cookie-message {
+.cookie-message,
+.covid-message {
     position:fixed;
     bottom:0;
     left:0;
@@ -26,7 +27,8 @@
 }
 
 @media (max-width:860px) {
-    .cookie-message {
+    .cookie-message,
+    .covid-message {
         span {
             display: block;
             margin-bottom:20px;
@@ -37,4 +39,41 @@
             }
         }
     }
+}
+
+.covid-message {
+  padding: 10px;
+  position: static;
+  background-color: #feea22;
+  color: #003636;
+  transition: transform 250ms ease;
+  &:hover {
+    transform: scale(1.01);
+    svg {
+      transform: scale(1.3) translateX(3px);
+    }
+  }
+  span {
+    display: inline-block !important;
+    font-size: 120%;
+    margin: 0 !important;
+    margin-right: .25em;
+  }
+  a {
+    color: inherit;
+  }
+  svg {
+    transition: all 250ms ease;
+    fill: #003636;
+    color: #003636;
+  }
+
+  @media (min-width: $movil) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    span {
+      font-size: 150%;
+    }
+  }
 }
