@@ -169,11 +169,19 @@
 }
 
 @media (max-width:860px) {
+  .home-medios {
+      .home-medios-logos {
+          margin-top:60px;
+          flex-wrap: wrap;
+          justify-content: space-around;
+      }
+  }
+}
+@media (max-width:860px) {
     .home-medios {
         .home-medios-logos {
-            margin-top:60px;
-            flex-wrap: wrap;
-            justify-content: space-around;
+          grid-template-columns: 200px 200px;
+          grid-template-columns: repeat(2, 200px);
         }
     }
 }
@@ -194,7 +202,7 @@
 //// BACKGROUNDS HEROS
 
 .home-inscribete {
-    margin: 80px 0 0;
+  margin: 0;
     background:url(../images/home/home_hero_1.jpg) no-repeat center center;
     background-size: cover;
     .hero-img {

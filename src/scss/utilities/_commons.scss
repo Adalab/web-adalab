@@ -55,19 +55,19 @@
 
 /// TITLES
 
-h2, .h2 {
-  font-size: 18px;
-  font-weight: normal;
-  color: $grey3;
-  line-height: 160%;
-  margin-bottom: 25px;
-}
+// h2, .h2 {
+//   font-size: 18px;
+//   font-weight: normal;
+//   color: $grey3;
+//   line-height: 160%;
+//   margin-bottom: 25px;
+// }
 
-@media (max-width: 680px) {
-  h2, .h2 {
-    font-size: 16px;
-  }
-}
+// @media (max-width: 680px) {
+//   h2, .h2 {
+//     font-size: 16px;
+//   }
+// }
 
 .section__title {
   position: relative;
@@ -95,7 +95,16 @@ h2, .h2 {
     font-size: 24px;
     font-weight: 300;
   }
+
+  &.align-left:before,
+  &.align-right:before {
+    margin: 0;
+  }
+  &.align-right:before { margin-left: auto; }
 }
+
+.align-left { text-align: left; }
+.align-right { text-align: right; }
 
 @media (max-width: 680px) {
   h3 {

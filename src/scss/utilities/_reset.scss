@@ -9,7 +9,7 @@ $grey2: #b8b8b9;
 $grey3: #54585a;
 
 
-html, body, body div, span, object, iframe, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {
+html, span, object, iframe, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -84,7 +84,7 @@ table {font-size: inherit; font: 100%;}
 
 small {font-size: 85%;}
 
-strong {font-weight: bold;}
+strong {font-weight: 500;}
 
 td, td img {vertical-align: top;}
 

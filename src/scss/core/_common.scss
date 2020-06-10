@@ -167,7 +167,7 @@ a {
     // INFOGRAFÍA DATOS
 
 .hero-datos {
-    margin: 30px auto 60px;
+    margin: 30px auto 0 !important;
     text-align: center;
 
     .hero-dato {
@@ -403,3 +403,15 @@ a {
 }
 
 blockquote { all: inherit !important; }
+.ada-hero-section {
+  h2, .h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: Rubik, sans-serif;
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: 400;
+    text-decoration: none;
+    color: inherit;
+  }
+}
