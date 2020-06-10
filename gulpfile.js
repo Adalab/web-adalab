@@ -128,15 +128,7 @@ gulp.task('html', function(done) {
 
 // > Arranca el servidor web con BrowserSync
 gulp.task(
-  'build',
-  gulp.series(['html', 'styles', 'scripts'], function(done) {
-    done();
-  })
-);
-
-// > Arranca el servidor web con BrowserSync
-gulp.task(
-  'build',
+  'default',
   gulp.series(['html', 'styles', 'scripts'], function(done) {
     browserSync.init({
       server: {
@@ -149,6 +141,15 @@ gulp.task(
     gulp.watch(config.images, gulp.series('bs-reload'));
     gulp.watch(config.scss.src, gulp.series('styles'));
     gulp.watch(config.js.src, gulp.series(['scripts', 'bs-reload']));
+    done();
+  })
+);
+
+// > Arranca el servidor web con BrowserSync
+gulp.task(
+  'build',
+  gulp.series(['html', 'styles-min', 'scripts-min'], function(done) {
+    console.log('> Versión de producción: OK');
     done();
   })
 );
