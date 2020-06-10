@@ -128,7 +128,15 @@ gulp.task('html', function(done) {
 
 // > Arranca el servidor web con BrowserSync
 gulp.task(
-  'default',
+  'build',
+  gulp.series(['html', 'styles', 'scripts'], function(done) {
+    done();
+  })
+);
+
+// > Arranca el servidor web con BrowserSync
+gulp.task(
+  'build',
   gulp.series(['html', 'styles', 'scripts'], function(done) {
     browserSync.init({
       server: {
