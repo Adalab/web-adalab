@@ -50,6 +50,7 @@
   .btn {
     padding: 10px 15px;
     font-size: 12px;
+    line-height: 1.4;
   }
 }
 
@@ -112,9 +113,16 @@
   }
 }
 
+@media (max-width: $movil) {
+  .align-center-mobile { text-align: center !important; }
+  .align-center-mobile:before { margin: auto !important; }
+}
+
 .course-module-title,
 h4 {
   font-size: 22px;
   font-weight: 500;
   color: $aqua;
 }
+
+.z-index { z-index: 1; }

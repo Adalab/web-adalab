@@ -14,7 +14,7 @@ body {
   font-family: Rubik, sans-serif;
   color: #54585a;
   font-size: 18px;
-  line-height: 1.6rem;
+  line-height: 1.4rem;
 }
 
 h1 {
@@ -50,7 +50,7 @@ h6 {
   line-height: 18px;
 }
 
-p, .hero-text {
+p {
   margin-bottom: 10px;
   font-size: 1em;
   line-height: 1.8rem;
@@ -433,11 +433,12 @@ strong {
 }
 
 .light {
+  line-height: 1.4rem;
   font-weight: 300;
 }
 
 .ada-alumna-content-text {
-  line-height: 20px;
+  line-height: 10px;
 }
 
 .nomargin-bottom {
@@ -702,12 +703,9 @@ strong {
 }
 
 .ada-carrusel {
+  height: 180px;
   padding-right: 100px;
   padding-left: 100px;
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
   background-color: hsla(0, 0%, 86.7%, 0);
 }
 
@@ -861,10 +859,10 @@ strong {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-flex: 1;
-  -webkit-flex: auto;
-  -ms-flex: auto;
-  flex: auto;
+  -webkit-box-flex: 33%;
+  -webkit-flex: 33%;
+  -ms-flex: 33%;
+  flex: 33%;
 }
 
 .whitelight-block {
@@ -1098,6 +1096,11 @@ strong {
   object-fit: cover;
 }
 
+.ada-background-image.ada-background-image-top {
+  -o-object-position: 50% 50%;
+  object-position: 50% 50%;
+}
+
 .ada-background-overlay {
   position: absolute;
   width: 100%;
@@ -1174,6 +1177,56 @@ strong {
   position: relative;
 }
 
+.nominheight {
+  min-height: 0px;
+}
+
+.ada-timeline-tab-separator-left {
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  z-index: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-transform: translate(50%, -50%);
+  -ms-transform: translate(50%, -50%);
+  transform: translate(50%, -50%);
+}
+
+.ada-timeline-image-item {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.mb-xs {
+  margin-bottom: 0.2rem;
+}
+
+.ada-flex-center-vertical {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 @media screen and (max-width: 991px) {
   .ada-container {
     padding-right: 30px;
@@ -1208,12 +1261,51 @@ strong {
     -ms-transform-origin: 0% 50%;
     transform-origin: 0% 50%;
   }
+  .ada-timeline-tabs-nav {
+    margin-top: -40px;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .ada-timeline-tab-link {
+    margin-top: 40px;
+    -webkit-box-flex: 1;
+    -webkit-flex: auto;
+    -ms-flex: auto;
+    flex: auto;
+  }
+  .ada-timeline-tab-separator {
+    right: 0px;
+  }
+  .ada-timeline-tab-separator-1 {
+    width: 7px;
+    -webkit-transform: translate(0px, 0px) skew(20deg, 0deg);
+    -ms-transform: translate(0px, 0px) skew(20deg, 0deg);
+    transform: translate(0px, 0px) skew(20deg, 0deg);
+  }
+  .ada-timeline-tab-separator-2 {
+    width: 7px;
+    -webkit-transform: skew(-20deg, 0deg);
+    -ms-transform: skew(-20deg, 0deg);
+    transform: skew(-20deg, 0deg);
+  }
   .ada-carrusel {
     padding-right: 60px;
     padding-left: 60px;
   }
   .ada-carrusel-logo {
     width: 33%;
+  }
+  .ada-timeline-tab-separator-left {
+    left: 0px;
+    right: auto;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
   }
 }
 
@@ -1266,6 +1358,16 @@ strong {
   .ada-content-box-padded.ada-grey-block.bank-logo.pointer.ml-l {
     margin-left: 1rem;
   }
+  .ada-content-box-padded.flex-grow.pointer.darktext {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 100%;
+    -ms-flex: 0 100%;
+    flex: 0 100%;
+  }
+  .ada-content-box-padded.flex-grow.pointer.darktext.ml-l {
+    margin-top: 1rem;
+    margin-left: 0rem;
+  }
   .bank-logo {
     height: 120px;
     min-width: 0%;
@@ -1303,6 +1405,18 @@ strong {
     -ms-flex-direction: column;
     flex-direction: column;
   }
+  .ada-container.horizontal.ada-intro {
+    -webkit-flex-wrap: wrap-reverse;
+    -ms-flex-wrap: wrap-reverse;
+    flex-wrap: wrap-reverse;
+  }
+  .ada-container.ada-container-small {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
   .buttontext {
     font-size: 17px;
   }
@@ -1332,6 +1446,46 @@ strong {
     -ms-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
   }
+  .ada-timeline-image {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .ada-timeline-content {
+    margin-left: 0px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+  }
+  .ada-timeline-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .ada-svg.bigger {
+    width: 70px;
+  }
+  .ada-svg.smaller {
+    width: 50px;
+  }
+  .ada-tab-header {
+    width: 40%;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  .ada-h6 {
+    font-size: 1em;
+  }
+  .arrow {
+    width: 12px;
+  }
+  .ada-timeline-tabs-nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
   .ada-carrusel {
     width: 100%;
     padding-right: 40px;
@@ -1340,14 +1494,18 @@ strong {
   .ada-carrusel-logo {
     width: 50%;
   }
+  .ada-carrusel-logo-container {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
   .left-arrow {
-    left: 0px;
+    left: -10px;
     -webkit-transform: scale(0.6);
     -ms-transform: scale(0.6);
     transform: scale(0.6);
   }
   .right-arrow {
-    right: 0px;
+    right: -10px;
     -webkit-transform: scale(0.6);
     -ms-transform: scale(0.6);
     transform: scale(0.6);
@@ -1361,6 +1519,11 @@ strong {
     -webkit-transform: translate(-70%, 0px);
     -ms-transform: translate(-70%, 0px);
     transform: translate(-70%, 0px);
+  }
+  .ada-box.nowrap {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
   }
   .ada-content-box.horizontal.whitelight-block.flex-3 {
     -webkit-flex-wrap: wrap;
@@ -1404,9 +1567,16 @@ strong {
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
   }
+  .ada-background-image.ada-background-image-top.ada-background-tilt-left-mobile {
+    -o-object-position: 0% 50%;
+    object-position: 0% 50%;
+  }
   .ada-modal-open-icon-plus {
     width: 2rem;
     height: 2rem;
+  }
+  .tabs {
+    width: 100%;
   }
 }
 

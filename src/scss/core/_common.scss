@@ -5,14 +5,15 @@ body {
   font-family: $Rubik;
 }
 
-.container {
-
-}
-
 a {
-    text-decoration: none;
-    color:$aqua;
+  text-decoration: none;
+  color:$aqua;
 }
+
+strong {
+  font-weight: bold;
+}
+
 
 //// HEROS
 
@@ -80,6 +81,17 @@ a {
         transform: translateY(-30px);
       }
     }
+}
+
+.hide-desktop {
+  @media (min-width: $movil) {
+    display: none;
+  }
+}
+.hide-mobile {
+  @media (max-width: $movil) {
+    display: none;
+  }
 }
 
 .hero-img {
@@ -173,6 +185,7 @@ a {
     .hero-dato {
         min-height: 147px;
         display: flex;
+        line-height: 3em;
         align-items: center;
         text-align: center;
         padding:40px 10px;
@@ -209,6 +222,11 @@ a {
             margin: 0;
         }
     }
+}
+
+
+.padding-bottom-80 {
+  padding-bottom: 80px;
 }
 
 @media (max-width:860px) {
@@ -402,7 +420,7 @@ a {
   font-size: 120% !important;
 }
 
-blockquote { all: inherit !important; }
+// blockquote { all: inherit !important; }
 .ada-hero-section {
   h2, .h2 {
     margin-top: 20px;
@@ -414,4 +432,12 @@ blockquote { all: inherit !important; }
     text-decoration: none;
     color: inherit;
   }
+}
+
+.mb {
+  margin-bottom: 1rem !important;
+}
+
+.transparent {
+  background: transparent !important;
 }
