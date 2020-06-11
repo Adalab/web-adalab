@@ -183,6 +183,7 @@ strong {
     text-align: center;
 
     .hero-dato {
+        position: relative;
         min-height: 147px;
         display: flex;
         line-height: 3em;
@@ -190,12 +191,25 @@ strong {
         text-align: center;
         padding:40px 10px;
         flex: 1;
-        margin: 0 16px;
         // border: 1px solid $aqua;
         border-radius: 3px;
         background: $aqua;
         color: white;
         p { color: white; }
+        small {
+          font-size: 14px;
+          line-height: 1.2;
+          display: block;
+          margin-top: 1em;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          transform: translateY(100%);
+          padding: 10px;
+          color: #54585a;
+        }
+
+        & + .hero-dato { margin-left: 16px; }
 
         .hero-dato-content {
             width: 100%;
@@ -440,4 +454,37 @@ strong {
 
 .transparent {
   background: transparent !important;
+}
+
+.padding {
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+}
+
+.emoji {
+  font-family: "Noto Color Emoji", "Apple Color Emoji", "Segoe UI Emoji", Times, Symbola, Aegyptus, Code2000, Code2001, Code2002, Musica, serif, LastResort;
+}
+
+.ada-inverted .ada-separator { background-color: #A9A9AA; }
+.ada-timeline-tabs-nav {
+  -webkit-overflow-scrolling: touch; /* [3] */
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  background-image:
+    /* Shadows */
+    linear-gradient(to right, white, white),
+    linear-gradient(to right, white, white),
+    /* Shadow covers */
+    linear-gradient(to right, rgba(0,0,0,.15), rgba(255,255,255,0)),
+    linear-gradient(to left, rgba(0,0,0,.15), rgba(255,255,255,0));
+  background-position: left center, right center, left center, right center;
+  background-repeat: no-repeat;
+  background-color: white;
+  background-size: 15px 100%, 20px 100%, 10px 100%, 10px 100%;
+  /* Opera doesn't support this in the shorthand */
+  background-attachment: local, local, scroll, scroll;
+  }
+.ada-container {
+  strong {
+    font-weight: 500;
+  }
 }
