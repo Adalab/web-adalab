@@ -4,6 +4,12 @@
     margin: 80px 0 0;
     text-align: left;
     border: 0;
+
+    [itemprop="mainEntity"]:last-child dt {
+      padding-bottom: 0;
+      a { border: none !important; }
+    }
+
     dt,
     dd {
         border-bottom: 0;

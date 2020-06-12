@@ -1460,7 +1460,7 @@ strong {
   }
   .ada-container.vertical {
     padding-top: 40px;
-    padding-bottom: 40px;
+    padding-bottom: 20px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
