@@ -5,7 +5,7 @@ console.log('>> Ready :)');
 $(document).ready(function() {
 
     //// MODALS
-    
+
     ! function (o) {
         "object" == typeof module && "object" == typeof module.exports ? o(require("jquery"), window, document) : o(jQuery, window, document)
     }(function (o, t, i, e) {
@@ -114,6 +114,19 @@ $(document).ready(function() {
             t.preventDefault(), o(this).modal()
         })
     });
-    
+
 
 });
+
+window.onload = function() {
+// Prevents body scroll on desktop only
+  if (Webflow) Webflow.push(function() {
+    $('.ada-modal-clicker').click(function(e) {
+      $('body').addClass('modalOpen');
+    });
+
+    $('.ada-modal-close').click(function(e) {
+      $('body').removeClass('modalOpen');
+    });
+  });
+}

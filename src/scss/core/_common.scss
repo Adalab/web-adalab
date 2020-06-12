@@ -487,3 +487,17 @@ strong {
     font-weight: 500;
   }
 }
+
+
+.modalOpen {
+  overflow: hidden;
+}
+.ada-timeline-content {
+  strong {
+    font-weight: normal;
+  }
+}
+
+.ada-modal-wrapper {
+  z-index: 99;
+}

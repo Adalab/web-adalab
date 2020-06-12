@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--  This site was created in Webflow. http://www.webflow.com  -->
-<!--  Last Published: Fri Jun 12 2020 08:14:56 GMT+0000 (Coordinated Universal Time)  -->
+<!--  Last Published: Fri Jun 12 2020 09:49:51 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="5ee222cf189ba21e1e876e4f" data-wf-site="5ede0ece73d6ee50c62f7272">
 <head>
   <meta charset="utf-8">
@@ -18,6 +18,51 @@
   <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
   <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
   <link href="images/webclip.png" rel="apple-touch-icon">
+  <script>
+window.onload = function() {
+// Prevents body scroll on desktop only
+  Webflow.push(function() {
+    $('.ada-modal-clicker').click(function(e) {
+      $('body').addClass('modalOpen');
+    });
+    $('.ada-modal-close').click(function(e) {
+      $('body').removeClass('modalOpen');
+    });
+  });
+}
+</script>
+  <style>
+.force-show-scrollbars ::-webkit-scrollbar-track:vertical {
+    border-left: 1px solid #E7E7E7;
+    box-shadow: 1px 0 1px 0 #F6F6F6 inset, -1px 0 1px 0 #F6F6F6 inset;
+}
+.force-show-scrollbars ::-webkit-scrollbar-track:horizontal {
+    border-top: 1px solid #E7E7E7;
+    box-shadow: 0 1px 1px 0 #F6F6F6 inset, 0 -1px 1px 0 #F6F6F6 inset;
+}
+.force-show-scrollbars ::-webkit-scrollbar {
+    -webkit-appearance: none;
+    background-color: #FAFAFA;
+    width: 16px;
+}
+.force-show-scrollbars ::-webkit-scrollbar-thumb {
+    background-clip: padding-box;
+    background-color: #C1C1C1;
+    border-color: transparent;
+    border-radius: 9px 8px 8px 9px;
+    border-style: solid;
+    border-width: 3px 3px 3px 4px; /* Workaround because margins aren't supported */
+    box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+}
+/* Unfortunately scrollbars can't use CSS transitions. Also, it's not possible
+   to highlight the thumb when the scrollbar track is hovered without some
+   JavaScript acrobatics; https://jsfiddle.net/QcqBM/6/ is a start, but you
+   also have to check whether the element has a scrollbar and if so how wide
+   it is. */
+.force-show-scrollbars ::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+</style>
 </head>
 <body>
   <div id="un-dia-en-adalab">
@@ -53,12 +98,22 @@
 	/* Opera doesn't support this in the shorthand */
 	background-attachment: local, local, scroll, scroll;
 }
+.ada-timeline-tabs-child:after {
+    content: '→';
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #14d9c4;
+    transform: translate(-100%, -80%);
+    font-size: 120%;
+    font-weight: bold;
+}
 </style>
         </div>
       </div>
       <div data-duration-in="300" data-duration-out="100" class="tabs w-tabs">
         <div class="tabs-menu w-tab-menu">
-          <a data-w-tab="Semipresencial" class="ada-tab-header w-inline-block w-tab-link">
+          <a data-w-tab="Semipresencial" class="ada-tab-header w-inline-block w-tab-link w--current">
             <div class="ada-svg smaller">
               <div class="html-embed w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 55.43 55.43"><defs><style>.cls-1{fill:currentColor;}</style></defs><g id="Capa_2" data-name="Capa 2"><g id="Día_en_Adalab_Presencial_Clases" data-name="Día en Adalab Presencial Clases"><path class="cls-1" d="M54.33.18H1.1a.93.93 0 00-.92.92v18.35H2V2h51.4v20.21H21.29V24h33a.92.92 0 00.92-.92V1.1a.92.92 0 00-.88-.92z"></path><path class="cls-1" d="M54.32 24.23H21.11V22h32.11V2.2H2.2v17.44H0V1.1A1.1 1.1 0 011.1 0h53.22a1.11 1.11 0 011.11 1.1v22a1.11 1.11 0 01-1.11 1.13zm-32.85-.37h32.85a.74.74 0 00.74-.74V1.1a.73.73 0 00-.73-.73H1.1a.73.73 0 00-.73.73v18.17h1.46V1.83h51.76v20.56H21.47z"></path><path class="cls-1" d="M30.47 4.77h18.35v1.84H30.47z"></path><path class="cls-1" d="M49 6.79H30.28v-2.2H49zm-18.35-.37h18V5h-18zM33.22 10.28h18.36v1.84H33.22z"></path><path class="cls-1" d="M51.76 12.3H33v-2.21h18.76zm-18.36-.37h18v-1.47h-18zM29.55 15.78H47.9v1.83H29.55z"></path><path class="cls-1" d="M48.08 17.8H29.36v-2.2h18.72zm-18.35-.37h18V16h-18zM29.47 8.1a3 3 0 00-3.87-1.6h-.07l-7.44 3.86a4.68 4.68 0 00.45-2 4.59 4.59 0 00-9.18 0 4.67 4.67 0 00.94 2.76 6.28 6.28 0 00-5.85 4.07L2 23.71a2.94 2.94 0 105.52 2l1-3.05V36a4.48 4.48 0 00-2.83-1 4.58 4.58 0 00-3.2 7.86 4.24 4.24 0 00-2.31 3.77v7.69a.92.92 0 00.92.92h9.18a.92.92 0 00.92-.92v-7.69a4.24 4.24 0 00-1.64-3.32h6.94a4.23 4.23 0 00-1.63 3.32v7.69a.92.92 0 00.91.92H25a.92.92 0 00.92-.92v-7.69a4.24 4.24 0 00-2.31-3.75 4.58 4.58 0 00-4.11-7.77V16.34L27.88 12a3 3 0 001.59-3.9zM14 5.69a2.76 2.76 0 11-2.8 2.75A2.75 2.75 0 0114 5.69zM5.69 36.85a2.76 2.76 0 11-2.75 2.76 2.76 2.76 0 012.75-2.76zM9.36 53.4H2v-6.77a2.41 2.41 0 012.41-2.4H7a2.41 2.41 0 012.4 2.4zM24 46.63v6.77h-7.3v-6.77a2.42 2.42 0 012.41-2.4h2.53a2.41 2.41 0 012.36 2.4zm-3.67-9.78a2.76 2.76 0 11-2.75 2.76 2.76 2.76 0 012.79-2.76zM27.8 9.62a1.17 1.17 0 01-.7.68l-9 4.67a.9.9 0 00-.5.81V36a4.52 4.52 0 00-1.43 5.52h-1.3V25.88H13v15.6H9.87a4.48 4.48 0 00.4-1.84V16.7a.92.92 0 00-.92-.92.93.93 0 00-.88.65l-2.73 8.71a1.1 1.1 0 01-1.41.67h-.12a1.14 1.14 0 01-.51-1.51l2.45-8.45A4.44 4.44 0 0110.26 13h6.5a1.08 1.08 0 00.43-.1l9.11-4.71a1.14 1.14 0 011.45.54 1.11 1.11 0 01.05.89z"></path><path class="cls-1" d="M25 55.43h-9.21a1.11 1.11 0 01-1.11-1.11v-7.69A4.4 4.4 0 0116 43.5h-6a4.33 4.33 0 011.33 3.13v7.69a1.11 1.11 0 01-1.1 1.11H1.1A1.11 1.11 0 010 54.32v-7.69a4.39 4.39 0 012.19-3.79 4.82 4.82 0 01-1.27-3.25 4.77 4.77 0 014.77-4.76 4.87 4.87 0 012.57.77V23.88l-.6 1.91a3.13 3.13 0 11-5.87-2.15l2.45-8.42A6.51 6.51 0 0110 11a4.77 4.77 0 118.77-2.58 4.61 4.61 0 01-.32 1.58l7.09-3.67A3.14 3.14 0 0129.64 8 3.15 3.15 0 0128 12.14l-8.31 4.31v18.44a4.77 4.77 0 014.23 8 4.39 4.39 0 012.19 3.79v7.69A1.11 1.11 0 0125 55.43zM9 43.13h8l-.42.33a4 4 0 00-1.57 3.17v7.69a.74.74 0 00.73.74H25a.73.73 0 00.73-.74v-7.69a4 4 0 00-2.2-3.58l-.23-.12.19-.18a4.41 4.41 0 00.07-6.22 4.48 4.48 0 00-4-1.24l-.22.05V16.23l.1-.05 8.42-4.38a2.77 2.77 0 10-2.11-5.13l-.13-.15.08.17-7.95 4.12.24-.5a4.34 4.34 0 00.43-1.87 4.41 4.41 0 10-7.9 2.64l.22.3h-.44a6.14 6.14 0 00-5.71 3.95l-2.45 8.43a2.76 2.76 0 003.59 3.57 2.81 2.81 0 001.58-1.66l1.32-4.19v14.85l-.3-.22a4.39 4.39 0 00-5.71 6.64l.18.18-.23.12a4 4 0 00-2.2 3.58v7.69a.74.74 0 00.73.74h9.18a.74.74 0 00.73-.74v-7.69a4 4 0 00-1.56-3.17zm15.23 10.46h-7.71v-7A2.6 2.6 0 0119.11 44h2.53a2.61 2.61 0 012.59 2.59zm-7.35-.37h7v-6.59a2.23 2.23 0 00-2.22-2.22h-2.55a2.24 2.24 0 00-2.23 2.22zm-7.34.37H1.83v-7A2.62 2.62 0 014.43 44H7a2.6 2.6 0 012.58 2.59zm-7.34-.37h7v-6.59A2.24 2.24 0 007 44.41H4.43a2.24 2.24 0 00-2.23 2.22zm18.17-10.68a2.94 2.94 0 110-5.87 2.94 2.94 0 110 5.87zm0-5.5a2.57 2.57 0 102.57 2.57A2.58 2.58 0 0020.37 37zm-14.68 5.5a2.94 2.94 0 110-5.87 2.94 2.94 0 110 5.87zm0-5.5a2.57 2.57 0 102.57 2.57A2.58 2.58 0 005.69 37zm10.79 4.62h-1.8v-15.6h-1.46v15.6H9.59l.12-.26a4.45 4.45 0 00.38-1.76V16.7a.75.75 0 00-.73-.7.73.73 0 00-.7.51L5.92 25.2a1.31 1.31 0 01-1.65.8l-.13-.06a1.29 1.29 0 01-.6-1.7L6 15.8a4.61 4.61 0 014.29-3h6.5a.69.69 0 00.34-.09L26.22 8A1.31 1.31 0 0128 9.69a1.41 1.41 0 01-.8.79l-9 4.65a.73.73 0 00-.4.65v20.27l-.07.06a4.35 4.35 0 00-1.37 5.29zm-1.43-.37h.86a4.74 4.74 0 011.52-5.42V15.78a1.1 1.1 0 01.6-1l9-4.66a1 1 0 00.6-.58.9.9 0 000-.75 1 1 0 00-1.21-.45l-9.1 4.73a1.16 1.16 0 01-.51.12h-6.5a4.25 4.25 0 00-3.94 2.71l-2.49 8.45a1 1 0 00.42 1.24h.1a.81.81 0 00.31.06.93.93 0 00.86-.61l2.74-8.71a1.1 1.1 0 012.15.33v23.17a4.58 4.58 0 01-.3 1.46h2.7v-15.6h2.2zM14 11.38a2.94 2.94 0 112.93-2.94A2.94 2.94 0 0114 11.38zm0-5.51a2.57 2.57 0 102.57 2.57A2.58 2.58 0 0014 5.87zM38.26 42.88a4.59 4.59 0 10-6.49-.08l.08.08a4.22 4.22 0 00-2.3 3.75v7.69a.92.92 0 00.91.92h9.18a.92.92 0 00.92-.92v-7.69a4.25 4.25 0 00-2.3-3.75zm-3.21-6a2.76 2.76 0 11-2.75 2.76 2.76 2.76 0 012.75-2.79zm3.67 16.52h-7.34v-6.77a2.41 2.41 0 012.41-2.4h2.53a2.4 2.4 0 012.4 2.4z"></path><path class="cls-1" d="M39.64 55.43h-9.17a1.11 1.11 0 01-1.11-1.11v-7.69a4.39 4.39 0 012.19-3.79 4.77 4.77 0 117 0 4.36 4.36 0 012.18 3.79v7.69a1.11 1.11 0 01-1.09 1.11zm-4.59-20.24a4.4 4.4 0 00-4.4 4.35 4.35 4.35 0 001.25 3.13l.26.26-.22.12a4 4 0 00-2.21 3.58v7.69a.74.74 0 00.73.74h9.18a.74.74 0 00.74-.74v-7.69a4 4 0 00-2.21-3.58l-.23-.12.19-.18a4.41 4.41 0 00-3.08-7.56zm3.86 18.4H31.2v-7A2.6 2.6 0 0133.79 44h2.53a2.61 2.61 0 012.59 2.59zm-7.34-.37h7v-6.59a2.23 2.23 0 00-2.22-2.22h-2.56a2.23 2.23 0 00-2.22 2.22zm3.48-10.68a2.94 2.94 0 010-5.87 2.94 2.94 0 110 5.87zm0-5.5a2.57 2.57 0 102.57 2.57A2.58 2.58 0 0035.05 37zM52.94 42.88a4.59 4.59 0 10-6.49-.08l.09.08a4.22 4.22 0 00-2.31 3.75v7.69a.92.92 0 00.92.92h9.17a.92.92 0 00.92-.92v-7.69a4.22 4.22 0 00-2.3-3.75zm-3.21-6A2.76 2.76 0 1147 39.61a2.76 2.76 0 012.73-2.76zM53.4 53.4h-7.34v-6.77a2.42 2.42 0 012.41-2.4H51a2.4 2.4 0 012.4 2.4z"></path><path class="cls-1" d="M54.32 55.43h-9.17A1.11 1.11 0 0144 54.32v-7.69a4.39 4.39 0 012.19-3.79 4.77 4.77 0 013.5-8 4.72 4.72 0 013.42 1.44 4.78 4.78 0 01.09 6.57 4.39 4.39 0 012.19 3.79v7.69a1.11 1.11 0 01-1.07 1.1zm-4.59-20.24a4.41 4.41 0 00-3.15 7.48l.26.27-.22.11a4 4 0 00-2.2 3.58v7.69a.73.73 0 00.73.74h9.17a.74.74 0 00.74-.74v-7.69a4 4 0 00-2.21-3.58l-.23-.12.18-.18a4.4 4.4 0 00-3.07-7.56zm3.86 18.4h-7.71v-7A2.6 2.6 0 0148.47 44H51a2.6 2.6 0 012.59 2.59zm-7.34-.37h7v-6.59A2.23 2.23 0 0051 44.41h-2.53a2.23 2.23 0 00-2.22 2.22zm3.48-10.68a2.94 2.94 0 010-5.87 2.94 2.94 0 110 5.87zm0-5.5a2.57 2.57 0 102.57 2.57A2.57 2.57 0 0049.73 37z"></path></g></g></svg></div>
             </div>
@@ -67,7 +122,7 @@
 <g data-name="Capa 2">
 <path d="M9.36 0a3.86 3.86 0 00-1.08.56q-3.9 3.95-7.75 8c-1 1-.48 1.87.34 2.71 2.31 2.36 4.6 4.75 6.9 7.11.75.76 1.65 1.67 2.64.63.83-.87.11-1.77-.6-2.5-1.81-1.88-3.54-3.79-5.4-5.57-1-.94-1-1.56 0-2.5 2-1.9 3.82-3.92 5.73-5.89a1.72 1.72 0 00.51-1.76C10.5.27 10.12 0 9.36 0z" fill="currentColor" fill-rule="evenodd" data-name="Día en Adalab Presencial Clases"></path></g></svg></div>
           </a>
-          <a data-w-tab="Online" class="ada-tab-header w-inline-block w-tab-link w--current">
+          <a data-w-tab="Online" class="ada-tab-header w-inline-block w-tab-link">
             <div class="ada-svg bigger">
               <div class="w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 71.85 51.49"><defs><style>.cls-1{fill:currentColor}</style></defs><g id="Capa_2" data-name="Capa 2"><g id="Día_en_Adalab_Presencial_Clases" data-name="Día en Adalab Presencial Clases"><path class="cls-1" d="M70.65 43.11h-1.2V12.28a2.69 2.69 0 00-2.69-2.7h-.9V12h.9a.29.29 0 01.3.3v30.81H47.9a1.26 1.26 0 00-.54.13l-2.14 1.07h-18.6l-2.14-1.07a1.22 1.22 0 00-.53-.13H4.79V12.28a.29.29 0 01.3-.3H6v-2.4h-.9a2.7 2.7 0 00-2.7 2.7v30.83H1.2a1.2 1.2 0 00-1.2 1.2v3a4.19 4.19 0 004.19 4.19h63.47a4.19 4.19 0 004.19-4.19v-3a1.2 1.2 0 00-1.2-1.2zm-1.2 4.19a1.8 1.8 0 01-1.79 1.8H4.19a1.81 1.81 0 01-1.8-1.8v-1.79h21.28l2.14 1.07a1.22 1.22 0 00.53.13H45.5a1.26 1.26 0 00.54-.13l2.14-1.07h21.27z"></path><path class="cls-1" d="M8.38 7.19v32.33a1.2 1.2 0 001.2 1.2h52.69a1.2 1.2 0 001.2-1.2V25.15h-2.4v13.17h-50.3V8.38h12V6H9.58a1.2 1.2 0 00-1.2 1.19zM63.47 22.7V7.19A1.2 1.2 0 0062.27 6H46.7v2.38h14.37V22.7z"></path><path class="cls-1" d="M26.34 12h6.29a5.74 5.74 0 004.64-2.4h3.44v6.69a1.8 1.8 0 01-.87 1.54l-3 1.8a1.81 1.81 0 01-1.85 0l-3-1.8a1.81 1.81 0 01-.88-1.54v-1.9h-2.37v1.9a4.21 4.21 0 002 3.59l1.25.75-.73 3.65-7 2.63a4.23 4.23 0 00-2.72 3.93v2.71h-6v2.4h40.74v-2.4h-6v-2.73a4.2 4.2 0 00-2.72-3.93l-7-2.63-.73-3.65 1.24-.75a4.2 4.2 0 002-3.59V9.58a1.2 1.2 0 001.2-1.2V5.69A5.7 5.7 0 0038.62 0h-7.79a5.69 5.69 0 00-5.68 5.69v5.09A1.19 1.19 0 0026.34 12zm9.58 10.28a4.22 4.22 0 001.72-.37l.55 2.71-2.27 1.5-2.26-1.5.55-2.71a4.21 4.21 0 001.71.35zm12 8.56v2.71H24v-2.73a1.8 1.8 0 011.17-1.69l7.06-2.65 3.08 2.06a1.19 1.19 0 001.33 0l3.08-2.06 7.06 2.65a1.82 1.82 0 011.12 1.69zm-6-25.13v1.5h-3.6V2.4h.3a3.29 3.29 0 013.29 3.29zm-14.37 0a3.29 3.29 0 013.28-3.31h5.09v3.89a3.29 3.29 0 01-3.29 3.29h-5.09z"></path><path class="cls-1" d="M47.9 10.78A1.2 1.2 0 0046.7 12v9.57a1.2 1.2 0 001.2 1.2h9.58a1.2 1.2 0 001.2-1.2V12a1.2 1.2 0 00-1.2-1.2zm8.38 9.58H49.1v-7.19h7.18zM24.12 19.78l2.05-1.24-3.59-6a1.21 1.21 0 00-1-.58h-8.41v2.39h7.71z"></path><path class="cls-1" d="M13.17 16.77h7.19v2.39h-7.19z"></path></g></g></svg></div>
             </div>
@@ -76,9 +131,9 @@
           </a>
         </div>
         <div class="tabs-content w-tab-content">
-          <div data-w-tab="Semipresencial" class="w-tab-pane">
+          <div data-w-tab="Semipresencial" class="w-tab-pane w--tab-active">
             <div data-duration-in="300" data-duration-out="100" data-easing="ease-in-quad" class="ada-timeline-tabs w-tabs">
-              <div class="ada-timeline-tabs-nav w-tab-menu">
+              <div class="ada-timeline-tabs-nav force-show-scrollbars w-tab-menu">
                 <a data-w-tab="Clases" class="ada-timeline-tab-link w-inline-block w-tab-link w--current">
                   <div class="ada-timeline-date">8.30-10h</div>
                   <div>
@@ -162,7 +217,7 @@
                   </div>
                 </a>
               </div>
-              <div class="w-tab-content">
+              <div class="ada-timeline-tabs-child w-tab-content">
                 <div data-w-tab="Clases" class="w-tab-pane w--tab-active">
                   <div class="ada-timeline-container">
                     <div class="ada-timeline-image"><img src="images/01_clases_presencial.jpg" srcset="images/01_clases_presencial-p-1080.jpeg 1080w, images/01_clases_presencial-p-1600.jpeg 1600w, images/01_clases_presencial-p-2000.jpeg 2000w, images/01_clases_presencial.jpg 2048w" sizes="(max-width: 479px) 94vw, (max-width: 767px) 38vw, (max-width: 991px) 37vw, 38vw" alt="" class="ada-timeline-image-item"></div>
@@ -222,9 +277,9 @@
               </div>
             </div>
           </div>
-          <div data-w-tab="Online" class="tab-pane-online w-tab-pane w--tab-active">
+          <div data-w-tab="Online" class="tab-pane-online w-tab-pane">
             <div data-duration-in="300" data-duration-out="100" data-easing="ease-in-quad" class="ada-timeline-tabs w-tabs">
-              <div class="ada-timeline-tabs-nav w-tab-menu">
+              <div class="ada-timeline-tabs-nav force-show-scrollbars w-tab-menu">
                 <a data-w-tab="Clases" class="ada-timeline-tab-link w-inline-block w-tab-link w--current">
                   <div class="ada-timeline-date">8.30-10h</div>
                   <div>
@@ -308,7 +363,7 @@
                   </div>
                 </a>
               </div>
-              <div class="tabs-content-2 w-tab-content">
+              <div class="ada-timeline-tabs-child w-tab-content">
                 <div data-w-tab="Clases" class="w-tab-pane w--tab-active">
                   <div class="ada-timeline-container">
                     <div class="ada-timeline-image"><img src="images/01_Clases.png" srcset="images/01_Clases-p-500.png 500w, images/01_Clases.png 1440w" sizes="(max-width: 479px) 94vw, (max-width: 767px) 38vw, (max-width: 991px) 37vw, 38vw" alt="" class="ada-timeline-image-item"></div>
@@ -415,22 +470,26 @@
       <p>En Adalab, queremos que cualquier mujer pueda tener acceso a una de las profesiones más demandadas. <strong>Si lo necesitas, solicita financiación al Banc Sabadell y si tu solicitud no es aprobada, evaluaremos tu caso para que puedas pagar a plazos con el apoyo de la Fundación eCare:</strong></p>
       <div class="ada-spacer"></div>
       <div class="ada-box nowrap mobile-vertical">
-        <div data-w-id="150a6f89-3c03-98f5-570c-e9aa011b538a" class="ada-content-box-padded ada-grey-block bank-logo pointer">
+        <div data-w-id="150a6f89-3c03-98f5-570c-e9aa011b538a" class="ada-content-box-padded ada-grey-block bank-logo pointer openmodal">
           <div id="sabadell-modal" style="opacity:0;display:none" class="ada-modal-wrapper">
             <div style="-webkit-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="ada-modal-container"><a data-w-id="150a6f89-3c03-98f5-570c-e9aa011b538d" href="#" class="ada-modal-close w-inline-block"><img src="images/2.svg" alt=""></a>
               <div class="ada-modal-content">
                 <div class="text-block-2"><span class="ada-green-text"><strong>Banc Sabadell:<br></strong></span><br><span class="ada-light-grey-text">¿Quién lo puede solicitar?: <br></span><strong>Candidatas pre-admitidas</strong> en el proceso de selección.<br>‍<strong>Te pondremos en contacto con el banco</strong> para realizar los trámites.<br><br><span class="ada-light-grey-text">Importe máximo a financiar: <br></span>Coste del curso <strong>3.990€</strong><br>Aplicado <strong>descuento por pago al contado</strong> de <strong>630€</strong>.<br><br><span class="ada-light-grey-text">Opciones de financiación:<br></span><span class="ada-green-text"><strong>1)</strong></span><strong> Tipo de interés del 0 % </strong>y pago mensual durante un <strong>máximo de 10 meses.<br></strong><span class="ada-green-text"><strong>2)</strong></span><strong> Tipo de interés del 5 %</strong> y pago mensual durante un <strong>máximo de 8 años</strong> (posibilidad de carencia durante el curso intensivo)<strong>.</strong><br><br><span class="ada-green-text">Deberás presentar la carta de pre-admisión de Adalab junto con el resto de la documentación solicitada.</span></div>
               </div>
             </div>
-          </div><img src="images/logo_bancsabadell.png" alt="" class="ada-content-logo moveup"><img src="images/Recurso-6LilPlus.svg" width="28" alt="" class="ada-modal-open-icon"></div>
-        <div data-w-id="150a6f89-3c03-98f5-570c-e9aa011b53d0" class="ada-content-box-padded ada-grey-block bank-logo pointer ml-l mobile-vert">
+          </div><img src="images/logo_bancsabadell.png" alt="" class="ada-content-logo moveup"><img src="images/Recurso-6LilPlus.svg" width="28" alt="" class="ada-modal-open-icon">
+          <div class="ada-modal-clicker"></div>
+        </div>
+        <div data-w-id="150a6f89-3c03-98f5-570c-e9aa011b53d0" class="ada-content-box-padded ada-grey-block bank-logo pointer ml-l mobile-vert openmodal">
           <div id="e-care-modal" style="opacity:0;display:none" class="ada-modal-wrapper">
             <div style="-webkit-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="ada-modal-container"><a data-w-id="150a6f89-3c03-98f5-570c-e9aa011b53d3" href="#" class="ada-modal-close w-inline-block"><img src="images/2.svg" alt=""></a>
               <div class="ada-modal-content">
                 <div class="text-block-2"><span class="ada-green-text"><strong>Fundación eCare:<br></strong></span><br><span class="ada-light-grey-text">¿Quién lo puede solicitar?: <br></span>Disponemos de <strong>plazas limitadas</strong> de pago a plazos para candidatas pre-admitidas <strong>cuya solicitud de financiación no haya sido aprobada</strong> por el Banc Sabadell.<br><br><span class="ada-light-grey-text">Importe máximo a financiar: <br></span>Total coste del curso: <strong>4.620€</strong><br>(<strong>No se aplica descuento</strong> por pago al contado de 630€)<br><br><span class="ada-light-grey-text">Modalidad de pago:<br></span><strong>420€ </strong>por<strong> reserva de plaza</strong><br><span class="ada-green-text">+</span> <strong>10 cuotas mensuales </strong>de<strong> 420€ </strong>(la primera cuota una vez finalizado el curso intensivo)<strong>.</strong><br><br><span class="ada-green-text">Deberás presentarnos el email del <strong>Banc Sabadell</strong> en el que se rechaza tu solicitud de préstamo para que evaluemos tu caso.</span></div>
               </div>
             </div>
-          </div><img src="images/Recurso-5ECARE.svg" width="200" alt="" class="ada-content-logo"><img src="images/Recurso-6LilPlus.svg" width="28" alt="" class="ada-modal-open-icon"></div>
+          </div><img src="images/Recurso-5ECARE.svg" width="200" alt="" class="ada-content-logo"><img src="images/Recurso-6LilPlus.svg" width="28" alt="" class="ada-modal-open-icon">
+          <div class="ada-modal-clicker"></div>
+        </div>
       </div>
     </div>
   </div>
@@ -450,7 +509,7 @@
         <p><strong>Al final del Curso Intensivo habrás desarrollado las habilidades para encontrar un empleo de calidad como programadora.</strong> Desde Adalab, te acompañamos en el proceso con:</p>
       </div>
       <div class="ada-box nowrap">
-        <div data-w-id="0ae09e1f-2852-a724-02bc-8715436d4e92" class="ada-content-box-padded flex-grow pointer darktext">
+        <div data-w-id="0ae09e1f-2852-a724-02bc-8715436d4e92" class="ada-content-box-padded flex-grow pointer darktext openmodal">
           <div id="sabadell-modal" style="opacity:0;display:none" class="ada-modal-wrapper">
             <div style="-webkit-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="ada-modal-container"><a data-w-id="0ae09e1f-2852-a724-02bc-8715436d4e95" href="#" class="ada-modal-close w-inline-block"><img src="images/2.svg" alt=""></a>
               <div class="ada-modal-content">
@@ -460,8 +519,9 @@
           </div>
           <div class="ada-content-box-background whitelight-block"></div><img src="images/Recurso-102.svg" width="28" alt="" class="ada-modal-open-icon-plus">
           <div class="ada-content-box-content"><strong>FORMACIÓN EN MARCA PERSONAL</strong></div>
+          <div class="ada-modal-clicker"></div>
         </div>
-        <div data-w-id="0ae09e1f-2852-a724-02bc-8715436d4eb3" class="ada-content-box-padded flex-grow pointer darktext ml-l">
+        <div data-w-id="0ae09e1f-2852-a724-02bc-8715436d4eb3" class="ada-content-box-padded flex-grow pointer darktext ml-l openmodal">
           <div id="sabadell-modal" style="opacity:0;display:none" class="ada-modal-wrapper">
             <div style="-webkit-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="ada-modal-container"><a data-w-id="0ae09e1f-2852-a724-02bc-8715436d4eb6" href="#" class="ada-modal-close w-inline-block"><img src="images/2.svg" alt=""></a>
               <div class="ada-modal-content">
@@ -471,8 +531,9 @@
           </div>
           <div class="ada-content-box-background whitelight-block"></div><img src="images/Recurso-102.svg" width="28" alt="" class="ada-modal-open-icon-plus">
           <div class="ada-content-box-content"><strong>BOLSA DE EMPLEO</strong></div>
+          <div class="ada-modal-clicker"></div>
         </div>
-        <div data-w-id="0ae09e1f-2852-a724-02bc-8715436d4ed6" class="ada-content-box-padded flex-grow pointer darktext ml-l">
+        <div data-w-id="0ae09e1f-2852-a724-02bc-8715436d4ed6" class="ada-content-box-padded flex-grow pointer darktext ml-l openmodal">
           <div id="sabadell-modal" style="opacity:0;display:none" class="ada-modal-wrapper">
             <div style="-webkit-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="ada-modal-container"><a data-w-id="0ae09e1f-2852-a724-02bc-8715436d4ed9" href="#" class="ada-modal-close w-inline-block"><img src="images/2.svg" alt=""></a>
               <div class="ada-modal-content">
@@ -481,7 +542,9 @@
             </div>
           </div>
           <div class="ada-content-box-background whitelight-block"></div>
-          <div class="ada-content-box-content"><strong>TU MENTOR/A PERSONAL</strong></div><img src="images/Recurso-102.svg" width="28" alt="" class="ada-modal-open-icon-plus"></div>
+          <div class="ada-content-box-content"><strong>TU MENTOR/A PERSONAL</strong></div><img src="images/Recurso-102.svg" width="28" alt="" class="ada-modal-open-icon-plus">
+          <div class="ada-modal-clicker"></div>
+        </div>
       </div>
     </div>
     <div class="ada-background">
