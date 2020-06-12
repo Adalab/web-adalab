@@ -28,7 +28,6 @@
   @media (max-width: $movil) {
     height: 320px;
     padding: 20px 0 0;
-    margin-bottom: 50px;
     &.inscribete-madrid { background-image: url(../images/inscribete/inscribete_madrid_mobile.jpg) }
   }
 }
@@ -309,6 +308,7 @@
 @media (max-width: $movil) {
   .inscribete-aprenderas {
     background: none;
+    padding-top: 0 !important;
     // padding: 0 0 30px;
     margin: 0;
     .col-33 {

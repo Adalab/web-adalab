@@ -1015,6 +1015,14 @@ strong {
   font-size: 20px;
 }
 
+.ada-modal-wrapper.ada-show {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: 1;
+}
+
 .ada-modal-container {
   position: relative;
   display: -webkit-box;
@@ -1042,6 +1050,7 @@ strong {
 
 .ada-modal-content {
   max-width: 570px;
+  line-height: 1.6rem;
   text-align: left;
 }
 
@@ -1345,6 +1354,9 @@ strong {
     padding-right: 15px;
     padding-left: 15px;
   }
+  .ada-container.vertical {
+    padding-bottom: 0px;
+  }
   .buttonwrap {
     margin-bottom: 16px;
   }
@@ -1400,6 +1412,9 @@ strong {
   }
   .ada-flex {
     margin-bottom: 1rem;
+  }
+  .break {
+    display: block;
   }
 }
 
@@ -1577,19 +1592,47 @@ strong {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
+  .ada-box.nowrap.mobile-vertical {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
   .ada-content-box.horizontal.whitelight-block.flex-3 {
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
+  .ada-content-box.horizontal.whitelight-block.flex-3.vertical-movil {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
   .ada-price-box {
+    width: 100%;
     height: auto;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
   }
   .ada-price-box-separator {
     position: static;
     width: 100%;
-    height: 3px;
-    margin-top: 1rem;
+    height: 2px;
+    margin-top: 1.4rem;
+    margin-bottom: 0.8rem;
   }
   .ada-spacer {
     margin-bottom: 2rem;
@@ -1600,9 +1643,20 @@ strong {
   .ada-content-box-padded.ada-grey-block.bank-logo.pointer {
     padding: 1.4rem;
   }
+  .ada-content-box-padded.ada-grey-block.bank-logo.pointer.ml-l.mobile-vert {
+    margin-top: 1rem;
+    margin-left: 0rem;
+  }
   .ada-modal-open-icon {
     width: 2rem;
     height: 2rem;
+  }
+  .ada-modal-wrapper {
+    display: none;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
   }
   .ada-flex {
     display: -webkit-box;
@@ -1649,6 +1703,16 @@ strong {
   }
   .ada-align-left.ada-hide-desktop {
     display: block;
+  }
+  .ada-align-left.ada-hide-desktop.ada-center-mobile {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
 }
 
