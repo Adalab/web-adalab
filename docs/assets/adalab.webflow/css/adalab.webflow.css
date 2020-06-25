@@ -948,9 +948,10 @@ strong {
   -webkit-box-align: start;
   -webkit-align-items: flex-start;
   -ms-flex-align: start;
-  align-items: flex-start;
+  align-items: center;
   border-radius: 3px;
   text-align: center;
+  min-height: 130px;
 }
 
 .ada-content-box-padded.horizontal {
