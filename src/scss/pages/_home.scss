@@ -100,7 +100,7 @@
 
 .home-reconocimientos {
     padding: 80px 0 60px;
-    h6 {
+    h6, p {
         position: relative;
         margin-top:40px;
         font-size: 14px;
@@ -125,7 +125,8 @@
         border:1px solid #f1f1f1;
         max-width: 120px;
     }
-    h6 + img:last-child {
+    h6 + img:last-child,
+    p + img:last-child {
         margin-bottom: 0;
     }
 }
@@ -133,7 +134,7 @@
 @media (max-width:680px) {
     .home-reconocimientos {
         padding:50px 0;
-        h6 {
+        h6, p {
             font-size: 12px;
             margin-top:20px;
         }
