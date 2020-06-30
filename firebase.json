@@ -7,8 +7,18 @@
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "redirects": [
       {
+        "source": "/cursos-desarrollo-web.html",
+        "destination": "/cursos-desarrollo-web/",
+        "type": 301
+      },
+      {
         "source": "/curso-desarrollo-web.html",
-        "destination": "/curso-desarrollo-web/",
+        "destination": "/cursos-desarrollo-web/",
+        "type": 301
+      },
+      {
+        "source": "/curso-desarrollo-web/",
+        "destination": "/cursos-desarrollo-web/",
         "type": 301
       },
       {
@@ -73,7 +83,7 @@
       },
       {
         "source": "/curso-de-desarrollo-web/",
-        "destination": "/curso-desarrollo-web/",
+        "destination": "/cursos-desarrollo-web/",
         "type": 301
       }
     ]
