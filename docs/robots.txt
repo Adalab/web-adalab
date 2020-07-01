@@ -1,2 +1,3 @@
 User-agent: *
 *.pdf$
+Sitemap: https://adalab.es/sitemap.xml
