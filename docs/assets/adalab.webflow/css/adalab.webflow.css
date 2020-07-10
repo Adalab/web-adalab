@@ -276,6 +276,10 @@ strong {
   max-width: 760px;
 }
 
+.ada-container.ada-container-grow {
+  max-width: 1080px;
+}
+
 .ada-hero-content {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
