@@ -24,3 +24,20 @@
 @import 'pages/contact';
 
 @import 'utilities/other';
+
+.hero-text {
+  p, span.p {
+      font-family: $OpenSans;
+      font-size: 18px;
+      line-height: 30px;
+      margin-bottom:30px;
+  }
+}
+
+
+h1 {
+  &.p {
+    display: inline;
+    all: inherit;
+  }
+}

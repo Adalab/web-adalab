@@ -23,12 +23,17 @@
       },
       {
         "source": "/alumnas-en-practicas/",
-        "destination": "/desarrollador-front-end/",
+        "destination": "/empresas/",
         "type": 301
       },
       {
         "source": "/desarrollador-front-end.html",
-        "destination": "/desarrollador-front-end/",
+        "destination": "/empresas/",
+        "type": 301
+      },
+      {
+        "source": "/desarrollador-front-end",
+        "destination": "/empresas/",
         "type": 301
       },
       {
@@ -43,12 +48,17 @@
       },
       {
         "source": "/hazte-voluntarioa/",
-        "destination": "/hazte-voluntario/",
+        "destination": "/voluntariado/",
         "type": 301
       },
       {
         "source": "/hazte-voluntario.html",
-        "destination": "/hazte-voluntario/",
+        "destination": "/voluntariado/",
+        "type": 301
+      },
+      {
+        "source": "/voluntariado.html",
+        "destination": "/voluntariado/",
         "type": 301
       },
       {
@@ -59,11 +69,6 @@
       {
         "source": "/contacto.html",
         "destination": "/contacto/",
-        "type": 301
-      },
-      {
-        "source": "/cookies.html",
-        "destination": "/cookies/",
         "type": 301
       },
       {
