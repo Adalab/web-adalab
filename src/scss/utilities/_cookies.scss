@@ -10,20 +10,26 @@
     color: #FFF;
     text-align: center;
     a {
+      &:not(.inline) {
         padding:10px;
-        cursor:pointer;
-        color: #FFF;
-        border-radius: 3px;
-        transition: opacity cubic-bezier(0.1, 0.79, 0.24, 0.93) .3s;
-        &.cookiebar-close {
-            margin-left:30px;
-            background-color:$blue-green;
-            padding:10px 20px;
-        }
-        &:hover {
-            opacity: .7;
-        }
+      }
+      cursor:pointer;
+      color: #FFF;
+      border-radius: 3px;
+      transition: opacity cubic-bezier(0.1, 0.79, 0.24, 0.93) .3s;
+      &.cookiebar-close {
+          margin-left:30px;
+          background-color:$blue-green;
+          padding:10px 20px;
+      }
+      &:hover {
+          opacity: .7;
+      }
     }
+}
+
+.cookie-message {
+  font-size: 80%;
 }
 
 @media (max-width:860px) {

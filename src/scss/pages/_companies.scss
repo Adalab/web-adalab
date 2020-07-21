@@ -156,6 +156,7 @@
 @media (max-width:680px) {
     .empresas-medios {
         padding: 50px 0 30px;
+        .empresas-medios-logos > div { flex: 1 0 50% }
     }
 }
 

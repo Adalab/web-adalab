@@ -50,8 +50,8 @@
 
 			// if close button not defined. define it!
 			if (settings.closeButton == 'none') {
-				cookiebar.append('<a class="cookiebar-close">Venga, vale</a> <a href="cookies.html" target="_blank">Cuéntame más</a>');
-				$.extend(settings, { 'closeButton': '.cookiebar-close' });
+				cookiebar.append('<a class="cookiebar-close closeThoseCookies">Acepto</a> <a class="closeThoseCookies" href="#">Rechazar</a>');
+				$.extend(settings, { 'closeButton': '.closeThoseCookies' });
 			}
 
 			if ($.cookie('cookiebar') != 'hide') {
