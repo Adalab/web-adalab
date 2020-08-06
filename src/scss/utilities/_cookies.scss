@@ -9,7 +9,8 @@
     z-index: 99999;
     color: #FFF;
     text-align: center;
-    a {
+    button { all: inherit; }
+    a, button {
       &:not(.inline) {
         padding:10px;
       }
@@ -30,6 +31,28 @@
 
 .cookie-message {
   font-size: 80%;
+  .svgIcon {
+    margin-right: .5em;
+    transform: scale(.8);
+    margin-top: -3px;
+  }
+  .inline { display: inline; }
+}
+
+.cookie-wrapper {
+  display: flex;
+}
+
+.cookie-inner-message {
+  display: flex;
+  align-items: flex-start;
+  text-align: left;
+  font-weight: normal;
+}
+
+.cookie-actions {
+  display: flex;
+  align-items: center;
 }
 
 @media (max-width:860px) {

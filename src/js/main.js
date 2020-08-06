@@ -4,7 +4,9 @@ console.log('>> Ready :)');
 
 $(document).ready(function() {
   //// INICIAMOS MENSAJE COOKIES
-  $('.cookie-message').cookieBar();
+  new CookiesEuBanner(function () {
+      // Your code here
+  }, true);
 
   //// CALENDARIO CURSOS
   if (typeof swiper !== 'undefined') {

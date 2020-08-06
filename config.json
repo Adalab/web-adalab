@@ -8,8 +8,8 @@
       "src/js/swiper.min.js",
       "src/js/modal.js",
       "src/js/desplegable.js",
-      "src/js/cookies.js",
       "src/js/jquery-modal-video.js",
+      "src/js/cookies-eu-banner.js",
       "src/js/main.js"
     ],
     "dest": "docs/assets/js/"
