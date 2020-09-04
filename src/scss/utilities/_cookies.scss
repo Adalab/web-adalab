@@ -104,3 +104,6 @@
     }
   }
 }
+body:not(.home) .cookie-message {
+  display: none !important;
+}

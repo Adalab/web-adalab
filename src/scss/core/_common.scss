@@ -424,6 +424,11 @@ h1 {
     align-items: center;
     justify-content: center;
   }
+
+  @media (max-width: $movil) {
+    a { align-items: flex-start; }
+    i { margin-top: .5em; }
+  }
 }
 
 .text-center {
