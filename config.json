@@ -17,18 +17,22 @@
   },
   "images": "docs/assets/images/**/*.{gif,jpg,png,svg}",
   "html_partials": {
-    "src": ["src/html/*.html", "docs/assets/adalab.webflow/landings/*.html"],
+    "src": "src/html/*.html",
     "base": "src/html/partials/",
     "dest": "docs/"
   },
   "webflow": {
     "html_src": "src/adalab.webflow/**/*.html",
-    "assets": "src/adalab.webflow/images/**/*",
+    "images": "src/adalab.webflow/images/**/*",
+    "css": "src/adalab.webflow/css/**/*",
+    "js": "src/adalab.webflow/js/**/*",
     "partials": "docs/assets/webflow/tmp/partials/**/*.html",
     "final": "docs/assets/webflow/",
     "finalPartials": "docs/assets/webflow/partials/",
     "css": ["src/adalab.webflow/css/webflow.css", "src/adalab.webflow/css/adalab.webflow.css"],
-    "tmp": "docs/assets/webflow/tmp/"
+    "css_src": "src/adalab.webflow/css/*.css",
+    "tmp": "docs/assets/webflow/tmp/",
+    "landings": "src/adalab.webflow/landings/*.html"
   },
   "html": ["src/**/*.html", "!node_modules/**/*.*"]
 }

@@ -19,6 +19,7 @@ var fileinclude = require("gulp-file-include");
 const dom = require("gulp-jsdom");
 var concatCss = require("gulp-concat-css");
 var wait = require("gulp-wait");
+var merge = require('merge-stream')
 
 function promisifyStream(stream) {
   return new Promise((res) => stream.on("end", res));
@@ -51,12 +52,14 @@ gulp.task('styles', function(done) {
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(config.scss.dest))
     .pipe(browserSync.reload({ stream: true }));
-  //.pipe(notify({message: 'CSS OK', onLast: true}));
+
   done();
 });
 
 // > Procesa los archivos SASS/SCSS, sin sourcemaps, minimizados y con autoprefixer
 gulp.task('styles-min', function(done) {
+  var sassStream;
+  var cssStream;
   gulp
     .src(config.scss.src)
     .pipe(
@@ -84,8 +87,12 @@ gulp.task('styles-min', function(done) {
 });
 
 gulp.task('concat-webflow-styles', function(done) {
-  gulp.src(config.webflow.css).pipe(concatCss("/webflow.css"))
-  .pipe(gulp.dest(config.scss.dest))
+  gulp
+    .src(config.webflow.css)
+    .pipe(replace("../../images", "../images"))
+    .pipe(replace("../images", "/assets/webflow/images"))
+    .pipe(concat("webflow.css"))
+    .pipe(gulp.dest(config.scss.dest));
   done();
 });
 
@@ -149,6 +156,26 @@ gulp.task('html', function(done) {
   done();
 });
 
+gulp.task("webflow-landings", function (done) {
+  gulp
+    .src(config.webflow.landings)
+    .pipe(replace("../../", "../"))
+    .pipe(replace("../", "/assets/webflow/"))
+    .pipe(
+      rename(function (file) {
+        if (file.basename !== "index") {
+          file.dirname = file.basename;
+          file.basename = "index";
+          file.extname = ".html";
+        }
+      })
+    )
+    .pipe(gulp.dest(config.html_partials.dest));
+
+  console.log("Landings OK");
+  done();
+});
+
 
 gulp.task("rewrite-webflow-paths", async function (done) {
   await promisifyStream(
@@ -158,6 +185,16 @@ gulp.task("rewrite-webflow-paths", async function (done) {
       .pipe(replace('src="../../images/', 'src="/assets/webflow/images/'))
       .pipe(replace('../../images/', '/assets/webflow/images/'))
       .pipe(replace('../images/', '/assets/webflow/images/'))
+      .pipe(gulp.dest(config.webflow.tmp))
+    )
+  done();
+});
+gulp.task("rewrite-webflow-css", async function (done) {
+  await promisifyStream(
+    gulp
+      .src(config.webflow.css)
+      .pipe(replace('../../images', '/assets/webflow/images'))
+      .pipe(replace('../images', '/assets/webflow/images'))
       .pipe(gulp.dest(config.webflow.tmp))
     )
   done();
@@ -180,10 +217,24 @@ gulp.task("rewrite-webflow-partials", async function (done) {
   done();
 });
 
-gulp.task("copy-webflow-assets", function (done) {
+gulp.task("copy-webflow-images", function (done) {
   gulp
-    .src(config.webflow.assets)
-    .pipe(gulp.dest(config.webflow.final + '/images'));
+    .src(config.webflow.images)
+    .pipe(gulp.dest(config.webflow.final + "/images"));
+  done();
+});
+
+gulp.task("copy-webflow-css", function (done) {
+  gulp
+    .src(config.webflow.css)
+    .pipe(gulp.dest(config.webflow.final + "/css"));
+  done();
+});
+
+gulp.task("copy-webflow-js", function (done) {
+  gulp
+    .src(config.webflow.js)
+    .pipe(gulp.dest(config.webflow.final + "/js"));
   done();
 });
 
@@ -193,7 +244,11 @@ gulp.task(
     [
       "rewrite-webflow-paths",
       "rewrite-webflow-partials",
-      "copy-webflow-assets",
+      "copy-webflow-images",
+      "copy-webflow-css",
+      "copy-webflow-js",
+      "webflow-landings",
+      "concat-webflow-styles",
     ],
     function (done) {
       console.log("> Webflow: OK");
@@ -206,8 +261,12 @@ gulp.task(
 gulp.task(
   "default",
   gulp.series(
-    ["webflow","html", "styles", "concat-webflow-styles", "scripts"],
-    // ["webflow", "html", "styles", "concat-webflow-styles", "scripts"],
+    [
+      "webflow",
+      "html",
+      "styles",
+      "scripts",
+    ],
     function (done) {
       browserSync.init({
         server: {
@@ -218,7 +277,7 @@ gulp.task(
       });
       gulp.watch(
         config.webflow.html_src,
-        gulp.series(["html", "bs-reload"])
+        gulp.series(["webflow", "html", "bs-reload"])
       );
       gulp.watch(config.html, gulp.series(["html", "bs-reload"]));
       gulp.watch(config.images, gulp.series("bs-reload"));
@@ -233,7 +292,7 @@ gulp.task(
 gulp.task(
   "build",
   gulp.series(
-    ["webflow", "html", "styles-min", "concat-webflow-styles", "scripts-min"],
+    ["webflow", "html", "styles-min", "scripts-min"],
     function (done) {
       console.log("> Versión de producción: OK");
       done();
