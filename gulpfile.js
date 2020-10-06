@@ -13,7 +13,16 @@ var sourcemaps = require('gulp-sourcemaps');
 var uglify = require('gulp-uglify');
 var htmlPartial = require('gulp-html-partial');
 var rename = require('gulp-rename');
-var browserSync = require('browser-sync');
+var browserSync = require("browser-sync");
+var replace = require("gulp-replace");
+var fileinclude = require("gulp-file-include");
+const dom = require("gulp-jsdom");
+var concatCss = require("gulp-concat-css");
+var wait = require("gulp-wait");
+
+function promisifyStream(stream) {
+  return new Promise((res) => stream.on("end", res));
+}
 
 // > Procesa los archivos SASS/SCSS, añade sourcemaps y autoprefixer
 gulp.task('styles', function(done) {
@@ -74,6 +83,12 @@ gulp.task('styles-min', function(done) {
   done();
 });
 
+gulp.task('concat-webflow-styles', function(done) {
+  gulp.src(config.webflow.css).pipe(concatCss("/webflow.css"))
+  .pipe(gulp.dest(config.scss.dest))
+  done();
+});
+
 // > Procesa los scripts concatenando
 gulp.task('scripts', function(done) {
   gulp
@@ -109,56 +124,130 @@ gulp.task('html', function(done) {
   gulp
     .src(config.html_partials.src)
     .pipe(
+      fileinclude({
+        prefix: "@@",
+        basepath: "docs/assets",
+      })
+    )
+    .pipe(
       htmlPartial({
         basePath: config.html_partials.base,
       })
     )
     .pipe(
-      rename(function(file) {
-        if (file.basename !== 'index') {
+      rename(function (file) {
+        if (file.basename !== "index") {
           file.dirname = file.basename;
-          file.basename = 'index';
-          file.extname = '.html';
+          file.basename = "index";
+          file.extname = ".html";
         }
       })
     )
     .pipe(gulp.dest(config.html_partials.dest));
+
+  console.log('HTML OK')
   done();
 });
 
-// > Arranca el servidor web con BrowserSync
+
+gulp.task("rewrite-webflow-paths", async function (done) {
+  await promisifyStream(
+    gulp
+      .src(config.webflow.html_src)
+      .pipe(replace('src="../images/', 'src="/assets/webflow/images/'))
+      .pipe(replace('src="../../images/', 'src="/assets/webflow/images/'))
+      .pipe(replace('../../images/', '/assets/webflow/images/'))
+      .pipe(replace('../images/', '/assets/webflow/images/'))
+      .pipe(gulp.dest(config.webflow.tmp))
+    )
+  done();
+});
+
+gulp.task("rewrite-webflow-partials", async function (done) {
+  await promisifyStream (
+    gulp
+      .src(config.webflow.partials)
+      .pipe(
+        dom(function (document) {
+          console.log('Rewriting partials')
+          return document.body.innerHTML;
+        }, {
+
+        }, false)
+      ).pipe(wait(500))
+      .pipe(gulp.dest(config.webflow.finalPartials))
+    )
+  done();
+});
+
+gulp.task("copy-webflow-assets", function (done) {
+  gulp
+    .src(config.webflow.assets)
+    .pipe(gulp.dest(config.webflow.final + '/images'));
+  done();
+});
+
 gulp.task(
-  'default',
-  gulp.series(['html', 'styles', 'scripts'], function(done) {
-    browserSync.init({
-      server: {
-        baseDir: './docs/',
-      },
-      ghostMode: false,
-      online: true,
-    });
-    gulp.watch(config.html, gulp.series(['html', 'bs-reload']));
-    gulp.watch(config.images, gulp.series('bs-reload'));
-    gulp.watch(config.scss.src, gulp.series('styles'));
-    gulp.watch(config.js.src, gulp.series(['scripts', 'bs-reload']));
-    done();
-  })
+  "webflow",
+  gulp.series(
+    [
+      "rewrite-webflow-paths",
+      "rewrite-webflow-partials",
+      "copy-webflow-assets",
+    ],
+    function (done) {
+      console.log("> Webflow: OK");
+      done();
+    }
+  )
 );
 
 // > Arranca el servidor web con BrowserSync
 gulp.task(
-  'build',
-  gulp.series(['html', 'styles-min', 'scripts-min'], function(done) {
-    console.log('> Versión de producción: OK');
-    done();
-  })
+  "default",
+  gulp.series(
+    ["webflow","html", "styles", "concat-webflow-styles", "scripts"],
+    // ["webflow", "html", "styles", "concat-webflow-styles", "scripts"],
+    function (done) {
+      browserSync.init({
+        server: {
+          baseDir: "./docs/",
+        },
+        ghostMode: false,
+        online: true,
+      });
+      gulp.watch(
+        config.webflow.html_src,
+        gulp.series(["html", "bs-reload"])
+      );
+      gulp.watch(config.html, gulp.series(["html", "bs-reload"]));
+      gulp.watch(config.images, gulp.series("bs-reload"));
+      gulp.watch(config.scss.src, gulp.series("styles"));
+      gulp.watch(config.js.src, gulp.series(["scripts", "bs-reload"]));
+      done();
+    }
+  )
+);
+
+// > Arranca el servidor web con BrowserSync
+gulp.task(
+  "build",
+  gulp.series(
+    ["webflow", "html", "styles-min", "concat-webflow-styles", "scripts-min"],
+    function (done) {
+      console.log("> Versión de producción: OK");
+      done();
+    }
+  )
 );
 
 // > Genera una versión lista para producción
 gulp.task(
-  'deploy',
-  gulp.series(['styles-min', 'scripts-min'], function(done) {
-    console.log('> Versión de producción: OK');
+  "deploy",
+  gulp.series(["styles-min", "concat-webflow-styles", "scripts-min"], function (
+    done
+  ) {
+    console.log("> Versión de producción: OK");
     done();
   })
 );

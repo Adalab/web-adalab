@@ -22,8 +22,18 @@
         "type": 301
       },
       {
+        "source": "/curso-desarrollo-web",
+        "destination": "/cursos-desarrollo-web",
+        "type": 301
+      },
+      {
         "source": "/alumnas-en-practicas/",
         "destination": "/empresas/",
+        "type": 301
+      },
+      {
+        "source": "/alumnas-en-practicas",
+        "destination": "/empresas",
         "type": 301
       },
       {
@@ -42,6 +52,11 @@
         "type": 301
       },
       {
+        "source": "/contacto-alumnas",
+        "destination": "/contacto-inscribete/",
+        "type": 301
+      },
+      {
         "source": "/contacto-inscribete.html",
         "destination": "/contacto-inscribete/",
         "type": 301
@@ -49,6 +64,11 @@
       {
         "source": "/hazte-voluntarioa/",
         "destination": "/voluntariado/",
+        "type": 301
+      },
+      {
+        "source": "/hazte-voluntarioa",
+        "destination": "/voluntariado",
         "type": 301
       },
       {
@@ -87,8 +107,23 @@
         "type": 301
       },
       {
+        "source": "/equipo-y-colaboradores",
+        "destination": "/equipo",
+        "type": 301
+      },
+      {
+        "source": "/equipo-y-colaboradores/,",
+        "destination": "/equipo",
+        "type": 301
+      },
+      {
         "source": "/curso-de-desarrollo-web/",
         "destination": "/cursos-desarrollo-web/",
+        "type": 301
+      },
+      {
+        "source": "/curso-de-desarrollo-web",
+        "destination": "/cursos-desarrollo-web",
         "type": 301
       }
     ]

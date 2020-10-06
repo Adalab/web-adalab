@@ -4,3 +4,6 @@
 ::selection { background: $aqua;color:#FFF;}
 ::-moz-selection {background: $aqua;color:#FFF;}
 ::-webkit-selection {background: $aqua;color:#FFF;}
+.af-html-block p {
+    line-height: normal;
+}
