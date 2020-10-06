@@ -17,9 +17,7 @@ var browserSync = require("browser-sync");
 var replace = require("gulp-replace");
 var fileinclude = require("gulp-file-include");
 const dom = require("gulp-jsdom");
-var concatCss = require("gulp-concat-css");
 var wait = require("gulp-wait");
-var merge = require('merge-stream')
 
 function promisifyStream(stream) {
   return new Promise((res) => stream.on("end", res));
@@ -156,23 +154,16 @@ gulp.task('html', function(done) {
   done();
 });
 
-gulp.task("webflow-landings", function (done) {
-  gulp
-    .src(config.webflow.landings)
-    .pipe(replace("../../", "../"))
-    .pipe(replace("../", "/assets/webflow/"))
-    .pipe(
-      rename(function (file) {
-        if (file.basename !== "index") {
-          file.dirname = file.basename;
-          file.basename = "index";
-          file.extname = ".html";
-        }
-      })
-    )
-    .pipe(gulp.dest(config.html_partials.dest));
-
+gulp.task("webflow-landings", async function (done) {
+  await promisifyStream(
+    gulp
+      .src(config.webflow.landings)
+      .pipe(replace("../../", "../"))
+      .pipe(replace("../", "/assets/webflow/"))
+      .pipe(gulp.dest(config.webflow.tmp + '/landings'))
+  );
   console.log("Landings OK");
+
   done();
 });
 
@@ -183,10 +174,13 @@ gulp.task("rewrite-webflow-paths", async function (done) {
       .src(config.webflow.html_src)
       .pipe(replace('src="../images/', 'src="/assets/webflow/images/'))
       .pipe(replace('src="../../images/', 'src="/assets/webflow/images/'))
-      .pipe(replace('../../images/', '/assets/webflow/images/'))
-      .pipe(replace('../images/', '/assets/webflow/images/'))
+      .pipe(replace("../../images/", "/assets/webflow/images/"))
+      .pipe(replace("../images/", "/assets/webflow/images/"))
+      .pipe(replace("../images/", "/assets/webflow/images/"))
+      .pipe(replace("../css", "/assets/webflow/css"))
+      .pipe(replace("../js", "/assets/webflow/js"))
       .pipe(gulp.dest(config.webflow.tmp))
-    )
+  );
   done();
 });
 gulp.task("rewrite-webflow-css", async function (done) {
@@ -226,7 +220,7 @@ gulp.task("copy-webflow-images", function (done) {
 
 gulp.task("copy-webflow-css", function (done) {
   gulp
-    .src(config.webflow.css)
+    .src(config.webflow.css_copy)
     .pipe(gulp.dest(config.webflow.final + "/css"));
   done();
 });
@@ -247,7 +241,7 @@ gulp.task(
       "copy-webflow-images",
       "copy-webflow-css",
       "copy-webflow-js",
-      "webflow-landings",
+      // "webflow-landings",
       "concat-webflow-styles",
     ],
     function (done) {

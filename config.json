@@ -17,14 +17,14 @@
   },
   "images": "docs/assets/images/**/*.{gif,jpg,png,svg}",
   "html_partials": {
-    "src": "src/html/*.html",
+    "src": ["src/html/*.html", "docs/assets/webflow/tmp/landings/**/*.html"],
     "base": "src/html/partials/",
     "dest": "docs/"
   },
   "webflow": {
     "html_src": "src/adalab.webflow/**/*.html",
     "images": "src/adalab.webflow/images/**/*",
-    "css": "src/adalab.webflow/css/**/*",
+    "css_copy": "src/adalab.webflow/css/**/*",
     "js": "src/adalab.webflow/js/**/*",
     "partials": "docs/assets/webflow/tmp/partials/**/*.html",
     "final": "docs/assets/webflow/",
@@ -32,7 +32,13 @@
     "css": ["src/adalab.webflow/css/webflow.css", "src/adalab.webflow/css/adalab.webflow.css"],
     "css_src": "src/adalab.webflow/css/*.css",
     "tmp": "docs/assets/webflow/tmp/",
-    "landings": "src/adalab.webflow/landings/*.html"
+    "landings": "src/adalab.webflow/landings/*.html",
+    "landings_dest": "src/adalab.webflow/landings/"
+  },
+  "landing_partials": {
+    "head": "",
+    "header": "",
+    "footer": ""
   },
   "html": ["src/**/*.html", "!node_modules/**/*.*"]
 }

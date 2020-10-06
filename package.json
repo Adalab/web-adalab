@@ -11,7 +11,6 @@
 		"gulp-clean-css": "*",
 		"gulp-combine-mq": "*",
 		"gulp-concat": "*",
-		"gulp-concat-css": "^3.1.0",
 		"gulp-file-include": "^2.2.2",
 		"gulp-html-extract": "^0.3.0",
 		"gulp-html-partial": "^1.0.1",
@@ -28,11 +27,12 @@
 		"gulp-wait": "0.0.2",
 		"gulp-zip": "*",
 		"jsdom": "^16.4.0",
-		"merge-stream": "^2.0.0",
 		"natives": "^1.1.6",
 		"run-sequence": "*"
 	},
-	"devDependencies": {},
+	"devDependencies": {
+		"gulp-append-prepend": "^1.0.8"
+	},
 	"scripts": {
 		"start": "gulp",
 		"test": "echo \"Error: no test specified\" && exit 1"
