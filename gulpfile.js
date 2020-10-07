@@ -18,10 +18,62 @@ var replace = require("gulp-replace");
 var fileinclude = require("gulp-file-include");
 const dom = require("gulp-jsdom");
 var wait = require("gulp-wait");
+var fs = require('fs');
+const jsdom = require("jsdom");
+const { JSDOM } = jsdom;
 
 function promisifyStream(stream) {
   return new Promise((res) => stream.on("end", res));
 }
+
+
+gulp.task('webflow-split-partials', async (done) => {
+  await promisifyStream(
+    gulp
+      // .src(config.html_partials.src)
+      .src(config.html_partials.src)
+      .pipe(
+        dom(async document => {
+          let wfPage = document.documentElement.dataset.replaceWfPageFrom
+          if (wfPage) {
+            let fullPage = fs.readFileSync(config.webflow.partials_dir + wfPage, 'utf8')
+            let page = new JSDOM(fullPage)
+            document.documentElement.dataset.wfPage = page.window.document.documentElement.dataset.wfPage
+            document.documentElement.dataset.wfSite = page.window.document.documentElement.dataset.wfSite
+          }
+
+          const replacers = document.querySelectorAll('[data-replace]')
+          if (!replacers) return
+
+          Array.from(replacers).map(async node => {
+            let fullPage = fs.readFileSync(config.webflow.partials_dir + node.dataset.replace, 'utf8')
+            let page = new JSDOM(fullPage);
+            console.log(node.dataset.replace, node.dataset.section)
+            const partial = page.window.document.getElementById(node.dataset.section)
+            node.innerHTML = partial.outerHTML
+          })
+        })
+      )
+      /* .pipe(
+        htmlPartial({
+          basePath: config.html_partials.base,
+        })
+      ) */
+      /* .pipe(
+        rename(function (file) {
+          if (file.basename !== "index") {
+            file.dirname = file.basename;
+            file.basename = "index";
+            file.extname = ".html";
+          }
+        })
+      ) */
+      .pipe(gulp.dest(config.tmp))
+  )
+
+  console.log('HTML OK')
+  done();
+});
 
 // > Procesa los archivos SASS/SCSS, añade sourcemaps y autoprefixer
 gulp.task('styles', function(done) {
@@ -125,30 +177,56 @@ gulp.task('scripts-min', function(done) {
   done();
 });
 
-gulp.task('html', function(done) {
-  gulp
-    .src(config.html_partials.src)
-    .pipe(
-      fileinclude({
-        prefix: "@@",
-        basepath: "docs/assets",
-      })
-    )
-    .pipe(
-      htmlPartial({
-        basePath: config.html_partials.base,
-      })
-    )
-    .pipe(
-      rename(function (file) {
-        if (file.basename !== "index") {
-          file.dirname = file.basename;
-          file.basename = "index";
-          file.extname = ".html";
-        }
-      })
-    )
-    .pipe(gulp.dest(config.html_partials.dest));
+gulp.task('html', async function(done) {
+  await promisifyStream(
+    gulp
+      .src(config.html_partials.src)
+      /* .pipe(
+        fileinclude({
+          prefix: "@@",
+          basepath: "docs/assets",
+        })
+      ) */
+      .pipe(
+        dom(async document => {
+          let wfPage = document.documentElement.dataset.replaceWfPageFrom
+          if (wfPage) {
+            let fullPage = fs.readFileSync(config.webflow.partials_init_dir + wfPage)
+            let page = new JSDOM(fullPage)
+            console.log('HEY', config.webflow.partials_init_dir + wfPage)
+            console.log('Adding webflow markup ' + page.window.document.documentElement.dataset.wfPage)
+            document.documentElement.dataset.wfPage = page.window.document.documentElement.dataset.wfPage
+            document.documentElement.dataset.wfSite = page.window.document.documentElement.dataset.wfSite
+          }
+
+          const replacers = document.querySelectorAll('[data-replace]')
+          if (!replacers) return
+
+          Array.from(replacers).map(async node => {
+            let fullPage = fs.readFileSync(config.webflow.partials_dir + node.dataset.replace, 'utf8')
+            let page = new JSDOM(fullPage);
+            console.log(node.dataset.replace, node.dataset.section)
+            const partial = page.window.document.getElementById(node.dataset.section)
+            node.innerHTML = partial.outerHTML
+          })
+        })
+      )
+      .pipe(
+        htmlPartial({
+          basePath: config.html_partials.base,
+        })
+      )
+      .pipe(
+        rename(function (file) {
+          if (file.basename !== "index") {
+            file.dirname = file.basename;
+            file.basename = "index";
+            file.extname = ".html";
+          }
+        })
+      )
+      .pipe(gulp.dest(config.html_partials.dest))
+  )
 
   console.log('HTML OK')
   done();
@@ -201,6 +279,15 @@ gulp.task("rewrite-webflow-partials", async function (done) {
       .pipe(
         dom(function (document) {
           console.log('Rewriting partials')
+          var scripts = document.getElementsByTagName('script');
+          var i = scripts.length;
+          while (i--) {
+            scripts[i].parentNode.removeChild(scripts[i]);
+          } var scripts = document.getElementsByTagName('script');
+          var i = scripts.length;
+          while (i--) {
+            scripts[i].parentNode.removeChild(scripts[i]);
+          }
           return document.body.innerHTML;
         }, {
 

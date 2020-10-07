@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="es" data-wf-page="5ede0ece73d6eeecf92f7273" data-wf-site="5ede0ece73d6ee50c62f7272">
+<html class="no-js" lang="es" data-wf-page="" data-replace-wf-page-from="home.html"  data-wf-site="5ede0ece73d6ee50c62f7272">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -35,7 +35,8 @@
     <div class="container">
       <partial src="_header.html"></partial>
 
-      @@include('webflow/partials/home/home-banner.html')
+      <!-- @@include('webflow/partials/home/home-banner.html') -->
+      <span data-replace="home.html" data-section="home-banner"></span>
 
       <main>
         <!--
@@ -99,7 +100,8 @@
           </div>
         </section>
 
-        @@include('webflow/partials/home/carrusel-empresas.html')
+        <!-- @@include('webflow/partials/home/carrusel-empresas.html') -->
+        <span data-replace="home.html" data-section="carrusel-empresas"></span>
 
         <section class="hero home-inscribete">
           <div class="content hide-desktop transparent">

@@ -6,7 +6,6 @@
   "js": {
     "src": [
       "src/js/swiper.min.js",
-      "src/adalab.webflow/js/webflow.js",
       "src/js/modal.js",
       "src/js/desplegable.js",
       "src/js/jquery-modal-video.js",
@@ -27,6 +26,8 @@
     "css_copy": "src/adalab.webflow/css/**/*",
     "js": "src/adalab.webflow/js/**/*",
     "partials": "docs/assets/webflow/tmp/partials/**/*.html",
+    "partials_dir": "docs/assets/webflow/partials/",
+    "partials_init_dir": "src/adalab.webflow/partials/",
     "final": "docs/assets/webflow/",
     "finalPartials": "docs/assets/webflow/partials/",
     "css": ["src/adalab.webflow/css/webflow.css", "src/adalab.webflow/css/adalab.webflow.css"],
@@ -40,5 +41,6 @@
     "header": "",
     "footer": ""
   },
-  "html": ["src/**/*.html", "!node_modules/**/*.*"]
+  "html": ["src/**/*.html", "!node_modules/**/*.*"],
+  "tmp": "src/test/tmp"
 }

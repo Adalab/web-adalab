@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-wf-page="5ee222cf189ba21e1e876e4f" data-wf-site="5ede0ece73d6ee50c62f7272" class="no-js" lang="es">
+<html data-wf-page="" data-replace-wf-page-from="cursos.html" data-wf-site="5ede0ece73d6ee50c62f7272" class="no-js" lang="es">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -105,7 +105,8 @@
         </section>
 
         <!-- 3: Estructura del curso -->
-        @@include('webflow/partials/cursos/un-dia-en-adalab.html')
+        <!-- @@include('cursos.html', { "section": "un-dia-en-adalab" }) -->
+        <span data-replace="cursos.html" data-section="un-dia-en-adalab"></span>
 
         <!-- 4: Qué aprenderás -->
         <section class="inscribete-aprenderas hero-text">
@@ -151,10 +152,12 @@
         </section>
 
         <!-- 5: Apoyo al empleo -->
-        @@include('webflow/partials/cursos/busqueda-de-empleo.html')
+        <!-- @@include('webflow/partials/cursos/busqueda-de-empleo.html') -->
+        <span data-replace="cursos.html" data-section="busqueda-de-empleo"></span>
 
         <!-- 6: Calendario -->
-        @@include('webflow/partials/cursos/calendario.html')
+        <!-- @@include('webflow/partials/cursos/calendario.html') -->
+        <span data-replace="cursos.html" data-section="calendario"></span>
 
         <!-- 7: Criterios -->
         <section class="inscribete-seleccion hero-text grey">
@@ -202,8 +205,8 @@
           </div>
         </section>
 
-        @@include('webflow/partials/cursos/precio-cursos.html')
-
+        <!-- @@include('webflow/partials/cursos/precio-cursos.html') -->
+        <span data-replace="cursos.html" data-section="precio-cursos"></span>
         <partial src="_faq.html" />
 
         <section class="hero-text">
