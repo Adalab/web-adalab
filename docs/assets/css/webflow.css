@@ -2025,7 +2025,9 @@ strong {
 }
 
 .small {
-  font-size: 12px;
+  font-size: 15px;
+  line-height: 1.4rem;
+  white-space: nowrap;
 }
 
 .primary {
@@ -3913,8 +3915,8 @@ strong {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -3924,15 +3926,16 @@ strong {
   -ms-flex-align: center;
   align-items: center;
   border-radius: 100%;
-  background-color: #aaaaab;
+  background-color: rgba(170, 170, 171, 0);
   -webkit-transform: translate(0px, -50%);
   -ms-transform: translate(0px, -50%);
   transform: translate(0px, -50%);
 }
 
 .ada-calendar-promo-indicator-letter {
-  font-family: 'Londrina Outline', sans-serif;
-  font-size: 3em;
+  color: #aaaaab;
+  font-size: 2.6em;
+  font-weight: 700;
 }
 
 .ada-container-title {
@@ -3993,6 +3996,9 @@ strong {
 }
 
 @media screen and (min-width: 1920px) {
+  .small {
+    font-size: 18px;
+  }
   .ada-content.ada-content-large {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;

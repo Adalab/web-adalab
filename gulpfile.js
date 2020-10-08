@@ -193,7 +193,6 @@ gulp.task('html', async function(done) {
           if (wfPage) {
             let fullPage = fs.readFileSync(config.webflow.partials_init_dir + wfPage)
             let page = new JSDOM(fullPage)
-            console.log('HEY', config.webflow.partials_init_dir + wfPage)
             console.log('Adding webflow markup ' + page.window.document.documentElement.dataset.wfPage)
             document.documentElement.dataset.wfPage = page.window.document.documentElement.dataset.wfPage
             document.documentElement.dataset.wfSite = page.window.document.documentElement.dataset.wfSite
