@@ -118,7 +118,7 @@ $(document).ready(function() {
 
 });
 
-/* window.onload = function() {
+window.onload = function() {
 // Prevents body scroll on desktop only
   if (Webflow) Webflow.push(function() {
     $('.ada-modal-clicker').click(function(e) {
@@ -130,4 +130,4 @@ $(document).ready(function() {
     });
   });
 }
- */
+
