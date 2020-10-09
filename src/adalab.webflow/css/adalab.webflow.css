@@ -2185,6 +2185,14 @@ strong {
   grid-template-rows: auto;
 }
 
+.ada-link {
+  color: #54585a;
+}
+
+.paragraph {
+  color: #54585a;
+}
+
 @media screen and (min-width: 1920px) {
   .small {
     font-size: 18px;
@@ -3159,24 +3167,6 @@ strong {
   }
 }
 
-#w-node-101fdfff1a14-137bcf18 {
-  -ms-grid-row: 1;
-  -ms-grid-column: 5;
-  grid-area: Area-3;
-}
-
-#w-node-67ffa5e8fa30-137bcf18 {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  grid-area: Area-4;
-}
-
-#w-node-97dd621bf69f-137bcf18 {
-  -ms-grid-row: 3;
-  -ms-grid-column: 5;
-  grid-area: Area-6;
-}
-
 #w-node-101fdfff1a14-5a06a406 {
   -ms-grid-row: 1;
   -ms-grid-column: 5;
@@ -3196,14 +3186,6 @@ strong {
 }
 
 @media screen and (min-width: 1920px) {
-  .ada-grid-2>#w-node-101fdfff1a14-137bcf18 {
-    -ms-grid-row: 1;
-    -ms-grid-column: 3;
-  }
-  .ada-grid-2>#w-node-67ffa5e8fa30-137bcf18 {
-    -ms-grid-row: 1;
-    -ms-grid-column: 4;
-  }
   .ada-grid-2>#w-node-101fdfff1a14-5a06a406 {
     -ms-grid-row: 1;
     -ms-grid-column: 3;
@@ -3215,18 +3197,6 @@ strong {
 }
 
 @media screen and (max-width: 991px) {
-  #w-node-101fdfff1a14-137bcf18 {
-    -ms-grid-row: 1;
-    -ms-grid-column: 2;
-  }
-  #w-node-67ffa5e8fa30-137bcf18 {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-  }
-  #w-node-97dd621bf69f-137bcf18 {
-    -ms-grid-row: 2;
-    -ms-grid-column: 2;
-  }
   #w-node-101fdfff1a14-5a06a406 {
     -ms-grid-row: 1;
     -ms-grid-column: 2;
@@ -3242,18 +3212,6 @@ strong {
 }
 
 @media screen and (max-width: 479px) {
-  #w-node-101fdfff1a14-137bcf18 {
-    -ms-grid-row: 1;
-    -ms-grid-column: 2;
-  }
-  #w-node-67ffa5e8fa30-137bcf18 {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-  }
-  #w-node-97dd621bf69f-137bcf18 {
-    -ms-grid-row: 2;
-    -ms-grid-column: 2;
-  }
   #w-node-101fdfff1a14-5a06a406 {
     -ms-grid-row: 1;
     -ms-grid-column: 2;
@@ -3305,16 +3263,6 @@ strong {
 }
 
 @media screen and (max-width: 479px) {
-  #w-node-1c006384b860-137bcf18 {
-    -ms-grid-column-span: 1;
-    grid-column-end: span 1;
-    -ms-grid-column: span 1;
-    grid-column-start: span 1;
-    -ms-grid-row-span: 1;
-    grid-row-end: span 1;
-    -ms-grid-row: span 1;
-    grid-row-start: span 1;
-  }
   #w-node-1c006384b860-5a06a406 {
     -ms-grid-column-span: 1;
     grid-column-end: span 1;
